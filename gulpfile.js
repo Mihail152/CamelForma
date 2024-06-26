@@ -5,6 +5,10 @@ import { plugins } from "./config/gulp-plugins.js";
 // Импорт путей
 import { path } from "./config/gulp-settings.js";
 
+import syncServer from "browser-sync";
+const sync = syncServer.create();
+
+
 // Передаем значения в глобальную переменную
 global.app = {
 	isBuild: process.argv.includes('--build'),
@@ -29,6 +33,20 @@ import { sprite } from "./config/gulp-tasks/sprite.js";
 import { gitignore } from "./config/gulp-tasks/gitignore.js";
 import { otfToTtf, ttfToWoff, fonstStyle } from "./config/gulp-tasks/fonts.js";
 
+
+
+function serve() {
+	sync.init({ server: "./dist" });
+  
+	gulp.watch(["src/**/**.html"], gulp.series(html)).on("change", sync.reload);
+	gulp.watch(["src/**/**.htm"], gulp.series(html)).on("change", sync.reload);
+	gulp.watch(["src/**/**.scss"], gulp.series(css)).on("change", sync.reload);
+	gulp.watch(["src/img/**/*"], gulp.series(images)).on("change", sync.reload);
+	gulp.watch(["src/**/**.js"], gulp.series(js)).on("change", sync.reload);
+  }
+
+
+
 // Последовательная обработака шрифтов
 const fonts = gulp.series(reset, otfToTtf, ttfToWoff, fonstStyle);
 // Основные задачи будем выполнять параллельно после обработки шрифтов
@@ -36,7 +54,7 @@ const devTasks = gulp.parallel(fonts, gitignore);
 // Основные задачи будем выполнять параллельно после обработки шрифтов
 const buildTasks = gulp.series(fonts, jsDev, js, gulp.parallel(html, css, images, gitignore));
 
-const myHtml = gulp.series(fonts, jsDev, js,gulp.parallel(html, css, images, gitignore));
+const myHtml = gulp.series(gulp.parallel(js, html, css, images, gitignore, serve));
 
 // Экспорт задач
 export { html }
@@ -50,10 +68,10 @@ export { ftp }
 export { zip }
 
 // Построение сценариев выполнения задач
-const development = gulp.series(devTasks);
-const build = gulp.series(buildTasks);
-const deployFTP = gulp.series(buildTasks, ftp);
-const deployZIP = gulp.series(buildTasks, zip);
+// const development = gulp.series(devTasks);
+// const build = gulp.series(buildTasks);
+// const deployFTP = gulp.series(buildTasks, ftp);
+// const deployZIP = gulp.series(buildTasks, zip);
 const devHTML = gulp.series(myHtml);
 
 // Экспорт сценариев
