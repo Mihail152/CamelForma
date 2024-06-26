@@ -1,0 +1,361 @@
+//====================================================================================================
+.header {
+	background: rgba(246, 246, 246, 0.90);
+	border-bottom: 2px solid rgba(225, 225, 225, 0.90);
+	position: absolute;
+	top: 0;
+	width: 100%;
+	left: 0;
+	z-index: 999;
+	transition: all 0.3s ease 0s;
+
+	@media (max-width:$tablet) {
+		border-bottom: 1px solid var(--line, #E1E1E1);
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+		position: relative;
+
+		@media (max-width:$tablet) {
+			justify-content: space-between;
+			margin: rem(20) rem(0);
+		}
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		gap: rem(10);
+
+		span {
+			color: #212e44;
+			font-weight: 700;
+			font-size: rem(20);
+		}
+	}
+
+	&__inline {
+		display: flex;
+		flex: 1 1 auto;
+		align-items: center;
+		z-index: 3;
+
+		@media (max-width:$tablet) {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			background: rgba(246, 246, 246, 1);
+			width: 100%;
+		}
+	}
+
+	&__menu {
+		@media (max-width:$tablet) {
+			width: 100%;
+		}
+	}
+
+	&__card {
+		/*display: flex;*/
+		display: none;
+		align-items: center;
+		padding: rem(29) rem(20);
+		gap: 10px;
+		transition: all 0.3s ease 0s;
+
+		@media (max-width:$tablet) {
+			padding: rem(10);
+			border-radius: 100px;
+			border: 1.5px solid var(--line, #E1E1E1);
+			background: #F9F9F9;
+		}
+
+		@media (max-width:$mobile) {
+			gap: 0px;
+		}
+
+		svg {
+			@media (max-width:$mobile) {
+				max-height: rem(16);
+			}
+		}
+
+		span {
+			font-size: rem(14);
+			font-style: normal;
+			font-weight: 600;
+			line-height: normal;
+			background: #F9F9F9;
+			border-radius: 50%;
+			padding: rem(5.5) rem(11);
+
+			@media (max-width:$mobile) {
+				padding: rem(0) rem(11);
+			}
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				path {
+					fill: #374357;
+				}
+
+				span {
+					color: $hoverText;
+				}
+			}
+		}
+	}
+
+	&__btn {
+		margin-left: auto;
+
+		@media (max-width: 1100px) {
+			display: none;
+		}
+	}
+}
+
+.header.sticky {
+	position: fixed;
+	background: #212E44;
+	border-bottom: none;
+}
+
+.header.sticky .header__logo span {
+	color: #fff;
+}
+
+.header.sticky .menu__link {
+	color: #fff;
+
+	@media (max-width:$tablet) {
+		color: var(--Primary-100, #212E44);
+	}
+}
+
+.menu {
+	display: flex;
+	justify-content: center;
+
+	&__body {
+		@media (max-width:$tablet) {
+			width: 100%;
+		}
+	}
+
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		flex-basis: calc(100% / 5);
+		&:nth-child(1) {
+			@media (max-width:$mobile){
+				 order: -2; 
+			}
+		}
+		&:nth-child(2) {
+			@media (max-width:$mobile){
+				order: 0;
+			}
+		}
+		&:nth-child(3) {
+			@media (max-width:$mobile){
+				order: -1; 
+			}
+		}
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		padding: rem(29) rem(25);
+		gap: 10px;
+		color: var(--Primary-100, #212E44);
+		font-size: rem(16);
+		font-weight: 600;
+		transition: all 0.3s ease 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				path {
+					fill: #F65A03;
+				}
+
+				span {
+					color: #F65A03;
+				}
+			}
+		}
+
+		@media (max-width:$tablet) {
+			flex-direction: column;
+			font-size: rem(12);
+			font-weight: 400;
+			padding: rem(15) rem(15);
+		}
+	}
+
+	&__icon {}
+}
+
+.icon-menu {}
+
+
+.icon__card {}
+
+.btn {
+	color: #FFF;
+	font-size: rem(16);
+	font-weight: 600;
+	border-radius: 6px;
+	background: var(--Secondary-color-100, #F65A03);
+	padding: rem(10) rem(20);
+	transition: all 0.3s ease 0s;
+
+	@media (any-hover: hover) {
+		&:hover {
+			background: $mainHover
+		}
+	}
+
+	@media (max-width:$tablet) {
+		display: none;
+	}
+}
+
+
+
+.widjet__title {
+	color: var(--Primary-100, #212E44);
+	font-size: rem(18);
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.sub-menu-list {
+	display: flex;
+	flex-direction: column;
+	gap: rem(30);
+}
+
+.sub-menu-list li a {
+	color: var(--Primary-100, #212E44);
+	font-size: rem(16);
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	display: flex;
+	align-items: center;
+	gap: rem(15);
+}
+
+.sub-menu {
+	&::after {
+		content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M6 7.11634L0.5 1.61634L1.78333 0.333008L6 4.54967L10.2167 0.333008L11.5 1.61634L6 7.11634Z" fill="%23A6ABB4"/></svg>');
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			&:after {
+				content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 11 8" fill="none"><path d="M5.5 0.332877L11 5.83288L9.71667 7.11621L5.5 2.89954L1.28333 7.11621L-2.38419e-07 5.83288L5.5 0.332877Z" fill="%23F65A03"/></svg>');
+			}
+		}
+	}
+
+	@media (max-width:$tablet) {
+		&::after {
+			content: none;
+		}
+
+		&:hover {
+			&:after {
+				content: none;
+			}
+		}
+	}
+}
+
+.dropdown {
+	/*position: relative;*/
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #fff;
+	min-width: rem(300);
+	padding: rem(51) rem(33);
+	border-radius: rem(16);
+	border: 1.5px solid var(--line, #E1E1E1);
+	box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.05);
+	backdrop-filter: blur(7.5px);
+	@media (max-width:$mobile){
+		border-radius: rem(16) rem(16) rem(0) rem(0); 
+		backdrop-filter: none;
+		border: none;
+		border-top: 1.5px solid var(--line, #E1E1E1);
+		padding: rem(31) rem(20);
+	}
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.sub-menu__link {
+	display: flex;
+	gap: rem(16);
+	align-items: center;
+}
+
+.dropdown-content.sub-menu-services {
+	width: 100%;
+	max-width: rem(1230);
+	left: 0;
+	@media (max-width:$tablet){
+		bottom: rem(74);
+	}
+}
+.sub-menu-services {
+	.spollers {
+		background: none;
+		display: flex;
+		justify-content: space-between;
+		gap: rem(53);
+		padding: 0;
+		@media (max-width:$mobile){
+			 flex-direction: column; 
+			 gap: rem(33);
+		}
+	}
+	.spollers__item {
+		flex-basis: calc((100% - rem(159)) / 4);
+		@media (max-width:$mobile){
+			 font-size: rem(16); 
+		}
+	}
+	.spollers__body {
+		border: none;
+		border-radius: 0;
+		background: none;
+		padding: 0;
+		margin-top: rem(41);
+		@media (max-width:$mobile){
+			margin-top: rem(15);  
+		}
+	}
+	.spollers__title {
+		border: none;
+		border-radius: 0;
+		background: none;
+		padding: 0;
+	}
+}
+.sub-menu-services .sub-menu-list {
+	margin-top: rem(41);
+}

@@ -1,0 +1,147 @@
+//====================================================================================================
+.footer {
+  background: #212E44;
+  border-radius: rem(25) rem(25) 0 0;
+  @media (max-width:$mobile){
+     padding-bottom: rem(70); 
+     margin-top: rem(130);
+  }
+  &__top {
+    padding: rem(65) rem(0) rem(98) rem(0);
+    color: #FFF;
+ @media (max-width:$mobile){
+  padding: rem(38) rem(15) rem(41) rem(15);
+ }
+  }
+
+  &__container {}
+
+  &__columns {
+    display: flex;
+    gap: rem(100);
+    justify-content: space-between;
+
+  }
+
+  &__column {
+    @media (max-width:$mobile){
+      display: flex;
+       flex-direction: column; 
+    }
+    &:nth-child(1) {
+      @media (max-width:$mobile) {
+        display: none;
+      }
+    }
+
+    &:nth-child(2) {
+      @media (max-width:$mobile) {
+        display: none;
+      }
+    }
+
+    &:nth-child(3) {
+      flex-basis: 25%;
+      @media (max-width:$mobile) {
+        display: none;
+      }
+    }
+
+    &:nth-child(4) {}
+  }
+
+  &__title {
+    color: #E9E9E9;
+    font-size: rem(30);
+    font-weight: 700;
+    margin-bottom: rem(31);
+  }
+
+  &__menu {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    gap: rem(30);
+
+    li {
+      a {
+        display: flex;
+        align-items: center;
+        gap: rem(16);
+      }
+    }
+  }
+
+  &__logo {
+    display: block;
+    @media (max-width:$mobile){
+       img {
+        max-width: rem(160); 
+       }
+    }
+  }
+
+  &__contact {
+    margin-top: rem(66);
+    font-family: Inter, sans-serif;
+    font-size: rem(16);
+    display: flex;
+    flex-direction: column;
+    gap: rem(25);
+    margin-bottom: rem(46);
+    font-weight: 600;
+    line-height: normal;
+    @media (max-width:$mobile){
+      margin-top: rem(30);
+      font-size: rem(14);
+      order: 3;
+      margin-bottom: rem(0);
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: rem(12);
+    @media (max-width:$mobile){
+       margin-top: rem(25); 
+    }
+  }
+
+  &__bottom {
+    background: #1C2940;
+    color: #7A828F;
+    padding: rem(39) 0;
+    font-size: rem(16);
+    font-weight: 600;
+@media (max-width:$mobile){
+   font-size: rem(14); 
+   border-radius: rem(20);
+}
+    .footer__container {
+      display: flex;
+      justify-content: space-between;
+      @media (max-width:$mobile){
+        border-radius: 16px;
+background: #212E44;
+         flex-direction: column;
+         gap: rem(13);
+         padding: rem(24) rem(13);
+         margin-left: rem(21);
+         margin-right: rem(21);
+      }
+    }
+  }
+
+  &__copiright {}
+
+  &__bottom-menu {
+    display: flex;
+    gap: rem(39);
+    @media (max-width:$mobile){
+       gap: rem(20); 
+       font-size: rem(12);
+    }
+  }
+}
