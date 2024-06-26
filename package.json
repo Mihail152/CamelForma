@@ -52,7 +52,7 @@
     "nouislider": "latest",
     "pug": "latest",
     "pug-loader": "latest",
-    "sass": "latest",
+    "sass": "^1.64.2",
     "sass-loader": "latest",
     "smooth-scroll": "latest",
     "string-replace-loader": "latest",
@@ -70,6 +70,8 @@
     "webpack-stream": "latest"
   },
   "dependencies": {
+    "gulp-file-include": "^2.3.0",
+    "gulp-sass": "^5.1.0",
     "simplebar": "latest"
   },
   "main": "gulpfile.js"

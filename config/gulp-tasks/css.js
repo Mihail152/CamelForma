@@ -3,9 +3,12 @@ import del from "del";
 import webpcss from 'gulp-webpcss';
 import autoprefixer from 'gulp-autoprefixer';
 import groupCssMediaQueries from 'gulp-group-css-media-queries';
+import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+const sass = gulpSass(dartSass);
 
 export const css = () => {
-	return app.gulp.src(`${app.path.build.css}style.css`, {})
+	return app.gulp.src(`src/scss/style.scss`, {})
 		.pipe(app.plugins.plumber(
 			app.plugins.notify.onError({
 				title: "CSS",
@@ -16,7 +19,7 @@ export const css = () => {
 				app.isBuild,
 				groupCssMediaQueries()
 			)
-		)
+		)		
 		.pipe(
 			app.plugins.if(
 				app.isBuild,
@@ -41,6 +44,7 @@ export const css = () => {
 				)
 			)
 		)
+		.pipe(sass().on('error', sass.logError))
 		.pipe(app.gulp.dest(app.path.build.css))
 		.pipe(
 			app.plugins.if(

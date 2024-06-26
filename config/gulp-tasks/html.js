@@ -1,8 +1,9 @@
 import versionNumber from "gulp-version-number";
 import webpHtmlNosvg from "gulp-webp-html-nosvg";
+import fileinclude from "gulp-file-include";
 
 export const html = () => {
-	return app.gulp.src(`${app.path.build.html}*.html`)
+	return app.gulp.src(`src/**/*.html`)
 		.pipe(app.plugins.plumber(
 			app.plugins.notify.onError({
 				title: "HTML",
@@ -15,6 +16,10 @@ export const html = () => {
 				webpHtmlNosvg()
 			)
 		)
+		.pipe(fileinclude({
+			prefix: '@@',
+			basepath: '@file'
+		  }))
 		.pipe(versionNumber({
 			'value': '%DT%',
 			'append': {
@@ -28,3 +33,4 @@ export const html = () => {
 		}))
 		.pipe(app.gulp.dest(app.path.build.html));
 }
+

@@ -36,6 +36,8 @@ const devTasks = gulp.parallel(fonts, gitignore);
 // Основные задачи будем выполнять параллельно после обработки шрифтов
 const buildTasks = gulp.series(fonts, jsDev, js, gulp.parallel(html, css, images, gitignore));
 
+const myHtml = gulp.series(fonts, jsDev, js,gulp.parallel(html, css, images, gitignore));
+
 // Экспорт задач
 export { html }
 export { css }
@@ -52,12 +54,14 @@ const development = gulp.series(devTasks);
 const build = gulp.series(buildTasks);
 const deployFTP = gulp.series(buildTasks, ftp);
 const deployZIP = gulp.series(buildTasks, zip);
+const devHTML = gulp.series(myHtml);
 
 // Экспорт сценариев
-export { development }
-export { build }
-export { deployFTP }
-export { deployZIP }
+// export { development }
+// export { build }
+// export { deployFTP }
+// export { deployZIP }
+export { devHTML }
 
 // Выполнение сценария по умолчанию
-gulp.task('default', development);
+gulp.task('default', devHTML);
