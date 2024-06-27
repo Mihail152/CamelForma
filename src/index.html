@@ -8,9 +8,22 @@
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page forms-wrapper">
-			@@include('html/_bread.htm',{})
-			@@include('html/home/_first-block.htm',{})
-			<a href="#" class="goback">Вернуться назад 1</a>
+			@@include('html/_bread.htm',{	
+				"parent_title": "",
+				"parent_link": "",
+				"title": "Разместить стартап"
+			})
+			@@include('html/startup/_header.htm',{
+				"title":"Разместить стартап"
+			})
+			@@include('html/startup/_steps.htm',{
+				"current":"1",
+				"text": "Основная информация"
+			})
+			
+			
+			<!-- @@include('html/home/_first-block.htm',{})
+			
 			@@include('html/home/_problems.htm',{})
 			@@include('html/home/_success.htm',{})
 			@@include('html/home/_founder.htm',{})
@@ -18,7 +31,7 @@
 			@@include('html/home/_game.htm',{})
 			@@include('html/home/_mvp.htm',{})
 			@@include('html/home/_stage.htm',{})
-			@@include('html/home/_portfolio.htm',{})
+			@@include('html/home/_portfolio.htm',{}) -->
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>
