@@ -1994,3 +1994,29 @@ a.orang:hover {
 .btn-black:hover {
     background-color: #192233 !important
 }
+
+.bcream {
+    color: #a6abb4;
+}
+
+.bcream a {
+    font-weight: 600;
+    font-size: var(--font16);
+    color: #f67803;
+}
+
+.bcream a span {
+    color: #f67803;
+}
+
+.bcream span {
+    color: #212e44;
+    font-size: var(--font16);
+    font-weight: 400;
+}
+
+.bcream__goback a {
+    color: #9097a1;
+    font-size: var(--font14);
+    font-weight: 700;
+}

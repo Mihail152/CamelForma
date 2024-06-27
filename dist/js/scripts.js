@@ -39,3 +39,37 @@ $(document).on("click", ".js_open_popup_startap", function (e) {
       var sticky = header ? header.offsetTop : 0;
     }
   });
+
+  $(".progressbar").each(function () {
+    var progressbar = $(this);
+    var progressValue = parseInt(progressbar.data('progress'));
+    progressbar.progressbar({
+      value: progressValue
+    });
+  })
+
+  $("#file_input").withDropZone("#drop_zone", {
+    action: {
+      name: "image",
+      params: {
+        preview: true,
+      }
+    },
+  });
+
+  $("select.countryselect-investor-page").multiselect({
+    columns: 1,
+    placeholder: "Выберите страну",
+    icon: "./img/startupcatalog/choise_country.webp",
+    search: true,
+    openList: true,
+    listType: "radio",
+    btncalssreset: ".btn-reset",
+    categoryInput: "choise-country-placeholder",
+    maxPlaceholderOpts: 2,
+    searchOptions: {
+      default: "Введите страну для поиска",
+    },
+    selectAll: false,
+    // unselectAll: true
+  });

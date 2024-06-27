@@ -4,7 +4,7 @@
 export const js = () => {
 	// return app.gulp.src(app.path.src.js)
 	
-	return app.gulp.src('./src/js/scripts.js')
+	return app.gulp.src('./src/js/**.js')
 		.pipe(app.plugins.plumber(
 			app.plugins.notify.onError({
 				title: "JS",

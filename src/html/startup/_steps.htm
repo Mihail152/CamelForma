@@ -1,17 +1,5 @@
-<div class="steps__container">
-    <ul class="flex">
-        
-        <li class="step current"><span class="number">1</span>
-            @@if(current == 1){
-                <span class="text">@@text</span>
-            }
-        </li>
-        <li class="step"><span>2</span></li>
-        <li class="step"><span>3</span></li>
-        <li class="step"><span>4</span></li>
-        <li class="step"><span>5</span></li>
-        <li class="step"><span>6</span></li>
-        <li class="step"><span>7</span></li>
-        <li class="step"><span>8</span></li>
-    </ul>
-</div>
+
+<li class="step @@class">
+    <div class="step__num">@@step</div> 
+    <div class="step__desc">@@text</div>    
+</li>

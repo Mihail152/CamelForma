@@ -8,20 +8,37 @@
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page forms-wrapper">
-			@@include('html/_bread.htm',{	
-				"parent_title": "",
-				"parent_link": "",
-				"title": "Разместить стартап"
+			@@include('html/_bread.htm',{
+			"parent_title": "",
+			"parent_link": "",
+			"title": "Разместить стартап"
 			})
-			@@include('html/startup/_header.htm',{
+
+			<div class="steps_header__container">
+				@@include('html/startup/_header.htm',{
 				"title":"Разместить стартап"
-			})
-			@@include('html/startup/_steps.htm',{
-				"current":"1",
-				"text": "Основная информация"
-			})
-			
-			
+				})
+			</div>
+			<div class="steps_body__container mt-40">
+
+				<ul class="flex steps__row">
+					@@loop('html/startup/_steps.htm', [
+					{ "step": 1, "text": "Основная информация", "class":"current"},
+					{ "step": 2, "text": "" , "class":""},
+					{ "step": 3, "text": "" , "class":""},
+					{ "step": 4, "text": "", "class":"" },
+					{ "step": 5, "text": "", "class":"" },
+					{ "step": 6, "text": "", "class":"" },
+					{ "step": 7, "text": "", "class":"" },
+					{ "step": 8, "text": "", "class":"" },
+					])
+				</ul>
+
+			</div>
+
+			@@include('html/startup/content/step_1.htm',{})
+
+
 			<!-- @@include('html/home/_first-block.htm',{})
 			
 			@@include('html/home/_problems.htm',{})
