@@ -2,13 +2,15 @@ import webp from "gulp-webp";
 import imagemin from "gulp-imagemin";
 
 export const images = () => {
-	return app.gulp.src(app.path.src.images)
+	return app.gulp.src(app.path.src.images, { encoding: false })
 		.pipe(app.plugins.plumber(
 			app.plugins.notify.onError({
 				title: "IMAGES",
 				message: "Error: <%= error.message %>"
 			}))
 		)
+		// .pipe(app.gulp.dest("dist/img", { sourcemaps: true }))
+		// .pipe(app.gulp.dest(app.path.build.images));
 		.pipe(app.plugins.newer(app.path.build.images))
 		.pipe(
 			app.plugins.if(
