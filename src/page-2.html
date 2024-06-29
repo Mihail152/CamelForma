@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('html/_head.htm',{
-"title":"Главная"
+"title":"Разместить стартап/БИЗНЕС"
 })
 
 <body class="body">
@@ -11,20 +11,21 @@
 			@@include('html/_bread.htm',{
 			"parent_title": "",
 			"parent_link": "",
-			"title": "Разместить стартап"
+			"title": "Разместить стартап/БИЗНЕС"
 			})
 
 			<div class="steps_header__container">
 				@@include('html/startup/_header.htm',{
-				"title":"Разместить стартап"
+				"backlink":"/",
+				"title":"Разместить стартап/БИЗНЕС"
 				})
 			</div>
 			<div class="steps_body__container mt-40">
 
 				<ul class="flex steps__row">
 					@@loop('html/startup/_steps.htm', [
-					{ "step": 1, "text": "Основная информация", "class":"current"},
-					{ "step": 2, "text": "" , "class":""},
+					{ "step": 1, "text": "" , "class":""},
+					{ "step": 2, "text": "Шаг 2", "class":"current"},
 					{ "step": 3, "text": "" , "class":""},
 					{ "step": 4, "text": "", "class":"" },
 					{ "step": 5, "text": "", "class":"" },
@@ -35,7 +36,8 @@
 				</ul>
 
 			</div>
-			@@include('html/startup/content/step_1.htm',{})
+
+			@@include('html/startup/content/step_2.htm',{})
 
 
 			<!-- @@include('html/home/_first-block.htm',{})
