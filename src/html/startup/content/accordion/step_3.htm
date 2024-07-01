@@ -1,18 +1,19 @@
 <section class="forma_page_tab pb-20">
     <div class="last">
-        <div class="forma_page-item oh round-15 shadow bg-white mb-30" id="box-team">
-            <div class="triger shadow pointer flex aic jcsb bg-blue-2 w-full active">
+        <!-- STEP 1 -->
+        <div class="forma_page-item round-15 shadow bg-white mb-30" id="box-team">
+            <div class="triger shadow pointer flex aic jcsb bg-blue-2 w-full">
                 <div class="name flex aic fz218 fw600 color-333">
-                    @@include('status__tab.htm',{}) Первый блок *
+                    @@include('status__tab.htm',{}) Идея *
                 </div>
                 <div class="arrow flex aic fz14 bold orang">
                     <span class="ml-10"><img src="./img/Icon/ic_arrow.svg" alt=""></span>
                 </div>
             </div>
-            <div class="forma_page-info" style="display: block;">
+            <div class="forma_page-info">
 
-                <div class="biznes_idea-row flex bg-fa p-35">
-                    <div class="biznes_idea-ll fxg mr-30">
+                <div class="forma_page-row flex bg-fa p-35">
+                    <div class="forma_page-ll fxg mr-30">
                         <div class="name-box flex aic fz20 fw600 mb-25 color-333">
                             <span class="fxs flex aic mr-10">
                                 <img src="./img/Icon/1.svg" alt="">
@@ -39,8 +40,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="biznes_idea-rr fxs last">
-                        <div class="biznes_idea-box round-12 bg-white p-20 border shadow last">
+                    <div class="forma_page-rr fxs last">
+                        <div class="forma_page-box round-12 bg-white p-20 border shadow last">
                             <div class="fz16 fw600 mb-20">Предложения инвестору</div>
                             <div class="data fz12 last mb-25">
                                 <div class="data-item flex jcsb mb-14">
@@ -224,26 +225,206 @@
                         </div>
                         <div class="step_1__col">
                             <div class="fs_label mb-10">На какой стадии находится проект<sup>*</sup> </div>
-                            <a href="#choise-country"
-                                class="your-country flex aic pointer round-12 js_open_popup_startap">
-                                <span class="country-label flex aic fz14 fw500 blue-2 fxg">
-                                    <span id="choise-country-placeholder" class="flex aic">
-                                        <span class="fxs mr-8">
-
-                                        </span>Стадия проекта
-                                    </span>
-                                </span>
-                                <span class="arrow block tr"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" class="loaded">
-                                        <path
-                                            d="M18 12.998H13V17.998C13 18.2633 12.8946 18.5176 12.7071 18.7052C12.5196 18.8927 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8927 11.2929 18.7052C11.1054 18.5176 11 18.2633 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8927 5.29289 12.7052C5.10536 12.5176 5 12.2633 5 11.998C5 11.7328 5.10536 11.4785 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.99805C11 5.73283 11.1054 5.47848 11.2929 5.29094C11.4804 5.1034 11.7348 4.99805 12 4.99805C12.2652 4.99805 12.5196 5.1034 12.7071 5.29094C12.8946 5.47848 13 5.73283 13 5.99805V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4785 19 11.7328 19 11.998C19 12.2633 18.8946 12.5176 18.7071 12.7052C18.5196 12.8927 18.2652 12.998 18 12.998Z"
-                                            fill="#212E44"></path>
-                                    </svg></span>
-                            </a>
+                            <select name="basic[]" multiple="multiple" class="stageproject active">
+                                <option value="var-project-1">Идея</option>
+                                <option value="var-project-2">Seed stage</option>
+                                <option value="var-project-3">Startup stage</option>
+                                <option value="var-project-4">Готовый бизнес</option>
+                                <option value="var-project-5">Краудфандинг</option>
+                                <option value="var-project-6">Любой тип</option>
+                                <option value="var-project-7">Доля компании</option>
+                                <option value="var-project-8">Акции компании</option>
+                                <option value="var-project-9">Весь бизнес</option>
+                                <option value="var-project-10">Кредит под бизнес</option>
+                            </select>
                         </div>
                     </div>
                 </div>
             </div>
+
+
+
         </div>
+        <!-- STEP 2 -->
+
+        <div class="forma_page-item forma_page-block_2 oh round-15 bg-white mb-30" id="box-team">
+            <div class="triger shadow pointer flex aic jcsb bg-blue-2 w-full">
+                <div class="name flex aic fz218 fw600 color-333">
+                    @@include('status__tab.htm',{}) Анализ рынка *
+                </div>               
+                <div class="arrow flex aic fz14 bold orang">
+                    <span class="ml-10"><img src="./img/Icon/ic_arrow.svg" alt=""></span>
+                </div>
+            </div>
+            <div class="forma_page-info">
+
+
+                <div class="biznes_tab-info pt-20 pb-40 pl-40 pr-40 last">
+                    <div class="biznes_tab-name flex aic mb-20 fz18 fz16m fw600 blue-2">
+                        <div class="fxs mr-5"><img src="img/business/table/analis.svg" alt=""></div>
+                        Анализ рынка
+                    </div>
+                    <div class="m-scroll mb-40">
+                        <table class="cust_table">
+                            <tr>
+                                <td class="bg-blue v6">Конкуренты</td>
+                                <td class="bg-blue"></td>
+                                <th colspan="2"></th>
+                            </tr>
+                            <tr>
+                                <td>Мировой объём рынка</td>
+                                <td><b>Логистика B2B</b></td>
+                                <td><b>1 000 000$</b></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Локальный объём рынка</td>
+                                <td>
+                                    <div class="flex aic"><b>Польша</b> <span class="ml-5"><img src="img/business/pl.svg" alt=""></span></div>
+                                </td>
+                                <td><b>Логистика B2B</b></td>
+                                <td><b>250 000$</b></td>
+                            </tr>
+                            <tr>
+                                <td>Кол-во конкурентов на рынке общее</td>
+                                <td>
+                                    <div class="flex aic jcsb">
+                                        <div class="ucon flex aic">
+                                            <b class="mr-10">От 1000 шт</b>
+                                            <img src="img/business/table/1.svg" alt="">
+                                        </div>
+                                        <div class="tooltip dib posr pointer">
+                                            <img src="img/business/table/info-3.svg" alt="">
+                                            <div class="hide absolute fz14 white p-20 round-12 z-3">The outlines of our work with each project: The outlines of our work with each project: </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex aic jcsb">
+                                        <div class="ucon flex aic">
+                                            <b class="mr-10">100 шт</b>
+                                            <img src="img/business/table/2.svg" alt="">
+                                        </div>
+                                        <div class="tooltip dib posr pointer">
+                                            <img src="img/business/table/info-3.svg" alt="">
+                                            <div class="hide absolute fz14 white p-20 round-12 z-3">The outlines of our work with each project: The outlines of our work with each project: </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Кол-во основных конкурентов</td>
+                                <td><b>3</b></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Названия компаний</td>
+                                <td>
+                                    <ul>
+                                        <li><i>Google</i></li>
+                                        <li><i>Yandex</i></li>
+                                        <li><i>Facebook</i></li>
+                                    </ul>
+                                </td>
+                                <td colspan="2" class="center no-border-bottom">
+                                    <div class="fz18 bold">% покрытия Рынка</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Конкурент 1</td>
+                                <td class="no_paddin">
+                                    <div class="inner_td flex">
+                                        <b>Google</b>
+                                        <b>20%</b>
+                                    </div>
+                                </td>
+                                <td class="has-grafic" colspan="2" rowspan="4">
+                                    <div class="grafic">
+                                        <div class="grafic-fa">
+                                            <div class="grafic-fa-item flex aic">
+                                                <div class="grafic-bar-color" style="background: #0263FF"></div>
+                                                <div class="grafic-bar">
+                                                    <span class="progres" style="width: 20%; background: #0263FF"><b>20%</b></span>
+                                                </div>
+                                            </div>
+                                            <div class="grafic-fa-item flex aic">
+                                                <div class="grafic-bar-color" style="background: #FF7723"></div>
+                                                <div class="grafic-bar">
+                                                    <span class="progres" style="width: 50%; background: #FF7723"><b>50%</b></span>
+                                                </div>
+                                            </div>
+                                            <div class="grafic-fa-item flex aic">
+                                                <div class="grafic-bar-color" style="background: #8E30FF"></div>
+                                                <div class="grafic-bar">
+                                                    <span class="progres" style="width: 35%; background: #8E30FF"><b>35%</b></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="grafic-fa-num flex fz12">
+                                            <p>25%</p>
+                                            <p>50%</p>
+                                            <p>75%</p>
+                                            <p>100%</p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Конкурент 2</td>
+                                <td class="no_paddin">
+                                    <div class="inner_td flex">
+                                        <b>Yandex</b>
+                                        <b>30%</b>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Конкурент 3</td>
+                                <td class="no_paddin">
+                                    <div class="inner_td flex">
+                                        <b>Facebook</b>
+                                        <b>50%</b>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bg-blue" colspan="2">Средний чек услуги или
+                                    <br> продукта у конкурентов
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Минимальный чек</td>
+                                <td><b>100$</b></td>
+                                <td colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td>Cредний чек</td>
+                                <td><b>500$</b></td>
+                                <td colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td>Высокий чек</td>
+                                <td><b>1000$</b></td>
+                                <td colspan="2"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="set-blue fz16 fz14m p-20 round-12">
+                        <p><b>Дополнительная информация по рынку</b></p>
+                        <p>Рынок России на середину 2022 года насчитывает почти 5000 рекламных агентств и более 100 000 специалистов по рекламе.</p>
+                        <p>Еще в начале года как минимум 10% агентств и 1% индивидуальны специалистов вели рекламные кампании для иностранных партнеров.</p>
+                        <p>Средний бюджет на рекламу по 1 иностранному проекту в год - 120 000 €. Что в общей сумме составляет - 180 000 000 €</p>
+                        <p>Многие Российские IT-компании до сих пор в поиске решений для сотрудничества с иностранным бизнесом.</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
     </div>
 </section>

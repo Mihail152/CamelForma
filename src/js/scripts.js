@@ -92,7 +92,7 @@ $('.add_row').click(function (e) {
 
 
 $("select.countryselect-investor-page").multiselect({
-  columns: 1,
+  columns: 4,
   placeholder: "Выберите страну",
   icon: "./img/Icon/choise_country.svg",
   search: true,
@@ -112,6 +112,21 @@ $("select.cityselect-investor-page").multiselect({
   icon: "./img/Icon/choise_city.svg",
   search: false,
   openList: true,
+  listType: "radio",
+  btncalssreset: ".btn-reset",
+  categoryInput: "choise-city-placeholder",
+  maxPlaceholderOpts: 2,
+  searchOptions: {
+    default: "Введите страну для поиска",
+  },
+  selectAll: false,
+});
+$("select.stageproject").multiselect({
+  columns: 1,
+  placeholder: "Стадия проекта",
+  icon: "",
+  search: false,
+  openList: false,
   listType: "radio",
   btncalssreset: ".btn-reset",
   categoryInput: "choise-city-placeholder",
