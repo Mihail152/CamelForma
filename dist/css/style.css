@@ -4952,6 +4952,7 @@ section {
 .steps__row .completed .step__num {
   border: 2px solid rgb(243, 124, 34);
   position: relative;
+  color: #f67803;
 }
 .steps__row .completed .step__num::before {
   content: "";
@@ -5036,7 +5037,7 @@ section {
   border-radius: 12px;
   border: 1px solid #cedcf0;
   background: #fcfdff;
-  padding: 17px 20px;
+  padding: 14px 20px 15px;
   width: 100%;
   height: auto;
   font-size: 14px;
@@ -6667,10 +6668,12 @@ select option::before {
 
 .cust_table td {
   border: 1px solid #e1e1e1;
-  padding: 18px 20px 18px 30px;
+  padding: 15px 20px 15px 25px;
   line-height: normal;
   vertical-align: top;
   position: relative;
+  font-size: 14px;
+  vertical-align: middle;
 }
 
 .cust_table td.no_paddin {
@@ -6690,14 +6693,7 @@ select option::before {
   width: 50%;
   height: 100%;
   display: block;
-  padding: 18px 20px 18px 20px;
-}
-
-.cust_table .inner_td > * {
-  width: 50%;
-  height: 100%;
-  display: block;
-  padding: 18px 20px 18px 20px;
+  padding: 15px 20px 15px 20px;
 }
 
 .cust_table .inner_td > :nth-child(1n+2) {
@@ -6726,7 +6722,7 @@ select option::before {
 }
 
 .grafic-fa-item {
-  height: 59px;
+  height: 50px;
   position: relative;
 }
 
@@ -6742,11 +6738,6 @@ select option::before {
   border: 1px dashed #ccc;
   border-right-width: 0;
   width: 100%;
-  position: relative;
-}
-
-.grafic-le-item {
-  height: 59px;
   position: relative;
 }
 
@@ -6783,8 +6774,8 @@ select option::before {
 }
 
 .grafic-bar-color {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   border-radius: 6px;
   position: absolute;
   top: 50%;
@@ -6855,9 +6846,9 @@ select option::before {
 }
 
 .set-blue b {
-  font-size: var(--font18);
+  font-size: var(--font16);
   font-weight: 700;
-  color: #212e44;
+  color: #FF7723;
 }
 
 .set-blue li {
@@ -6882,4 +6873,95 @@ select option::before {
 
 .set-blue li:last-child {
   margin-bottom: 0;
+}
+
+.your-industry,
+.local-industry {
+  background-color: #fcfdff;
+  border: 1px solid #cedcf0;
+  padding: 11px 10px;
+}
+
+.industry-label > span > span {
+  background: #e4f0f2;
+  border-radius: 10px;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 15px;
+  font-size: 12px;
+  line-height: 16px;
+  display: inline-flex;
+}
+
+.popup_startap-close:hover svg {
+  background: #0b1d3b;
+  border-radius: 50%;
+}
+
+.popup_startap-close:hover svg rect {
+  fill: #fff;
+}
+
+.col-2 {
+  max-width: 340px;
+}
+
+#choise-local-placeholder > img,
+#choise-industry-placeholder > img {
+  margin-right: 0;
+}
+
+.mw-715 {
+  max-width: 715px;
+  margin: 0 auto;
+}
+
+.mw-715 .row__input {
+  max-width: 340px;
+}
+.mw-715 .fs_input {
+  max-width: 340px;
+}
+
+.percent__icon::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  display: block;
+  position: absolute;
+  top: 21px;
+  right: 15px;
+  background-image: url(../img/Icon/percent.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.step_1__row.column-3 .fs_input {
+  min-width: auto;
+}
+
+.cust_table i {
+  display: -moz-inline-flex;
+  display: -ms-inline-flex;
+  display: -o-inline-flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #e4f0f2;
+  border-radius: 6px;
+  color: #4d5869;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  padding: 5px 10px;
+}
+
+.mw-full {
+  max-width: inherit !important;
 }

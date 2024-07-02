@@ -78,10 +78,11 @@ if ($('#file_input').length) {
 $('.add_row').click(function (e) {
   e.preventDefault();
   var items_input = $(this).parent().parent().children('.row__input_items');
+  var placeholder = items_input.children('input:first-child').attr('placeholder'); 
   var last_input = items_input.children('input:last-child').data('item');
   var max_input = items_input.children('input:last-child').data('max');
   if (parseInt(last_input) <= max_input) {
-    var element = '<input type="text" id="ms-benefit-' + ++last_input + '" data-item="' + last_input + '" data-max="' + max_input + '" class="fs_input" placeholder="Описание преимущества">';
+    var element = '<input type="text" id="ms-benefit-' + ++last_input + '" data-item="' + last_input + '" data-max="' + max_input + '" class="fs_input" placeholder="' + placeholder + '">';
     items_input.append(element);
   }
   if(parseInt(last_input) == max_input) {
@@ -136,9 +137,53 @@ $("select.stageproject").multiselect({
   },
   selectAll: false,
 });
+$("select.sprosselect").multiselect({
+  columns: 1,
+  placeholder: "Спрос",
+  icon: "",
+  search: false,
+  openList: false,
+  listType: "radio",
+  minHeight: "150",
+  btncalssreset: ".btn-reset",
+  categoryInput: "choise-city-placeholder",
+  maxPlaceholderOpts: 2,
+  searchOptions: {
+    default: "Введите страну для поиска",
+  },
+  selectAll: false,
+});
 
 
+$('select[multiple].choise-industry').multiselect({
+  columns: 3,
+  placeholder: 'Выберите отрасль',
+  icon: 'img/choise_cat.webp',
+  search: true,
+  openList: true,
+  listType: 'checkbox',
+  categoryInput: 'choise-industry-placeholder',
+  maxPlaceholderOpts: 2,
+  searchOptions: {
+    'default': 'Введите категорию для поиска'
+  },
+  selectAll: false
+});
 
+$('select[multiple].local_industry').multiselect({
+  columns: 3,
+  placeholder: 'Выберите отрасль',
+  icon: 'img/choise_cat.webp',
+  search: true,
+  openList: true,
+  listType: 'checkbox',
+  categoryInput: 'local_industry-placeholder',
+  maxPlaceholderOpts: 2,
+  searchOptions: {
+    'default': 'Введите категорию для поиска'
+  },
+  selectAll: false
+});
 
 $(".forma_slider").slick({
   slidesToShow: 1,
@@ -179,3 +224,4 @@ $(".forma_slider-nav").slick({
       }
   } ]
 });
+
