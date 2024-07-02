@@ -132,6 +132,7 @@
         .step__num {
             border: 2px solid rgba(243, 124, 34, 1);
             position: relative;
+            color: rgb(243, 124, 34);
 
             &::before {
                 content: '';

@@ -4952,6 +4952,7 @@ section {
 .steps__row .completed .step__num {
   border: 2px solid rgb(243, 124, 34);
   position: relative;
+  color: rgb(243, 124, 34);
 }
 .steps__row .completed .step__num::before {
   content: "";
