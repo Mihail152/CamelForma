@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Разместить стартап/БИЗНЕС"
+})
+
+<body class="body">
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page forms-wrapper">
+			@@include('html/_bread.htm',{
+			"parent_title": "",
+			"parent_link": "",
+			"title": "Разместить стартап/БИЗНЕС"
+			})
+
+			<div class="steps_header__container">
+				@@include('html/startup/_header.htm',{
+				"backlink":"/",
+				"title":"Разместить стартап/БИЗНЕС"
+				})
+			</div>
+			<div class="steps_body__container mt-40">
+
+				<ul class="flex steps__row">
+                    <div class="progressbar steps__bg_line" data-progress="55"></div>
+					@@loop('html/startup/_steps.htm', [
+					{ "step": 1, "text": "" , "class":"completed"},
+					{ "step": 2, "text": "" , "class":"completed"},
+					{ "step": 3, "text": "" , "class":"completed"},
+					{ "step": 4, "text": "", "class":"completed" },
+					{ "step": 5, "text": "Шаг 5", "class":"current"},
+					{ "step": 6, "text": "", "class":"" },
+					{ "step": 7, "text": "", "class":"" },
+					{ "step": 8, "text": "", "class":"" },
+					])
+				</ul>
+                
+
+			</div>
+		
+
+			@@include('html/startup/content/step_5.htm',{})
+
+
+			<!-- @@include('html/home/_first-block.htm',{})
+			
+			@@include('html/home/_problems.htm',{})
+			@@include('html/home/_success.htm',{})
+			@@include('html/home/_founder.htm',{})
+			@@include('html/home/_slider-home.htm',{})
+			@@include('html/home/_game.htm',{})
+			@@include('html/home/_mvp.htm',{})
+			@@include('html/home/_stage.htm',{})
+			@@include('html/home/_portfolio.htm',{}) -->
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

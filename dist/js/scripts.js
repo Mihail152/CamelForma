@@ -258,3 +258,38 @@ new Chart(ctx, {
         }
     }
 });
+const ctx2 = document.getElementById('myChart2');
+new Chart(ctx2, {
+    type: 'pie',
+    data: {
+        labels: ['Женщины:', 'Мужчины:'],
+        datasets: [{
+            label: '',
+            data: [75, 25],
+            backgroundColor: [
+                '#377ED8',
+                '#FB951A',
+            ],
+            borderWidth: 1
+      }]
+    },
+    options: {
+        plugins: {
+            datalabels: {
+                formatter: function (value, context) {
+                    return context.chart.data.labels[context.dataIndex];
+                }
+            },
+            legend: {
+                display: false
+            }
+        }
+    }
+});
+
+$(".tab-100-nav").delegate("li:not(.current)", "click", (function() {
+  $(this).addClass("current").siblings().removeClass("current").parents(".tab-100").find("div.tab-100-box").hide().eq($(this).index()).fadeIn(0);
+}));
+$(".tab-200-nav").delegate("li:not(.current)", "click", (function() {
+  $(this).addClass("current").siblings().removeClass("current").parents(".tab-200").find("div.tab-200-box").hide().eq($(this).index()).fadeIn(0);
+}));
