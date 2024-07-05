@@ -1,11 +1,10 @@
 <section class="forma_page_tab pb-20">
     <div class="last">
-
         <!-- STEP 1 -->
-        <div class="forma_page-item round-15 shadow bg-white mb-30" id="box-stpe1">
+        <div class="forma_page-item round-15 shadow bg-white mb-30" id="box-step2">
             <div class="triger shadow pointer flex aic jcsb bg-blue-2 w-full">
                 <div class="name flex aic fz218 fw600 color-333 status_check">
-                    @@include('status__tab.htm',{}) Клиенты проекта
+                    @@include('status__tab.htm',{}) Целевое назначение инвестиций
                 </div>
                 <div class="arrow flex aic fz14 bold orang">
                     <span class="ml-10"><img src="./img/Icon/ic_arrow.svg" alt=""></span>
@@ -15,258 +14,181 @@
                 <!-- B2C -->
                 <div class="forma_page-row flex bg-fa p-35">
                     <div class="tab-100-box">
-                        <div class="biznes_tab-name flex aic mb-20 fz18 fz16m fw600 blue-2">
-                            B2C
+                        <div class="box-step2-name flex aic mb-20 fz18 fz16m fw600 blue-2">
+                            Распределение инвестиций
                         </div>
-                        <div class="m-scroll-767">
-                            <table class="cust_table cust_table_500 mb-40" style="max-width: 700px">
+                        <div class="m-scroll mb-40">
+                            <table class="cust_table table-se">
                                 <tr>
-                                    <td colspan="2">Средний уровень дохода
-                                        <br> потенциальных клиентов
+                                    <td class="bg-blue center v1" colspan="2">
+                                        Статьи расходов
                                     </td>
-                                    <td><b>От 40 €</b></td>
-                                    <td><b>До 5000 €</b></td>
+                                    <td class="bg-blue center v4" colspan="3">
+                                        Процент от суммы
+                                    </td>
+                                    <td class="no-border-bottom center" colspan="4">
+                                        <div class="fz18 fw600">Динамические расходы</div>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2">Средний чек клиентов</td>
-                                    <td><b>От 400 €</b></td>
-                                    <td><b>До 400 €</b></td>
+                                    <td class="v1" colspan="2">
+                                        Для ИП и ООО
+                                    </td>
+                                    <td colspan="3">
+                                        <b>75%</b>
+                                    </td>
+                                    <td class="has-grafic" colspan="4" rowspan="9">
+                                        <div class="grafic">
+                                            <div class="grafic-fa">
+                                                <div class="grafic-fa-item flex aic">
+                                                    <div class="grafic-bar-color" style="background: #0263FF"></div>
+                                                    <div class="grafic-bar">
+                                                        <span class="progres"
+                                                            style="width: 75%; background: #0263FF"><b>75%</b></span>
+                                                    </div>
+                                                </div>
+                                                <div class="grafic-fa-item flex aic">
+                                                    <div class="grafic-bar-color" style="background: #FF7723"></div>
+                                                    <div class="grafic-bar">
+                                                        <span class="progres"
+                                                            style="width: 20%; background: #FF7723"><b>20%</b></span>
+                                                    </div>
+                                                </div>
+                                                <div class="grafic-fa-item flex aic">
+                                                    <div class="grafic-bar-color" style="background: #8E30FF"></div>
+                                                    <div class="grafic-bar">
+                                                        <span class="progres"
+                                                            style="width: 5%; background: #8E30FF"><b>5%</b></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="grafic-fa-num flex fz12">
+                                                <p>25%</p>
+                                                <p>50%</p>
+                                                <p>75%</p>
+                                                <p>100%</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="v1" colspan="2">
+                                        Для физ. лиц
+                                    </td>
+                                    <td colspan="3">
+                                        <b>20%</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="v1" colspan="2">
+                                        Для государственных служащих
+                                    </td>
+                                    <td colspan="3">
+                                        <b>5%</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="v1" colspan="2">
+                                        Общее количество расходов
+                                    </td>
+                                    <td colspan="3">
+                                        <b>100 000 €</b>
+                                    </td>
                                 </tr>
                             </table>
                         </div>
-                        <div class="tab-200 flex fz16 fz14m">
-                            <div class="tab-200-nav fxs blue-2 lh-normal">
-                                <ul>
-                                    <li class="flex aic pointer posr current">По целевой аудитории</li>
-                                    <li class="flex aic pointer posr">Возраст аудитории</li>
-                                    <li class="flex aic pointer posr">Семейный статус клиентов</li>
-                                    <li class="flex aic pointer posr">Социальные статусы клиентов</li>
-                                    <li class="flex aic pointer posr">Рекламные источники</li>
-                                </ul>
-                            </div>
-                            <div class="tab-200-rr fxg">
-                                <div class="tab-200-box h-full pt-30 pb-30 pl-10 pr-10 " style="max-width: 415px">
-                                    <div class="flex vert aic h-full">
-                                        <canvas id="myChart2" class="mb-30"></canvas>
-                                        <ol class="cart-list fz14 bold last posr flex jcsb fxww gap-16">
-                                            <li class="flex aic">
-                                                <span style="background: #FB951A"
-                                                    class="block fxs round-6 posr z-3 mr-15"></span> Женщины: 25%
-                                            </li>
-                                            <li class="flex aic">
-                                                <span style="background: #377ED8"
-                                                    class="block fxs round-6 posr z-3 mr-15"></span> Мужчины: 75%
-                                            </li>
-                                        </ol>
-                                    </div>
-                                </div>
-                                <div class="tab-200-box h-full pt-30 pb-30 pl-10 pr-10 hide" style="max-width: 415px">
-                                    <div class="fz14 bold center mb-8">Соотношение полов</div>
-                                    <div class="flex vert aic h-full">
-                                        <canvas id="myChart3" class="mb-20"></canvas>
-                                        <ol class="cart-list fz14 bold last posr flex jcsb fxww gap-16">
-                                            <li class="flex aic">
-                                                <span style="background: #FB951A"
-                                                    class="block fxs round-6 posr z-3 mr-15"></span> Женщины 20-48 лет
-                                            </li>
-                                            <li class="flex aic">
-                                                <span style="background: #377ED8"
-                                                    class="block fxs round-6 posr z-3 mr-15"></span>Мужчины 20-48 лет
-                                            </li>
-                                        </ol>
-                                    </div>
-                                </div>
-
-                                <div class="tab-200-box h-full pt-20 pb-20 pl-10 pr-10 hide">
-                                    <div class="tab-200-inner flex aic ml-20">
-                                        <div class="tab-200-inner-left mr-60">
-                                            <div class="grafic">
-                                                <div class="grafic-fa">
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 30%; background: #19F1B3"><b>30%</b></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 20%; background: #8E30FF"><b>20%</b></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 50%; background: #FF7723"><b>50%</b></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 75%; background: #0263FF"><b>75%</b></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grafic-fa-num flex fz12">
-                                                    <p>25%</p>
-                                                    <p>50%</p>
-                                                    <p>75%</p>
-                                                    <p>100%</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-200-inner-right">
-                                            <ol class="cart-list fz14 last posr">
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #19F1B3"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Семьи без детей
-                                                </li>
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #8E30FF"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Семьи с детьми
-                                                </li>
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #FF7723"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Бездетные пары
-                                                </li>
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #0263FF"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Одинокие
-                                                    взрослые
-                                                </li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-200-box h-full pt-20 pb-20 pl-10 pr-10 hide">
-                                    <div class="tab-200-inner flex aic ml-20">
-                                        <div class="tab-200-inner-left mr-60">
-                                            <div class="grafic">
-                                                <div class="grafic-fa">
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 30%; background: #19F1B3"><b>30%</b></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 20%; background: #8E30FF"><b>20%</b></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 50%; background: #FF7723"><b>50%</b></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 75%; background: #0263FF"><b>75%</b></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grafic-fa-num flex fz12">
-                                                    <p>25%</p>
-                                                    <p>50%</p>
-                                                    <p>75%</p>
-                                                    <p>100%</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-200-inner-right">
-                                            <ol class="cart-list fz14 last posr">
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #19F1B3"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Дети
-                                                </li>
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #8E30FF"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Студенты
-                                                </li>
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #FF7723"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Взрослые
-                                                </li>
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #0263FF"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Пенсионеры
-                                                </li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-200-box h-full pt-20 pb-20 pl-10 pr-10 hide">
-                                    <div class="tab-200-inner flex aic ml-20">
-                                        <div class="tab-200-inner-left mr-60">
-                                            <div class="grafic">
-                                                <div class="grafic-fa">
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 30%; background: #19F1B3"><b>30%</b></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 20%; background: #8E30FF"><b>20%</b></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 50%; background: #FF7723"><b>50%</b></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 75%; background: #0263FF"><b>75%</b></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grafic-fa-num flex fz12">
-                                                    <p>25%</p>
-                                                    <p>50%</p>
-                                                    <p>75%</p>
-                                                    <p>100%</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-200-inner-right">
-                                            <ol class="cart-list fz14 last posr">
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #19F1B3"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Интернет-Онлайн
-                                                </li>
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #8E30FF"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Наружная
-                                                    реклама
-                                                </li>
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #FF7723"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Соц.сети
-                                                </li>
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #0263FF"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Email рассылка
-                                                </li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="set-green fz14 p-20 round-12">
-                            <p><b>Обоснование финансовых показателей</b></p>
+                        <div class="set-blue fz16 fz14m p-20 round-12">
+                            <p><b>Подробности о проблемах и возможностях</b></p>
                             <p>Рынок России на середину 2022 года насчитывает почти 5000 рекламных агентств и более 100
                                 000 специалистов по рекламе.</p>
                         </div>
                     </div>
+                </div>
+
+                <!-- Container 715width -->
+                <div class="mw-715  pb-40">
+                    <!-- Block 1 -->
+                    <div class="step__block">
+                        <div class="step__title fz18 fw500 ff-roboto">Распределение инвестиций</div>
+
+                        <div class="block__repetitive clone-container mt-20" data-id="1" data-max="3">
+                            <div class="block__title mb-15 fz16 fw500 ff-roboto">Статья расходов <span
+                                    class="current">1</span></div>
+                            <div class="step__row step__2_columns">
+                                <div class="step_col">
+                                    <label for="name" class="fs_label">
+                                        Статья расходов <sup>*</sup>
+                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        <div class="mt-10 flex aic gap-8 posr">
+                                            <input type="text" id="curr" class="fs_input minw-no"
+                                                placeholder="Статья доходов">
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="step_col">
+                                    <label for="name" class="fs_label">
+                                        Процент от суммы <sup>*</sup>
+                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        <div class="row__input mt-10 flex aic gap-35 posr ">
+                                            <div class="row__input_items w-full percent__icon">
+                                                <input type="text" id="ms-benefit-1" data-item="1" data-max="6"
+                                                    data-min="3" class="fs_input" placeholder="Описание состояния">
+                                            </div>
+                                            <div class="add_row__wrap">
+                                                <a href="#" class="add_block clone_button">
+                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
+                                                            fill="#4272C5"></path>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="step__row step__2_columns mt-30">
+                            <div class="step_col">
+                                <label for="name" class="fs_label">
+                                    Общее количество расходов * <sup>*</sup>
+                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                    <div class="mt-10 flex aic gap-8 posr dollar__icon">
+                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="step_col"></div>
+                        </div>
+                        <div class="step__row mt-40">
+                            <div class="fs_label">Подробности о проблемах и возможностях <sup>*</sup>
+                                <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                            </div>
+                            <div class="flex mt-10 gap-40">
+                                <textarea name="" id=""
+                                    placeholder="Подробности о проблемах и возможностях"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- STEP 2 -->
+        <div class="forma_page-item round-15 shadow bg-white mb-30" id="box-stpe1">
+            <div class="triger shadow pointer flex aic jcsb bg-blue-2 w-full active">
+                <div class="name flex aic fz218 fw600 color-333 status_check">
+                    @@include('status__tab.htm',{}) Предложение инвестору 
+                </div>
+                <div class="arrow flex aic fz14 bold orang">
+                    <span class="ml-10"><img src="./img/Icon/ic_arrow.svg" alt=""></span>
+                </div>
+            </div>
+            <div class="forma_page-info"  style="display: block;">
+                
+                <div class="forma_page-row flex bg-fa p-35">
+                   
                 </div>
 
                 <!-- Container 715width -->
@@ -1135,181 +1057,7 @@
 
             </div>
         </div>
-        <!-- STEP 2 -->
-        <div class="forma_page-item round-15 shadow bg-white mb-30" id="box-step2">
-            <div class="triger shadow pointer flex aic jcsb bg-blue-2 w-full active">
-                <div class="name flex aic fz218 fw600 color-333 status_check">
-                    @@include('status__tab.htm',{}) Целевое назначение инвестиций
-                </div>
-                <div class="arrow flex aic fz14 bold orang">
-                    <span class="ml-10"><img src="./img/Icon/ic_arrow.svg" alt=""></span>
-                </div>
-            </div>
-            <div class="forma_page-info" style="display: block;">
-                <!-- B2C -->
-                <div class="forma_page-row flex bg-fa p-35">
-                    <div class="tab-100-box">
-                        <div class="box-step2-name flex aic mb-20 fz18 fz16m fw600 blue-2">
-                            Распределение инвестиций
-                        </div>
-                        <div class="m-scroll mb-40">
-                            <table class="cust_table table-se">
-                                <tr>
-                                    <td class="bg-blue center v1" colspan="2">
-                                        Статьи расходов
-                                    </td>
-                                    <td class="bg-blue center v4" colspan="3">
-                                        Процент от суммы
-                                    </td>
-                                    <td class="no-border-bottom center" colspan="4">
-                                        <div class="fz18 fw600">Динамические расходы</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="v1" colspan="2">
-                                        Для ИП и ООО
-                                    </td>
-                                    <td colspan="3">
-                                        <b>75%</b>
-                                    </td>
-                                    <td class="has-grafic" colspan="4" rowspan="9">
-                                        <div class="grafic">
-                                            <div class="grafic-fa">
-                                                <div class="grafic-fa-item flex aic">
-                                                    <div class="grafic-bar-color" style="background: #0263FF"></div>
-                                                    <div class="grafic-bar">
-                                                        <span class="progres"
-                                                            style="width: 75%; background: #0263FF"><b>75%</b></span>
-                                                    </div>
-                                                </div>
-                                                <div class="grafic-fa-item flex aic">
-                                                    <div class="grafic-bar-color" style="background: #FF7723"></div>
-                                                    <div class="grafic-bar">
-                                                        <span class="progres"
-                                                            style="width: 20%; background: #FF7723"><b>20%</b></span>
-                                                    </div>
-                                                </div>
-                                                <div class="grafic-fa-item flex aic">
-                                                    <div class="grafic-bar-color" style="background: #8E30FF"></div>
-                                                    <div class="grafic-bar">
-                                                        <span class="progres"
-                                                            style="width: 5%; background: #8E30FF"><b>5%</b></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="grafic-fa-num flex fz12">
-                                                <p>25%</p>
-                                                <p>50%</p>
-                                                <p>75%</p>
-                                                <p>100%</p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="v1" colspan="2">
-                                        Для физ. лиц
-                                    </td>
-                                    <td colspan="3">
-                                        <b>20%</b>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="v1" colspan="2">
-                                        Для государственных служащих
-                                    </td>
-                                    <td colspan="3">
-                                        <b>5%</b>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="v1" colspan="2">
-                                        Общее количество расходов
-                                    </td>
-                                    <td colspan="3">
-                                        <b>100 000 €</b>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="set-blue fz16 fz14m p-20 round-12">
-                            <p><b>Подробности о проблемах и возможностях</b></p>
-                            <p>Рынок России на середину 2022 года насчитывает почти 5000 рекламных агентств и более 100
-                                000 специалистов по рекламе.</p>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Container 715width -->
-                <div class="mw-715  pb-40">
-                    <!-- Block 1 -->
-                    <div class="step__block">
-                        <div class="step__title fz18 fw500 ff-roboto">Распределение инвестиций</div>
-
-                        <div class="block__repetitive clone-container mt-20" data-id="1" data-max="3">
-                            <div class="block__title mb-15 fz16 fw500 ff-roboto">Статья расходов <span
-                                    class="current">1</span></div>
-                            <div class="step__row step__2_columns">
-                                <div class="step_col">
-                                    <label for="name" class="fs_label">
-                                        Статья расходов <sup>*</sup>
-                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                        <div class="mt-10 flex aic gap-8 posr">
-                                            <input type="text" id="curr" class="fs_input minw-no"
-                                                placeholder="Статья доходов">
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="step_col">
-                                    <label for="name" class="fs_label">
-                                        Процент от суммы <sup>*</sup>
-                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                        <div class="row__input mt-10 flex aic gap-35 posr ">
-                                            <div class="row__input_items w-full percent__icon">
-                                                <input type="text" id="ms-benefit-1" data-item="1" data-max="6"
-                                                    data-min="3" class="fs_input" placeholder="Описание состояния">
-                                            </div>
-                                            <div class="add_row__wrap">
-                                                <a href="#" class="add_block clone_button">
-                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                            d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
-                                                            fill="#4272C5"></path>
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </label>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="step__row step__2_columns mt-30">
-                            <div class="step_col">
-                                <label for="name" class="fs_label">
-                                    Общее количество расходов * <sup>*</sup>
-                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <div class="mt-10 flex aic gap-8 posr dollar__icon">
-                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="step_col"></div>
-                        </div>
-                        <div class="step__row mt-40">
-                            <div class="fs_label">Подробности о проблемах и возможностях <sup>*</sup>
-                                <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                            </div>
-                            <div class="flex mt-10 gap-40">
-                                <textarea name="" id=""
-                                    placeholder="Подробности о проблемах и возможностях"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
 </section>

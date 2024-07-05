@@ -97,6 +97,29 @@ $(".add_row").click(function (e) {
   }
 });
 
+
+
+$(document).on('click', '.clone_button',function (e) {
+  e.preventDefault();
+  const container = $(this).closest('.clone-container');
+  const maxClones = parseInt(container.data('max')) || 0;  
+  const curContainer = parseInt(container.data('id')) || 0;  
+  
+  
+  if (curContainer < maxClones) {
+    const newClone = container.clone();
+    newClone.find('input').val(''); 
+    newClone.attr('data-id', curContainer + 1);
+    newClone.find('.current').text(curContainer + 1);  
+    $(this).remove();  
+    if(curContainer == maxClones-1){
+      newClone.find('.clone_button').remove(); 
+    }
+    container.after(newClone);    
+  }   
+});
+
+
 $("select.countryselect-investor-page").multiselect({
   columns: 4,
   placeholder: "Выберите страну",
@@ -188,6 +211,94 @@ $("select[multiple].local_industry").multiselect({
   },
   selectAll: false,
 });
+$("select[multiple].client_status-select").multiselect({
+  columns: 3,
+  placeholder: "Семейный статус клиентов",
+  icon: "",
+  search: true,
+  openList: true,
+  listType: "checkbox",
+  categoryInput: "client_status-placeholder",
+  maxPlaceholderOpts: 3,
+  searchOptions: {
+    default: "Введите категорию для поиска",
+  },
+  selectAll: false,
+});
+$("select[multiple].family_status-select").multiselect({
+  columns: 2,
+  placeholder: "Социальные статусы клиентов",
+  icon: "",
+  search: true,
+  openList: true,
+  listType: "checkbox",
+  categoryInput: "family_status-placeholder",
+  maxPlaceholderOpts: 4,
+  searchOptions: {
+    default: "Введите категорию для поиска",
+  },
+  selectAll: false,
+});
+$("select[multiple].adv_source-select").multiselect({
+  columns: 3,
+  placeholder: "Социальные статусы клиентов",
+  icon: "",
+  search: true,
+  openList: true,
+  listType: "checkbox",
+  categoryInput: "adv_source-placeholder",
+  maxPlaceholderOpts: 3,
+  searchOptions: {
+    default: "Введите категорию для поиска",
+  },
+  selectAll: false,
+});
+$("select[multiple].company_size-select").multiselect({
+  columns: 3,
+  placeholder: "Социальные статусы клиентов",
+  icon: "",
+  search: true,
+  openList: true,
+  listType: "checkbox",
+  categoryInput: "company_size-placeholder",
+  maxPlaceholderOpts: 3,
+  searchOptions: {
+    default: "Введите категорию для поиска",
+  },
+  selectAll: false,
+});
+
+$("select[multiple].segment_client-select").multiselect({
+  columns: 2,
+  placeholder: "Социальные статусы клиентов",
+  icon: "",
+  search: true,
+  openList: true,
+  listType: "checkbox",
+  categoryInput: "segment_client-placeholder",
+  maxPlaceholderOpts: 4,
+  searchOptions: {
+    default: "Введите категорию для поиска",
+  },
+  selectAll: false,
+});
+
+$("select[multiple].adv_source_b2b-select").multiselect({
+  columns: 4,
+  placeholder: "Социальные статусы клиентов",
+  icon: "",
+  search: true,
+  openList: true,
+  listType: "checkbox",
+  categoryInput: "adv_source_b2b-placeholder",
+  maxPlaceholderOpts: 4,
+  searchOptions: {
+    default: "Введите категорию для поиска",
+  },
+  selectAll: false,
+});
+
+
 
 $(".forma_slider").slick({
   slidesToShow: 1,
@@ -346,14 +457,14 @@ $(".tab-200-nav").delegate("li:not(.current)", "click", function () {
 //   },
 // });
 
-var handle = $("#custom-handle");
-$("#slider").slider({
+var handle = $(".slider_percent__handle");
+$(".slider_percent__progress").slider({
   range: "min",
   value: 37,
   min: 1,
   max: 100,
   create: function () {
-    handle.text($(this).slider("value"));
+    handle.html('<div class="slider_value">' + $(this).slider("value") + ' %</div>');
   },
   slide: function (event, ui) {
     handle.html('<div class="slider_value">' + ui.value + ' %</div>');
