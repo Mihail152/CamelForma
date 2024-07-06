@@ -99,24 +99,69 @@ $(".add_row").click(function (e) {
 
 
 
-$(document).on('click', '.clone_button',function (e) {
+$(document).on('click', '.clone_button', function (e) {
   e.preventDefault();
   const container = $(this).closest('.clone-container');
-  const maxClones = parseInt(container.data('max')) || 0;  
-  const curContainer = parseInt(container.data('id')) || 0;  
-  
-  
+  const maxClones = parseInt(container.data('max')) || 0;
+  const curContainer = parseInt(container.data('id')) || 0;
+
+
   if (curContainer < maxClones) {
     const newClone = container.clone();
-    newClone.find('input').val(''); 
+    newClone.find('input').val('');
     newClone.attr('data-id', curContainer + 1);
-    newClone.find('.current').text(curContainer + 1);  
-    $(this).remove();  
-    if(curContainer == maxClones-1){
-      newClone.find('.clone_button').remove(); 
+    newClone.find('.current').text(curContainer + 1);
+
+    newClone.find('input[type="radio"]').each(function () {
+      const newName = $(this).attr('name') + '_' + curContainer;
+      $(this).attr('name', newName);
+      const id = $(this).attr('id') + '_' + curContainer;
+      $(this).attr('id', id);
+
+      $(this).siblings('label').attr('for', id);
+    });
+
+    newClone.find('.ms-options-wrap').remove();
+    newClone.find('.cloneselect ').removeClass('jqmsLoaded ms-list-2');
+
+    $(this).remove();
+    if (curContainer == maxClones - 1) {
+      newClone.find('.clone_button').remove();
     }
-    container.after(newClone);    
-  }   
+    container.after(newClone);
+  }
+  $("select.cloneselect").multiselect({
+    columns: 1,
+    placeholder: '',
+    icon: "",
+    search: false,
+    openList: false,
+    listType: "radio",
+    minHeight: "150",
+    maxPlaceholderOpts: 2,
+    searchOptions: {
+      default: "Введите страну для поиска",
+    },
+    selectAll: false,
+  });
+
+});
+$('select.cloneselect').each(function (index) {
+  const selectElement = $(this);
+  selectElement.multiselect({
+    columns: 1,
+    placeholder: $(this).attr('data-placeholder'),
+    icon: "",
+    search: false,
+    openList: false,
+    listType: "radio",
+    minHeight: "150",
+    maxPlaceholderOpts: 2,
+    searchOptions: {
+      default: "Введите страну для поиска",
+    },
+    selectAll: false,
+  });
 });
 
 
@@ -181,6 +226,7 @@ $("select.sprosselect").multiselect({
   },
   selectAll: false,
 });
+
 
 $("select[multiple].choise-industry").multiselect({
   columns: 3,
@@ -300,6 +346,8 @@ $("select[multiple].adv_source_b2b-select").multiselect({
 
 
 
+
+
 $(".forma_slider").slick({
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -347,78 +395,7 @@ $(".forma_slider-nav").slick({
   ],
 });
 
-if (document.getElementById("myChart") != null) {
-  const ctx = document.getElementById("myChart");
-  new Chart(ctx, {
-    type: "pie",
-    data: {
-      labels: [
-        "Средний оборот в месяц",
-        "Динамические расходы",
-        "Статические расходы",
-        "Ежемесячные расходы на недвижимость",
-        "Расходы на нематериальные активы",
-        "Ежемесячные непредвиденные расходы",
-      ],
-      datasets: [
-        {
-          label: "",
-          data: [30640, 50000, 50000, 7000, 7000, 6600],
-          backgroundColor: [
-            "#AFCD39",
-            "#FB951A",
-            "#377ED8", // Желтый
-            "#455B81", // Зеленый
-            "#B62D2D", // Фиолетовый
-            "#FB501A", // Оранжевый
-          ],
-          borderWidth: 1,
-        },
-      ],
-    },
-    options: {
-      plugins: {
-        datalabels: {
-          formatter: function (value, context) {
-            return context.chart.data.labels[context.dataIndex];
-          },
-        },
-        legend: {
-          display: false,
-        },
-      },
-    },
-  });
-}
-if (document.getElementById("myChart2") != null) {
-  const ctx2 = document.getElementById("myChart2");
-  new Chart(ctx2, {
-    type: "pie",
-    data: {
-      labels: ["Женщины:", "Мужчины:"],
-      datasets: [
-        {
-          label: "",
-          data: [75, 25],
-          backgroundColor: ["#377ED8", "#FB951A"],
-          borderWidth: 1,
-        },
-      ],
-    },
-    options: {
-      plugins: {
-        datalabels: {
-          formatter: function (value, context) {
-            return context.chart.data.labels[context.dataIndex];
-          },
-        },
-        legend: {
-          display: false,
-        },
-      },
-    },
-  });
-}
+
 $(".tab-100-nav").delegate("li:not(.current)", "click", function () {
   $(this)
     .addClass("current")

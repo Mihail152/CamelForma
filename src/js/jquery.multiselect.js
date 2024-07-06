@@ -45,7 +45,7 @@
 
         // plugin texts
         texts: {
-            placeholder    : 'Выберите город', // text to use in dummy input
+            placeholder    : '', // text to use in dummy input
             icon    : '', // text to use in dummy input
             categoryType    : false, // text to use in dummy input
             openList    : false, // text to use in dummy input
@@ -126,7 +126,12 @@
 
         /** BACKWARDS COMPATIBILITY **/
         if( 'placeholder' in this.options ) {
-            this.options.texts.placeholder = '<img src="' + this.options.icon + '" class="mr-8">' + this.options.placeholder;
+            if(this.options.icon){
+                this.options.texts.placeholder = '<span class="placeholder"><img src="' + this.options.icon + '" class="mr-8">' + this.options.placeholder + '</span>';
+            }else {
+                this.options.texts.placeholder = '<span class="placeholder">' + this.options.placeholder + '</span>';
+            }
+            
             delete this.options.placeholder;
         }
         
