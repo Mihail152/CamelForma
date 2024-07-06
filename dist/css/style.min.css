@@ -5334,6 +5334,17 @@ section {
   gap: 100px;
 }
 
+.grid {
+  display: grid;
+}
+.grid.grid-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.gap-20-40 {
+  gap: 20px 40px;
+}
+
 .dollar_icon {
   right: 18px;
 }
@@ -5342,6 +5353,13 @@ section {
   background-color: #fcfdff;
   border: 1px solid #cedcf0;
   padding: 11px 10px;
+}
+
+.languages__link {
+  background-color: #fcfdff;
+  border: 1px solid #cedcf0;
+  padding: 15px 10px 15px 20px;
+  height: 50px;
 }
 
 .popup_startap.active {
@@ -6845,7 +6863,7 @@ select option::before {
 }
 
 .set-blue > * {
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
 .set-blue > :last-child {
@@ -6988,6 +7006,19 @@ select option::before {
   background-image: url(../img/Icon/m2.svg);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.month__icon {
+  position: relative;
+}
+.month__icon::after {
+  content: "мес";
+  width: 20px;
+  height: 12px;
+  display: block;
+  position: absolute;
+  top: 18px;
+  right: 25px;
 }
 
 .step_1__row.column-3 .fs_input {
@@ -7519,4 +7550,47 @@ html .ui-button.ui-state-disabled:active {
 .clone_button.right_top {
   right: 20px;
   top: 20px;
+}
+
+.aie {
+  align-items: end;
+}
+.aie .clone_button {
+  margin-bottom: 5px;
+}
+
+.row-092-right {
+  width: 492px;
+}
+
+.tab-100-nav li {
+  width: 50%;
+  border: 1px solid #f65a03;
+}
+
+.tab-100-nav .current {
+  background-color: #f65a03;
+  color: #fff;
+}
+
+.tab-100-nav li:first-child {
+  border-radius: 12px 0 0 12px;
+}
+
+.tab-100-nav li:last-child {
+  border-radius: 0 12px 12px 0;
+}
+
+.languages__link span {
+  font-size: 0;
+  margin-right: 5px;
+}
+.languages__link .placeholder {
+  font-size: 14px;
+}
+.languages__link .placeholder img {
+  display: none;
+}
+.languages__link .count {
+  font-size: 12px;
 }

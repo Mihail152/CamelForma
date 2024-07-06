@@ -1,4 +1,3 @@
-// const { log } = require("gulp-util");
 
 $(document).on("click", ".js_open_popup_startap", function (e) {
   e.preventDefault();
@@ -8,9 +7,7 @@ $(document).on("click", ".js_open_popup_startap", function (e) {
   $(".popup_startap-bg").addClass("active");
   $("body").addClass("oh");
 });
-$(
-  ".popup_startap-close, .popup_startap-bg, .btn-reset-apple, .popup_startap,.btn-reset-apple-country"
-).click(function (e) {
+$(document).on('click', ".popup_startap-close, .popup_startap-bg, .btn-reset-apple, .popup_startap,.btn-reset-apple-country", function (e) {
   if (e.target !== this && !$(this).hasClass("popup_startap-close")) return;
   // var div = $(".popup_startap-wrap");
   // if (!div.is(e.target) // если клик был не по нашему блоку
@@ -121,8 +118,48 @@ $(document).on('click', '.clone_button', function (e) {
       $(this).siblings('label').attr('for', id);
     });
 
+
+    if (newClone.find('.languages__link')) {
+
+      const href = newClone.find('.languages__link').attr('href');      
+      const container_popup = $(href);
+      const newContainer_popup = container_popup.clone(); 
+      const newHref = href.replace('#', '') + "_" + curContainer;
+
+
+      const placeholder = newClone.find('.languages__link').attr('id');      
+      const newPlaceholder = placeholder + "_" + curContainer;
+      
+      newClone.find('.languages__link').attr('id', newPlaceholder)
+
+      newContainer_popup.attr('id', newHref);
+      container_popup.after(newContainer_popup);
+
+      const languages__link_href = newClone.find('.languages__link').attr('href') + '_' + curContainer;
+      newClone.find('.languages__link').attr('href', languages__link_href);
+
+      newContainer_popup.find('.ms-options-wrap').remove();
+      newContainer_popup.find('.languageselect').removeClass('active jqmsLoaded [class*="ms-list-"]');
+      $("select.languageselect").multiselect({
+        columns: 4,
+        placeholder: "Выберите языки",
+        icon: "./img/Icon/choise_country.svg",
+        search: true,
+        openList: true,
+        listType: "checkbox",
+        btncalssreset: ".btn-reset",
+        categoryInput: newPlaceholder,
+        maxPlaceholderOpts: 4,
+        searchOptions: {
+          default: "Введите страну для поиска",
+        },
+        selectAll: false,
+      });
+
+    }
+
     newClone.find('.ms-options-wrap').remove();
-    newClone.find('.cloneselect ').removeClass('jqmsLoaded ms-list-2');
+    newClone.find('.cloneselect').removeClass('jqmsLoaded [class*="ms-list-"]');
 
     $(this).remove();
     if (curContainer == maxClones - 1) {
@@ -130,6 +167,7 @@ $(document).on('click', '.clone_button', function (e) {
     }
     container.after(newClone);
   }
+  
   $("select.cloneselect").multiselect({
     columns: 1,
     placeholder: '',
@@ -144,6 +182,10 @@ $(document).on('click', '.clone_button', function (e) {
     },
     selectAll: false,
   });
+
+  
+
+
 
 });
 $('select.cloneselect').each(function (index) {
@@ -163,6 +205,22 @@ $('select.cloneselect').each(function (index) {
     selectAll: false,
   });
 });
+$("select.languageselect").multiselect({
+  columns: 4,
+  placeholder: "Выберите языки",
+  icon: "./img/Icon/choise_country.svg",
+  search: true,
+  openList: true,
+  listType: "checkbox",
+  btncalssreset: ".btn-reset",
+  categoryInput: "choise-language-placeholder",
+  maxPlaceholderOpts: 4,
+  searchOptions: {
+    default: "Введите страну для поиска",
+  },
+  selectAll: false,
+});
+
 
 
 $("select.countryselect-investor-page").multiselect({
@@ -180,6 +238,10 @@ $("select.countryselect-investor-page").multiselect({
   },
   selectAll: false,
 });
+
+
+
+
 $("select.cityselect-investor-page").multiselect({
   columns: 1,
   placeholder: "Выберите страну",
