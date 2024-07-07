@@ -95,6 +95,25 @@ $(".add_row").click(function (e) {
 });
 
 
+if ($('#datepicker').length) {
+  $("#datepicker").datepicker({
+    dateFormat: "dd/mm/yy"
+  });
+  // Получение текущей даты
+  var today = new Date();
+  var day = String(today.getDate()).padStart(2, '0');
+  var month = String(today.getMonth() + 1).padStart(2, '0'); // Январь = 0
+  var year = today.getFullYear();
+
+  var currentDate = day + '/' + month + '/' + year;
+
+  // Установка placeholder
+  $("#datepicker").attr("placeholder", currentDate);
+}
+
+
+
+
 
 $(document).on('click', '.clone_button', function (e) {
   e.preventDefault();
@@ -119,25 +138,19 @@ $(document).on('click', '.clone_button', function (e) {
     });
 
 
-    if (newClone.find('.languages__link')) {
 
-      const href = newClone.find('.languages__link').attr('href');      
+    if (newClone.find('.languages__link').length) {
+      const href = newClone.find('.languages__link').attr('href');
       const container_popup = $(href);
-      const newContainer_popup = container_popup.clone(); 
+      const newContainer_popup = container_popup.clone();
       const newHref = href.replace('#', '') + "_" + curContainer;
-
-
-      const placeholder = newClone.find('.languages__link').attr('id');      
+      const placeholder = newClone.find('.languages__link').attr('id');
       const newPlaceholder = placeholder + "_" + curContainer;
-      
       newClone.find('.languages__link').attr('id', newPlaceholder)
-
       newContainer_popup.attr('id', newHref);
       container_popup.after(newContainer_popup);
-
       const languages__link_href = newClone.find('.languages__link').attr('href') + '_' + curContainer;
       newClone.find('.languages__link').attr('href', languages__link_href);
-
       newContainer_popup.find('.ms-options-wrap').remove();
       newContainer_popup.find('.languageselect').removeClass('active jqmsLoaded [class*="ms-list-"]');
       $("select.languageselect").multiselect({
@@ -155,19 +168,86 @@ $(document).on('click', '.clone_button', function (e) {
         },
         selectAll: false,
       });
+    }
+    if (newClone.find('.your-country').length) {
+      newClone.find('.your-country').each(function(index){
+        const href = $(this).attr('href');
+        const container_popup = $(href);
+        const newHref = href.replace('#', '') + "_" + curContainer;
 
+        
+        // $(this).find('#location-country').attr('id', countryId);
+        // $(this).find('#location-city').attr('id', cityId);
+        
+        const newContainer_popup = container_popup.clone();
+        const placeholder = newContainer_popup.attr('id');        
+        const newPlaceholder = placeholder + "_" + curContainer;
+        $(this).attr('id', newPlaceholder)
+        newContainer_popup.attr('id', newHref);
+        container_popup.after(newContainer_popup);
+        $(this).attr('href', '#' + newHref);
+        newContainer_popup.find('.ms-options-wrap').remove();
+        newContainer_popup.find('select').removeClass('active jqmsLoaded [class*="ms-list-"]');     
+      })
+      
+      
+
+      
+      // $("select.languageselect").multiselect({
+      //   columns: 4,
+      //   placeholder: "Выберите языки",
+      //   icon: "./img/Icon/choise_country.svg",
+      //   search: true,
+      //   openList: true,
+      //   listType: "checkbox",
+      //   btncalssreset: ".btn-reset",
+      //   categoryInput: newPlaceholder,
+      //   maxPlaceholderOpts: 4,
+      //   searchOptions: {
+      //     default: "Введите страну для поиска",
+      //   },
+      //   selectAll: false,
+      // });
     }
 
     newClone.find('.ms-options-wrap').remove();
     newClone.find('.cloneselect').removeClass('jqmsLoaded [class*="ms-list-"]');
+
+
+
+
+
 
     $(this).remove();
     if (curContainer == maxClones - 1) {
       newClone.find('.clone_button').remove();
     }
     container.after(newClone);
+
+
+    if (newClone.find('.datepicker_calendar').length) {
+      newClone.find('.datepicker_calendar').removeClass('hasDatepicker');
+      var uniqueId = 'datepicker_' + curContainer;
+      newClone.find('.datepicker_calendar').attr('id', uniqueId);
+      $("#" + uniqueId).datepicker({
+        dateFormat: "dd/mm/yy"
+      });
+      // Получение текущей даты
+      var today = new Date();
+      var day = String(today.getDate()).padStart(2, '0');
+      var month = String(today.getMonth() + 1).padStart(2, '0'); // Январь = 0
+      var year = today.getFullYear();
+
+      var currentDate = day + '/' + month + '/' + year;
+
+      // Установка placeholder
+      $("#" + uniqueId).attr("placeholder", currentDate);
+    }
   }
-  
+
+
+
+
   $("select.cloneselect").multiselect({
     columns: 1,
     placeholder: '',
@@ -183,7 +263,7 @@ $(document).on('click', '.clone_button', function (e) {
     selectAll: false,
   });
 
-  
+
 
 
 
@@ -223,6 +303,38 @@ $("select.languageselect").multiselect({
 
 
 
+$("select.location-countryselect").multiselect({
+  columns: 4,
+  placeholder: "Выберите страну",
+  icon: "./img/Icon/choise_country.svg",
+  search: true,
+  openList: true,
+  listType: "radio",
+  btncalssreset: ".btn-reset",
+  categoryInput: "location-country-placeholder",
+  maxPlaceholderOpts: 2,
+  searchOptions: {
+    default: "Введите страну для поиска",
+  },
+  selectAll: false,
+});
+$("select.location-cityselect").multiselect({
+  columns: 3,
+  placeholder: "Выберите город",
+  icon: "./img/Icon/choise_city.svg",
+  search: false,
+  openList: true,
+  listType: "radio",
+  btncalssreset: ".btn-reset",
+  categoryInput: "location-city-placeholder",
+  maxPlaceholderOpts: 2,
+  searchOptions: {
+    default: "Введите страну для поиска",
+  },
+  selectAll: false,
+});
+
+
 $("select.countryselect-investor-page").multiselect({
   columns: 4,
   placeholder: "Выберите страну",
@@ -238,10 +350,6 @@ $("select.countryselect-investor-page").multiselect({
   },
   selectAll: false,
 });
-
-
-
-
 $("select.cityselect-investor-page").multiselect({
   columns: 1,
   placeholder: "Выберите страну",

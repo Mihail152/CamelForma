@@ -7594,3 +7594,54 @@ html .ui-button.ui-state-disabled:active {
 .languages__link .count {
   font-size: 12px;
 }
+
+.datepicker_calendar {
+  padding-left: 45px;
+}
+
+.calendar_icon {
+  left: 15px;
+}
+
+.ui-datepicker-calendar .ui-datepicker-today a.ui-state-default {
+  font-weight: 700;
+  background: rgba(246, 90, 3, 0.831372549);
+  color: #fff;
+}
+
+.ui-datepicker-calendar a.ui-state-default {
+  background: none;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(238, 238, 238, 0.64);
+  border-radius: 5px;
+  margin: 0 auto;
+  font-size: 12px;
+}
+
+.ui-datepicker .ui-widget-header {
+  border: 1px solid #dddddd;
+  background: #e6edf7;
+  color: #333333;
+  font-weight: bold;
+}
+
+.ui-datepicker .ui-state-hover,
+.ui-datepicker .ui-widget-content .ui-state-hover,
+.ui-datepicker .ui-widget-header .ui-state-hover,
+.ui-datepicker .ui-state-focus,
+.ui-datepicker .ui-widget-content .ui-state-focus,
+.ui-datepicker .ui-widget-header .ui-state-focus,
+.ui-datepicker .ui-button:hover,
+.ui-datepicker .ui-button:focus {
+  background: none;
+  border: none;
+}
+
+.ui-datepicker table,
+.ui-datepicker .ui-widget-header {
+  font-size: 14px;
+}

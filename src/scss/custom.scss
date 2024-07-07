@@ -537,12 +537,14 @@
   gap: 100px;
 }
 
-.grid{
+.grid {
   display: grid;
-  &.grid-5{
+
+  &.grid-5 {
     grid-template-columns: repeat(5, 1fr);
   }
-}  
+}
+
 .gap-20-40 {
   gap: 20px 40px;
 }
@@ -556,7 +558,8 @@
   border: 1px solid #cedcf0;
   padding: 11px 10px;
 }
-.languages__link{
+
+.languages__link {
   background-color: #fcfdff;
   border: 1px solid #cedcf0;
   padding: 15px 10px 15px 20px;
@@ -883,7 +886,8 @@ a.btn-back-step {
 .fw700 {
   font-weight: 700;
 }
-.bg-f7{
+
+.bg-f7 {
   background-color: #F7FBFF;
 }
 
@@ -898,6 +902,7 @@ a.btn-back-step {
   justify-content: center;
   // margin-bottom: 6px;
   cursor: pointer;
+
   &:hover {
     background-color: #4272c5;
 
@@ -2210,10 +2215,12 @@ select option::before {
   max-width: 715px;
   margin: 0 auto;
 }
-.w-100{
+
+.w-100 {
   width: 100% !important;
   max-width: 100% !important;
 }
+
 .mw-715 {
   .row__input {
     max-width: 340px;
@@ -2263,6 +2270,7 @@ select option::before {
     background-position: center;
   }
 }
+
 .m2__icon {
   position: relative;
 
@@ -2279,6 +2287,7 @@ select option::before {
     background-position: center;
   }
 }
+
 .month__icon {
   position: relative;
 
@@ -2681,8 +2690,9 @@ html .ui-button.ui-state-disabled:active {
   padding: 20px;
   position: relative;
 }
-.step_col{
-  .aft__input.absolute{
+
+.step_col {
+  .aft__input.absolute {
     right: -35px;
     top: 50%;
     margin-top: 5px;
@@ -2693,8 +2703,9 @@ html .ui-button.ui-state-disabled:active {
   top: 0;
   left: 0;
 }
+
 ::placeholder,
-.ms-options-wrap span.placeholder{
+.ms-options-wrap span.placeholder {
   font-family: Montserrat;
   font-size: 14px;
   font-weight: 400;
@@ -2702,7 +2713,8 @@ html .ui-button.ui-state-disabled:active {
   text-align: left;
   color: #ACB9CB;
 }
-.ms-options-wrap span.placeholder{  
+
+.ms-options-wrap span.placeholder {
   padding-left: 12px;
 }
 
@@ -2785,9 +2797,9 @@ html .ui-button.ui-state-disabled:active {
 .shema .hide {
   bottom: calc(100% + 60px);
   left: 0;
-  -webkit-transform: translate(-48px,0);
-  -ms-transform: translate(-48px,0);
-  transform: translate(-48px,0);
+  -webkit-transform: translate(-48px, 0);
+  -ms-transform: translate(-48px, 0);
+  transform: translate(-48px, 0);
   width: 232px;
   background-color: #212e44;
   font-weight: 400;
@@ -2851,51 +2863,113 @@ html .ui-button.ui-state-disabled:active {
   width: 100%;
   height: auto
 }
+
 @media (max-width: 767px) {
   .hide_767 {
-      display: none;
+    display: none;
   }
 }
-.clone_button.right_top{
+
+.clone_button.right_top {
   right: 20px;
   top: 20px;
 }
-.aie{
+
+.aie {
   align-items: end;
-  .clone_button{
+
+  .clone_button {
     margin-bottom: 5px;
   }
 }
+
 .row-092-right {
-    width: 492px;
+  width: 492px;
 }
 
 .tab-100-nav li {
   width: 50%;
   border: 1px solid #f65a03;
 }
+
 .tab-100-nav .current {
   background-color: #f65a03;
   color: #fff;
 }
+
 .tab-100-nav li:first-child {
   border-radius: 12px 0 0 12px;
 }
+
 .tab-100-nav li:last-child {
   border-radius: 0 12px 12px 0;
 }
-.languages__link{
-  span{
+
+.languages__link {
+  span {
     font-size: 0;
     margin-right: 5px;
   }
-  .placeholder{
-    img{
+
+  .placeholder {
+    img {
       display: none;
     }
+
     font-size: 14px;
   }
-  .count{
+
+  .count {
     font-size: 12px;
   }
+}
+
+.datepicker_calendar {
+  padding-left: 45px;
+}
+
+.calendar_icon {
+  left: 15px;
+}
+
+.ui-datepicker-calendar .ui-datepicker-today a.ui-state-default {
+  font-weight: 700;
+  background: #f65a03d4;
+  color: #fff;
+}
+
+.ui-datepicker-calendar a.ui-state-default {
+  background: none;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(238, 238, 238, 0.64);
+  border-radius: 5px;
+  margin: 0 auto;
+  font-size: 12px;
+}
+
+.ui-datepicker .ui-widget-header {
+  border: 1px solid #dddddd;
+  background: #e6edf7;
+  color: #333333;
+  font-weight: bold;
+}
+
+.ui-datepicker .ui-state-hover,
+.ui-datepicker .ui-widget-content .ui-state-hover,
+.ui-datepicker .ui-widget-header .ui-state-hover,
+.ui-datepicker .ui-state-focus,
+.ui-datepicker .ui-widget-content .ui-state-focus,
+.ui-datepicker .ui-widget-header .ui-state-focus,
+.ui-datepicker .ui-button:hover,
+.ui-datepicker .ui-button:focus {
+  background: none;
+  border: none;
+}
+.ui-datepicker table,
+.ui-datepicker .ui-widget-header{
+  font-size: 14px;
 }
