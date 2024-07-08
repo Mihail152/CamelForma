@@ -8,7 +8,7 @@ $(document).on("click", ".js_open_popup_startap", function (e) {
 });
 $(document).on(
   "click",
-  ".popup_startap-close, .popup_startap-bg, .btn-reset-apple, .popup_startap,.btn-reset-apple-country",
+  ".btn-apply, .popup_startap-close, .popup_startap-bg, .btn-reset-apple, .popup_startap,.btn-reset-apple-country",
   function (e) {
     if (e.target !== this && !$(this).hasClass("popup_startap-close")) return;
     // var div = $(".popup_startap-wrap");
@@ -121,17 +121,17 @@ $(document).on("click", ".clone_button", function (e) {
 
   if (curContainer < maxClones) {
     const newClone = container.clone();
-    newClone.find("input").val("");
-    // Сброс значений по умолчанию для чекбоксов и радиокнопок
-    newClone.find('input[type="checkbox"]').each(function () {
-      $(this).prop("checked", false);
-    });
-    newClone.find('input[type="radio"]').each(function () {
-      $(this).prop("checked", false);
-    });
-    newClone.attr("data-id", curContainer + 1);
-    newClone.find(".current").text(curContainer + 1);
 
+    // задаем id и name в input[type="text"] и сбрасываем значение
+    newClone.find('input[type="text"]').each(function () {
+      const newInput_name = $(this).attr('name') + "_" + curContainer;
+      $(this).attr('name', newInput_name);
+      const newInput_ID = $(this).attr('id') + "_" + curContainer;
+      $(this).attr('id', newInput_ID);
+      $(this).val("");
+    })
+
+    // 
     newClone.find('input[type="radio"]').each(function () {
       const newName = $(this).attr("name") + "_" + curContainer;
       $(this).attr("name", newName);
@@ -140,6 +140,78 @@ $(document).on("click", ".clone_button", function (e) {
 
       $(this).siblings("label").attr("for", id);
     });
+
+    // 
+    newClone.attr("data-id", curContainer + 1);
+    newClone.find(".current").text(curContainer + 1);
+
+    // Сбрасываем селект в popup
+    if (newClone.find(".js_open_popup_startap").length) {
+      newClone.find(".js_open_popup_startap").each(function () {
+        const href = $(this).attr("href");
+        const container_popup = $(href);
+        const newContainer_popup = container_popup.clone();
+
+        const newIdContainer = href.replace("#", "") + "_" + curContainer;
+        newContainer_popup.attr("id", newIdContainer);
+
+        const newHref = href + "_" + curContainer;
+        $(this).attr("href", newHref);
+
+        newContainer_popup.find(".ms-options-wrap").remove();
+        newContainer_popup
+          .find("select")
+          .removeClass('active jqmsLoaded [class*="ms-list-"]');
+
+        const placeholderText = $(this).siblings('.placeholder').attr('data-placeholder')
+        $(this).siblings('.placeholder').text(placeholderText)
+
+        const selectClass = newContainer_popup.find('select').attr('data-id');
+        const newSelectClass = selectClass + "_" + curContainer;
+
+        newContainer_popup.find("select").removeClass(selectClass).addClass(newSelectClass);
+
+        const placeholderId = $(this).siblings('.placeholder').attr('data-id');
+        const newPlaceholderId = placeholderId + "_" + curContainer;
+        $(this).siblings('.placeholder').attr('id', newPlaceholderId);
+
+        container_popup.after(newContainer_popup);
+        $('select.' + newSelectClass).multiselect({
+          columns: 1, // сюда через дата передать параметры
+          placeholder: placeholderText, // сюда через дата передать параметры
+          icon: "",
+          search: false,
+          openList: true, // сюда через дата передать параметры
+          onlyValue: true, // сюда через дата передать параметры
+          listType: "checkbox", // сюда через дата передать параметры
+          btncalssreset: ".btn-reset",
+          categoryInput: newPlaceholderId,
+          maxPlaceholderOpts: 3,
+          searchOptions: {
+            default: "Введите город для поиска",
+          },
+          selectAll: false,
+        });
+        // console.log(href)
+        // console.log(newIdContainer)
+        // console.log(container_popup)
+      })
+    }
+
+
+
+
+    // Сброс значений по умолчанию для чекбоксов и радиокнопок
+    // newClone.find('input[type="checkbox"]').each(function () {
+    //   $(this).prop("checked", false);
+    // });
+    // newClone.find('input[type="radio"]').each(function () {
+    //   $(this).prop("checked", false);
+    // });
+
+
+
+
 
     if (newClone.find(".languages__link").length) {
       const href = newClone.find(".languages__link").attr("href");
@@ -242,6 +314,9 @@ $(document).on("click", ".clone_button", function (e) {
     }
   }
 
+
+
+
   $("select.cloneselect").multiselect({
     columns: 1,
     placeholder: "",
@@ -257,6 +332,146 @@ $(document).on("click", ".clone_button", function (e) {
     selectAll: false,
   });
 });
+// 
+// 
+// 
+// 
+// end 
+
+
+
+
+// Сбросить значение input[type="radio"]
+$('.btn-reset').on('click', function () {
+  var parentDiv = $(this).closest('.popup_startap');
+
+  if (parentDiv.length) {
+    var selectElement = parentDiv.find('select');
+    if (selectElement.length) {
+      selectElement.val('');
+    }
+    var selectedLi = parentDiv.find('li.selected');
+    if (selectedLi.length) {
+      selectedLi.removeClass('selected');
+      selectedLi.find('input[type="radio"]').prop('checked', false);
+    }
+  }
+});
+// клик по крестику на выбранном элементе 
+$(document).on('click', '.remove__item', function () {
+  const popup_forma__link = $(this).closest('.popup_forma__link');
+  if (popup_forma__link.length) {
+    const get_href = popup_forma__link.find('.js_open_popup_startap').attr('href');
+    const get_id = $(this).closest('.item').attr('data-id');
+    const parentDiv = $(get_href);
+    console.log(get_id);
+    if (parentDiv.length) {
+      var selectElement = parentDiv.find('option[value="' + get_id + '"]');
+      if (selectElement.length) {
+        selectElement.prop('selected', false);
+      }
+      var selectedInput = parentDiv.find('li input[value="' + get_id + '"]');
+      if (selectedInput.length) {
+
+        selectedInput.closest('li').removeClass('selected');
+        selectedInput.prop('checked', false);
+      }
+    }
+  }
+  $(this).parent().remove();
+})
+
+// Валюта
+$("select.currency").multiselect({
+  columns: 3,
+  placeholder: "Выберите валюту",
+  icon: "./img/Icon/dollar--1.svg",
+  search: true,
+  openList: true,
+  onlyValue: true,
+  listType: "radio",
+  btncalssreset: ".btn-reset",
+  categoryInput: "currency__popup-placeholder",
+  maxPlaceholderOpts: 3,
+  searchOptions: {
+    default: "Введите валюту для поиска",
+  },
+  selectAll: false,
+});
+// Страна 
+$("select.country__popup").multiselect({
+  columns: 4,
+  placeholder: "Выберите страну",
+  icon: "./img/Icon/choise_country.svg",
+  search: true,
+  openList: true,
+  listType: "radio",
+  btncalssreset: ".btn-reset",
+  categoryInput: "country__popup-placeholder",
+  maxPlaceholderOpts: 2,
+  searchOptions: {
+    default: "Введите страну для поиска",
+  },
+  selectAll: false,
+});
+// Город
+$("select.city__popup").multiselect({
+  columns: 2,
+  placeholder: "Выберите страну",
+  icon: "./img/Icon/choise_city.svg",
+  search: false,
+  openList: true,
+  listType: "radio",
+  btncalssreset: ".btn-reset",
+  categoryInput: "city__popup-placeholder",
+  maxPlaceholderOpts: 2,
+  searchOptions: {
+    default: "Введите город для поиска",
+  },
+  selectAll: false,
+});
+// professional_skills
+$("select.professional_skills").multiselect({
+  columns: 1,
+  placeholder: "Выберите тип",
+  icon: "",
+  search: false,
+  openList: true,
+  onlyValue: true,
+  listType: "checkbox",
+  btncalssreset: ".btn-reset",
+  categoryInput: "professional_skills-placeholder",
+  maxPlaceholderOpts: 3,
+  searchOptions: {
+    default: "Введите город для поиска",
+  },
+  selectAll: false,
+});
+// key_skills
+$("select.key_skills").multiselect({
+  columns: 1,
+  placeholder: "Выберите тип",
+  icon: "",
+  search: false,
+  openList: true,
+  onlyValue: true,
+  listType: "checkbox",
+  btncalssreset: ".btn-reset",
+  categoryInput: "key_skills-placeholder",
+  maxPlaceholderOpts: 3,
+  searchOptions: {
+    default: "Введите город для поиска",
+  },
+  selectAll: false,
+});
+
+
+
+
+
+
+
+
 $("select.cloneselect").each(function (index) {
   const selectElement = $(this);
   selectElement.multiselect({
@@ -305,6 +520,7 @@ $("select.location-countryselect").multiselect({
   },
   selectAll: false,
 });
+
 $("select.location-cityselect").multiselect({
   columns: 3,
   placeholder: "Выберите город",
@@ -321,36 +537,7 @@ $("select.location-cityselect").multiselect({
   selectAll: false,
 });
 
-$("select.countryselect-investor-page").multiselect({
-  columns: 4,
-  placeholder: "Выберите страну",
-  icon: "./img/Icon/choise_country.svg",
-  search: true,
-  openList: true,
-  listType: "radio",
-  btncalssreset: ".btn-reset",
-  categoryInput: "choise-country-placeholder",
-  maxPlaceholderOpts: 2,
-  searchOptions: {
-    default: "Введите страну для поиска",
-  },
-  selectAll: false,
-});
-$("select.cityselect-investor-page").multiselect({
-  columns: 1,
-  placeholder: "Выберите страну",
-  icon: "./img/Icon/choise_city.svg",
-  search: false,
-  openList: true,
-  listType: "radio",
-  btncalssreset: ".btn-reset",
-  categoryInput: "choise-city-placeholder",
-  maxPlaceholderOpts: 2,
-  searchOptions: {
-    default: "Введите страну для поиска",
-  },
-  selectAll: false,
-});
+
 $("select.stageproject").multiselect({
   columns: 1,
   placeholder: "Стадия проекта",
