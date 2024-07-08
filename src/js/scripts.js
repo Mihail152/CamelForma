@@ -1,4 +1,3 @@
-
 $(document).on("click", ".js_open_popup_startap", function (e) {
   e.preventDefault();
   const id = $(this).attr("href");
@@ -7,16 +6,20 @@ $(document).on("click", ".js_open_popup_startap", function (e) {
   $(".popup_startap-bg").addClass("active");
   $("body").addClass("oh");
 });
-$(document).on('click', ".popup_startap-close, .popup_startap-bg, .btn-reset-apple, .popup_startap,.btn-reset-apple-country", function (e) {
-  if (e.target !== this && !$(this).hasClass("popup_startap-close")) return;
-  // var div = $(".popup_startap-wrap");
-  // if (!div.is(e.target) // если клик был не по нашему блоку
-  //   && div.has(e.target).length === 0) { // и не по его дочерним элементам
-  $(".popup_startap").removeClass("active");
-  $(".popup_startap-bg").removeClass("active");
-  $("body").removeClass("oh");
-  // }
-});
+$(document).on(
+  "click",
+  ".popup_startap-close, .popup_startap-bg, .btn-reset-apple, .popup_startap,.btn-reset-apple-country",
+  function (e) {
+    if (e.target !== this && !$(this).hasClass("popup_startap-close")) return;
+    // var div = $(".popup_startap-wrap");
+    // if (!div.is(e.target) // если клик был не по нашему блоку
+    //   && div.has(e.target).length === 0) { // и не по его дочерним элементам
+    $(".popup_startap").removeClass("active");
+    $(".popup_startap-bg").removeClass("active");
+    $("body").removeClass("oh");
+    // }
+  }
+);
 
 $(".forma_page_tab .triger").click(function () {
   $(this).toggleClass("active");
@@ -94,65 +97,68 @@ $(".add_row").click(function (e) {
   }
 });
 
-
-if ($('#datepicker').length) {
+if ($("#datepicker").length) {
   $("#datepicker").datepicker({
-    dateFormat: "dd/mm/yy"
+    dateFormat: "dd/mm/yy",
   });
   // Получение текущей даты
   var today = new Date();
-  var day = String(today.getDate()).padStart(2, '0');
-  var month = String(today.getMonth() + 1).padStart(2, '0'); // Январь = 0
+  var day = String(today.getDate()).padStart(2, "0");
+  var month = String(today.getMonth() + 1).padStart(2, "0"); // Январь = 0
   var year = today.getFullYear();
 
-  var currentDate = day + '/' + month + '/' + year;
+  var currentDate = day + "/" + month + "/" + year;
 
   // Установка placeholder
   $("#datepicker").attr("placeholder", currentDate);
 }
 
-
-
-
-
-$(document).on('click', '.clone_button', function (e) {
+$(document).on("click", ".clone_button", function (e) {
   e.preventDefault();
-  const container = $(this).closest('.clone-container');
-  const maxClones = parseInt(container.data('max')) || 0;
-  const curContainer = parseInt(container.data('id')) || 0;
-
+  const container = $(this).closest(".clone-container");
+  const maxClones = parseInt(container.data("max")) || 0;
+  const curContainer = parseInt(container.data("id")) || 0;
 
   if (curContainer < maxClones) {
     const newClone = container.clone();
-    newClone.find('input').val('');
-    newClone.attr('data-id', curContainer + 1);
-    newClone.find('.current').text(curContainer + 1);
+    newClone.find("input").val("");
+    // Сброс значений по умолчанию для чекбоксов и радиокнопок
+    // newClone.find('input[type="checkbox"]').each(function () {
+    //   $(this).prop("checked", false);
+    // });
+    // newClone.find('input[type="radio"]').each(function () {
+    //   $(this).prop("checked", false);
+    // });
+    
+    newClone.attr("data-id", curContainer + 1);
+    newClone.find(".current").text(curContainer + 1);
 
     newClone.find('input[type="radio"]').each(function () {
-      const newName = $(this).attr('name') + '_' + curContainer;
-      $(this).attr('name', newName);
-      const id = $(this).attr('id') + '_' + curContainer;
-      $(this).attr('id', id);
+      const newName = $(this).attr("name") + "_" + curContainer;
+      $(this).attr("name", newName);
+      const id = $(this).attr("id") + "_" + curContainer;
+      $(this).attr("id", id);
 
-      $(this).siblings('label').attr('for', id);
+      $(this).siblings("label").attr("for", id);
     });
 
-
-
-    if (newClone.find('.languages__link').length) {
-      const href = newClone.find('.languages__link').attr('href');
+    if (newClone.find(".languages__link").length) {
+      const href = newClone.find(".languages__link").attr("href");
       const container_popup = $(href);
       const newContainer_popup = container_popup.clone();
-      const newHref = href.replace('#', '') + "_" + curContainer;
-      const placeholder = newClone.find('.languages__link').attr('id');
+      const newHref = href.replace("#", "") + "_" + curContainer;
+      const placeholder = newClone.find(".languages__link").attr("id");
       const newPlaceholder = placeholder + "_" + curContainer;
-      newClone.find('.languages__link').attr('id', newPlaceholder)
-      newContainer_popup.attr('id', newHref);
+      newClone.find(".languages__link").attr("id", newPlaceholder);
+      newContainer_popup.attr("id", newHref);
       container_popup.after(newContainer_popup);
-      const languages__link_href = newClone.find('.languages__link').attr('href') + '_' + curContainer;
-      newClone.find('.languages__link').attr('href', languages__link_href);
-      newContainer_popup.find('.ms-options-wrap').remove();
-      newContainer_popup.find('.languageselect').removeClass('active jqmsLoaded [class*="ms-list-"]');
+      const languages__link_href =
+        newClone.find(".languages__link").attr("href") + "_" + curContainer;
+      newClone.find(".languages__link").attr("href", languages__link_href);
+      newContainer_popup.find(".ms-options-wrap").remove();
+      newContainer_popup
+        .find(".languageselect")
+        .removeClass('active jqmsLoaded [class*="ms-list-"]');
       $("select.languageselect").multiselect({
         columns: 4,
         placeholder: "Выберите языки",
@@ -169,30 +175,28 @@ $(document).on('click', '.clone_button', function (e) {
         selectAll: false,
       });
     }
-    if (newClone.find('.your-country').length) {
-      newClone.find('.your-country').each(function(index){
-        const href = $(this).attr('href');
+    if (newClone.find(".your-country").length) {
+      newClone.find(".your-country").each(function (index) {
+        const href = $(this).attr("href");
         const container_popup = $(href);
-        const newHref = href.replace('#', '') + "_" + curContainer;
+        const newHref = href.replace("#", "") + "_" + curContainer;
 
-        
         // $(this).find('#location-country').attr('id', countryId);
         // $(this).find('#location-city').attr('id', cityId);
-        
-        const newContainer_popup = container_popup.clone();
-        const placeholder = newContainer_popup.attr('id');        
-        const newPlaceholder = placeholder + "_" + curContainer;
-        $(this).attr('id', newPlaceholder)
-        newContainer_popup.attr('id', newHref);
-        container_popup.after(newContainer_popup);
-        $(this).attr('href', '#' + newHref);
-        newContainer_popup.find('.ms-options-wrap').remove();
-        newContainer_popup.find('select').removeClass('active jqmsLoaded [class*="ms-list-"]');     
-      })
-      
-      
 
-      
+        const newContainer_popup = container_popup.clone();
+        const placeholder = newContainer_popup.attr("id");
+        const newPlaceholder = placeholder + "_" + curContainer;
+        $(this).attr("id", newPlaceholder);
+        newContainer_popup.attr("id", newHref);
+        container_popup.after(newContainer_popup);
+        $(this).attr("href", "#" + newHref);
+        newContainer_popup.find(".ms-options-wrap").remove();
+        newContainer_popup
+          .find("select")
+          .removeClass('active jqmsLoaded [class*="ms-list-"]');
+      });
+
       // $("select.languageselect").multiselect({
       //   columns: 4,
       //   placeholder: "Выберите языки",
@@ -210,47 +214,38 @@ $(document).on('click', '.clone_button', function (e) {
       // });
     }
 
-    newClone.find('.ms-options-wrap').remove();
-    newClone.find('.cloneselect').removeClass('jqmsLoaded [class*="ms-list-"]');
-
-
-
-
-
+    newClone.find(".ms-options-wrap").remove();
+    newClone.find(".cloneselect").removeClass('jqmsLoaded [class*="ms-list-"]');
 
     $(this).remove();
     if (curContainer == maxClones - 1) {
-      newClone.find('.clone_button').remove();
+      newClone.find(".clone_button").remove();
     }
     container.after(newClone);
 
-
-    if (newClone.find('.datepicker_calendar').length) {
-      newClone.find('.datepicker_calendar').removeClass('hasDatepicker');
-      var uniqueId = 'datepicker_' + curContainer;
-      newClone.find('.datepicker_calendar').attr('id', uniqueId);
+    if (newClone.find(".datepicker_calendar").length) {
+      newClone.find(".datepicker_calendar").removeClass("hasDatepicker");
+      var uniqueId = "datepicker_" + curContainer;
+      newClone.find(".datepicker_calendar").attr("id", uniqueId);
       $("#" + uniqueId).datepicker({
-        dateFormat: "dd/mm/yy"
+        dateFormat: "dd/mm/yy",
       });
       // Получение текущей даты
       var today = new Date();
-      var day = String(today.getDate()).padStart(2, '0');
-      var month = String(today.getMonth() + 1).padStart(2, '0'); // Январь = 0
+      var day = String(today.getDate()).padStart(2, "0");
+      var month = String(today.getMonth() + 1).padStart(2, "0"); // Январь = 0
       var year = today.getFullYear();
 
-      var currentDate = day + '/' + month + '/' + year;
+      var currentDate = day + "/" + month + "/" + year;
 
       // Установка placeholder
       $("#" + uniqueId).attr("placeholder", currentDate);
     }
   }
 
-
-
-
   $("select.cloneselect").multiselect({
     columns: 1,
-    placeholder: '',
+    placeholder: "",
     icon: "",
     search: false,
     openList: false,
@@ -262,17 +257,12 @@ $(document).on('click', '.clone_button', function (e) {
     },
     selectAll: false,
   });
-
-
-
-
-
 });
-$('select.cloneselect').each(function (index) {
+$("select.cloneselect").each(function (index) {
   const selectElement = $(this);
   selectElement.multiselect({
     columns: 1,
-    placeholder: $(this).attr('data-placeholder'),
+    placeholder: $(this).attr("data-placeholder"),
     icon: "",
     search: false,
     openList: false,
@@ -300,8 +290,6 @@ $("select.languageselect").multiselect({
   },
   selectAll: false,
 });
-
-
 
 $("select.location-countryselect").multiselect({
   columns: 4,
@@ -333,7 +321,6 @@ $("select.location-cityselect").multiselect({
   },
   selectAll: false,
 });
-
 
 $("select.countryselect-investor-page").multiselect({
   columns: 4,
@@ -396,7 +383,6 @@ $("select.sprosselect").multiselect({
   },
   selectAll: false,
 });
-
 
 $("select[multiple].choise-industry").multiselect({
   columns: 3,
@@ -514,10 +500,6 @@ $("select[multiple].adv_source_b2b-select").multiselect({
   selectAll: false,
 });
 
-
-
-
-
 $(".forma_slider").slick({
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -565,7 +547,6 @@ $(".forma_slider-nav").slick({
   ],
 });
 
-
 $(".tab-100-nav").delegate("li:not(.current)", "click", function () {
   $(this)
     .addClass("current")
@@ -611,10 +592,12 @@ $(".slider_percent__progress").slider({
   min: 1,
   max: 100,
   create: function () {
-    handle.html('<div class="slider_value">' + $(this).slider("value") + ' %</div>');
+    handle.html(
+      '<div class="slider_value">' + $(this).slider("value") + " %</div>"
+    );
   },
   slide: function (event, ui) {
-    handle.html('<div class="slider_value">' + ui.value + ' %</div>');
+    handle.html('<div class="slider_value">' + ui.value + " %</div>");
   },
 });
 // $("#amount").val("$" + $("#slider-range-min").slider("value"));
