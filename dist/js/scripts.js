@@ -1,3 +1,4 @@
+
 $(document).on("click", ".js_open_popup_startap", function (e) {
   e.preventDefault();
   const id = $(this).attr("href");
@@ -65,6 +66,7 @@ if ($("#file_input").length) {
     action: {
       name: "image",
       params: {
+        maxFiles: 5,
         preview: true,
       },
     },
@@ -175,15 +177,20 @@ $(document).on("click", ".clone_button", function (e) {
         const newPlaceholderId = placeholderId + "_" + curContainer;
         $(this).siblings('.placeholder').attr('id', newPlaceholderId);
 
+        const data_search = $(this).attr('data-search') || false;
+        const data_openlist = $(this).attr('data-openlist') || false;
+        const data_onlyvalue = $(this).attr('data-onlyvalue') || false;
+        const data_listtype = $(this).attr('data-listtype') || false;
+
         container_popup.after(newContainer_popup);
         $('select.' + newSelectClass).multiselect({
           columns: 1, // сюда через дата передать параметры
           placeholder: placeholderText, // сюда через дата передать параметры
           icon: "",
-          search: false,
-          openList: true, // сюда через дата передать параметры
-          onlyValue: true, // сюда через дата передать параметры
-          listType: "checkbox", // сюда через дата передать параметры
+          search: data_search,
+          openList: data_openlist, // сюда через дата передать параметры
+          onlyValue: data_onlyvalue, // сюда через дата передать параметры
+          listType: data_listtype, // сюда через дата передать параметры
           btncalssreset: ".btn-reset",
           categoryInput: newPlaceholderId,
           maxPlaceholderOpts: 3,
@@ -381,89 +388,147 @@ $(document).on('click', '.remove__item', function () {
   $(this).parent().remove();
 })
 
+
+$('.multiselect').each(function (index) {
+  const selectElement = $(this);
+  // const onlyvalue = $(this).attr('data-onlyvalue') || false;
+  selectElement.multiselect({
+    columns: 1,
+    placeholder: $(this).attr("data-placeholder"),
+    icon: "",
+    search: false,
+    openList: false,
+    listType: "radio",
+    minHeight: "150",
+    // onlyValue: onlyvalue,
+    maxPlaceholderOpts: 2,
+    searchOptions: {
+      default: "Введите страну для поиска",
+    },
+    selectAll: false,
+  });
+});
+
+$('.js_open_popup_startap').each(function () {
+  const this_id = $(this).attr('href').replace('#', '');
+
+  const columns = $(this).attr('data-columns') || 1;
+  const placeholder = $(this).attr('data-placeholder') || $(this).siblings('.placeholder').attr('data-placeholder') || "default";
+  const icon = $(this).attr('data-Icon') || false;
+  const search = $(this).attr('data-search') || false;
+  const openList = $(this).attr('data-openlist') || false;
+  const listType = $(this).attr('data-listtype') || false;
+  const onlyvalue = $(this).attr('data-onlyvalue') || false;
+  const categoryInput = $(this).siblings('.placeholder').attr('id') || false;
+  const maxPlaceholderOpts = $(this).attr('data-maxPlaceholder') || 1;
+  const defaultText = $(this).attr('data-defaultText');
+
+  let icon_path = false;
+  if (icon) {
+    icon_path = "./img/Icon/" + icon;
+  }
+
+  $("select." + this_id).multiselect({
+    columns: columns,
+    placeholder: placeholder,
+    icon: icon_path,
+    search: search,
+    openList: openList,
+    listType: listType,
+    btncalssreset: ".btn-reset",
+    onlyValue: onlyvalue,
+    categoryInput: categoryInput,
+    maxPlaceholderOpts: maxPlaceholderOpts,
+    searchOptions: {
+      default: defaultText,
+    },
+    selectAll: false,
+  });
+})
+
 // Валюта
-$("select.currency").multiselect({
-  columns: 3,
-  placeholder: "Выберите валюту",
-  icon: "./img/Icon/dollar--1.svg",
-  search: true,
-  openList: true,
-  onlyValue: true,
-  listType: "radio",
-  btncalssreset: ".btn-reset",
-  categoryInput: "currency__popup-placeholder",
-  maxPlaceholderOpts: 3,
-  searchOptions: {
-    default: "Введите валюту для поиска",
-  },
-  selectAll: false,
-});
+// $("select.currency").multiselect({
+//   columns: 3,
+//   placeholder: "Выберите валюту",
+//   icon: "./img/Icon/dollar--1.svg",
+//   search: true,
+//   openList: true,
+//   onlyValue: true,
+//   listType: "radio",
+//   btncalssreset: ".btn-reset",
+//   categoryInput: "currency__popup-placeholder",
+//   maxPlaceholderOpts: 3,
+//   searchOptions: {
+//     default: "Введите валюту для поиска",
+//   },
+//   selectAll: false,
+// });
 // Страна 
-$("select.country__popup").multiselect({
-  columns: 4,
-  placeholder: "Выберите страну",
-  icon: "./img/Icon/choise_country.svg",
-  search: true,
-  openList: true,
-  listType: "radio",
-  btncalssreset: ".btn-reset",
-  categoryInput: "country__popup-placeholder",
-  maxPlaceholderOpts: 2,
-  searchOptions: {
-    default: "Введите страну для поиска",
-  },
-  selectAll: false,
-});
+// $("select.country__popup").multiselect({
+//   columns: 4,
+//   placeholder: "Выберите страну",
+//   icon: "./img/Icon/choise_country.svg",
+//   search: true,
+//   openList: true,
+//   listType: "radio",
+//   btncalssreset: ".btn-reset",
+//   categoryInput: "country__popup-placeholder",
+//   maxPlaceholderOpts: 2,
+//   searchOptions: {
+//     default: "Введите страну для поиска",
+//   },
+//   selectAll: false,
+// });
 // Город
-$("select.city__popup").multiselect({
-  columns: 2,
-  placeholder: "Выберите страну",
-  icon: "./img/Icon/choise_city.svg",
-  search: false,
-  openList: true,
-  listType: "radio",
-  btncalssreset: ".btn-reset",
-  categoryInput: "city__popup-placeholder",
-  maxPlaceholderOpts: 2,
-  searchOptions: {
-    default: "Введите город для поиска",
-  },
-  selectAll: false,
-});
+// $("select.city__popup").multiselect({
+//   columns: 2,
+//   placeholder: "Выберите страну",
+//   icon: "./img/Icon/choise_city.svg",
+//   search: false,
+//   openList: true,
+//   listType: "radio",
+//   btncalssreset: ".btn-reset",
+//   categoryInput: "city__popup-placeholder",
+//   maxPlaceholderOpts: 2,
+//   searchOptions: {
+//     default: "Введите город для поиска",
+//   },
+//   selectAll: false,
+// });
 // professional_skills
-$("select.professional_skills").multiselect({
-  columns: 1,
-  placeholder: "Выберите тип",
-  icon: "",
-  search: false,
-  openList: true,
-  onlyValue: true,
-  listType: "checkbox",
-  btncalssreset: ".btn-reset",
-  categoryInput: "professional_skills-placeholder",
-  maxPlaceholderOpts: 3,
-  searchOptions: {
-    default: "Введите город для поиска",
-  },
-  selectAll: false,
-});
+// $("select.professional_skills").multiselect({
+//   columns: 1,
+//   placeholder: "Выберите тип",
+//   icon: "",
+//   search: false,
+//   openList: true,
+//   onlyValue: true,
+//   listType: "checkbox",
+//   btncalssreset: ".btn-reset",
+//   categoryInput: "professional_skills-placeholder",
+//   maxPlaceholderOpts: 3,
+//   searchOptions: {
+//     default: "Введите город для поиска",
+//   },
+//   selectAll: false,
+// });
 // key_skills
-$("select.key_skills").multiselect({
-  columns: 1,
-  placeholder: "Выберите тип",
-  icon: "",
-  search: false,
-  openList: true,
-  onlyValue: true,
-  listType: "checkbox",
-  btncalssreset: ".btn-reset",
-  categoryInput: "key_skills-placeholder",
-  maxPlaceholderOpts: 3,
-  searchOptions: {
-    default: "Введите город для поиска",
-  },
-  selectAll: false,
-});
+// $("select.key_skills").multiselect({
+//   columns: 1,
+//   placeholder: "Выберите тип",
+//   icon: "",
+//   search: false,
+//   openList: true,
+//   onlyValue: true,
+//   listType: "checkbox",
+//   btncalssreset: ".btn-reset",
+//   categoryInput: "key_skills-placeholder",
+//   maxPlaceholderOpts: 3,
+//   searchOptions: {
+//     default: "Введите город для поиска",
+//   },
+//   selectAll: false,
+// });
 
 
 

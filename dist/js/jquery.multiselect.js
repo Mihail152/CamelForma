@@ -1043,9 +1043,9 @@
             }
             // if copy is larger than button width use "# selected"
             else if (instance.options.replacePlaceholderText && ((placeholderTxt.width() > placeholder.width()) || (selOpts.length != selectVals.length))) {
-                placeholderTxt.html('<span>' + selOpts[0] + '</span>' + '<span>+' + --selectVals.length + '</span>' + instance.options.texts.selectedOptions);
+                placeholderTxt.html(selOpts[0] + '<span>+' + --selectVals.length + '</span>' + instance.options.texts.selectedOptions);
                 if (this.options.categoryInput) {
-                    $('#' + this.options.categoryInput).html('<span>' + selOpts[0] + '</span>' + '<span class="count">+' + --selectVals.length + '</span>' + instance.options.texts.selectedOptions);
+                    $('#' + this.options.categoryInput).html(selOpts[0] + '<span class="count">+' + --selectVals.length + '</span>' + instance.options.texts.selectedOptions);
                 }
             }
         },

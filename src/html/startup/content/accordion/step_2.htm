@@ -1,5 +1,6 @@
 <section class="forma_page_tab pb-20">
     <div class="last">
+        <!-- STEP 1 -->
         <div class="forma_page-item oh round-15 shadow bg-white mb-30" id="box-team">
             <div class="triger shadow pointer flex aic jcsb bg-blue-2 w-full active">
                 <div class="name flex aic fz218 fw600 color-333">
@@ -98,166 +99,160 @@
                 </div>
 
 
-                <div class="mw-765 mlr-a   pb-40">
-                    <div class="step_1__row">
-                        <div class="step_1__col">
-                            <div class="mt-40">
-                                <label for="name" class="fs_label">
-                                    Придумайте заголовок для страницы обяъвления <sup>*</sup> <img
-                                        src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <input type="text" id="name" class="fs_input mt-10" placeholder="Заголовок">
-                                </label>
-                            </div>
+                <div class="mw-765 mlr-a pb-40">
+                    <div class="step__row mt-40 mb-40">
+                        <div class="step_col">
+                            <label for="" class="fs_label">
+                                Придумайте заголовок для страницы обяъвления <sup>*</sup>
+                                <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                <input type="text" id="" class="fs_input mt-10 w-100" placeholder="Название компании">
+                            </label>
                         </div>
                     </div>
-                    <div class="step_1__row">
-                        <div class="step_1__col">
-                            <div class="mt-20">
-                                <label for="name" class="fs_label">
-                                    Напишите подзаголовок <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg"
-                                        alt="" class="pt-5">
-                                    <input type="text" id="name" class="fs_input mt-10" placeholder="Подзаголовок">
-                                </label>
-                            </div>
+                    <div class="step__row mb-40">
+                        <div class="step_col">
+                            <label for="" class="fs_label">
+                                Напишите подзаголовок <sup>*</sup>
+                                <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                <input type="text" id="" class="fs_input mt-10 w-100" placeholder="Подзаголовок">
+                            </label>
                         </div>
                     </div>
 
-                    <div class="step_1__row flex aic mb-40 gap-16">
-                        <div class="step_1__col">
-                            <div class="mt-40">
+                    <!-- Blcok 1 -->
+                    <div class="step__block">
+                        <div class="step__row step__2_columns">
+                            <div class="step_col">
                                 <label for="name" class="fs_label">
-                                    Валюта всех фин. показателей <sup>*</sup> <img
-                                        src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <input type="text" id="name" class="fs_input mt-10" placeholder="Подзаголовок">
-                                </label>
-                            </div>
-                        </div>
-                        <div class="step_1__col">
-                            <div class="mt-40">
-                                <label for="name" class="fs_label">
-                                    Необходимый бюджет <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg" alt=""
-                                        class="pt-5">
-                                    <div class="mt-10 flex aic gap-8 posr">
-                                        <span class="bef__input">От</span> <input type="text" id="curr" class="fs_input"
-                                            placeholder="0">
-                                        <img src="img/Icon/dollar.svg" alt="" class="absolute dollar_icon">
+                                    Валюта всех фин. показателей <sup>*</sup>
+                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                    <div class="mt-10 posr">
+                                        <!-- select -->
+                                        <select name="basic[]" multiple="multiple" class="multiselect"
+                                            data-placeholder="Выберите тип контента">
+                                            <option value="Dollar">Dollar ($)</option>
+                                            <option value="Рубль">Рубль (Р)</option>
+                                        </select>
+                                        <!-- #select -->
                                     </div>
-
+                                </label>
+                            </div>
+                            <div class="step_col">
+                                <label for="" class="fs_label mw-full">
+                                    Необходимый бюджет <sup>*</sup>
+                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                    <div class="mt-10 flex aic gap-8 posr dollar__icon">
+                                        <span class="bef">От</span>
+                                        <input type="text" id="" class="fs_input mw-full" placeholder="0">
+                                    </div>
                                 </label>
                             </div>
                         </div>
                     </div>
-
-                    <div class="step_1__row">
-                        <div class="step_1__col">
-                            <div class="mt-40">
-                                <div class="fz18 fw500 ff-roboto">Укажите сроки запуска или время работы компании</div>
+                    <!-- Block 2 -->
+                    <div class="step__block">
+                        <div class="fz18 fw500 ff-roboto">Укажите сроки запуска или время работы компании</div>
+                        <div class="step__row mb-20">
+                            <div class="step_col">
                                 <div class="flex mt-20 gap-40">
                                     <div class="block radio-def">
-                                        <input type="radio" name="distance" id="ms-opt-229" checked="">
-                                        <label for="ms-opt-229">
+                                        <input type="radio" name="group-1" id="radio-group-11" checked="">
+                                        <label for="radio-group-11">
                                             Сколько времени работает компания
                                         </label>
                                     </div>
                                     <div class="block radio-def">
-                                        <input type="radio" name="distance" id="ms-opt-230">
-                                        <label for="ms-opt-230">
+                                        <input type="radio" name="group-1" id="radio-group-12">
+                                        <label for="radio-group-12">
                                             Сроки запуска стартапа
                                         </label>
+
                                     </div>
-                                </div>
-                                <div class="flex mt-20 gap-40">
-                                    <label for="curr" class="fs_label flex aic gap-8 mt-10">
-                                        <input type="text" id="curr" class="fs_input" placeholder="0"> <span
-                                            class="after_input">Мес</span>
-                                    </label>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="flex gap-40">
+                            <label for="curr" class="fs_label flex aic gap-8 mt-10">
+                                <input type="text" id="curr" class="fs_input" placeholder="0"> <span
+                                    class="after_input">Мес</span>
+                            </label>
+                        </div>
                     </div>
-                    <div class="step_1__row">
-                        <div class="step_1__col">
-                            <div class="mt-40">
-                                <div class="fz18 fw500 ff-roboto">Укажите выручку или ожидаемую прибыль</div>
+                    <!-- Block 2 -->
+                    <div class="step__block">
+                        <div class="fz18 fw500 ff-roboto">Укажите выручку или ожидаемую прибыль</div>
+                        <div class="step__row mb-20">
+                            <div class="step_col">
                                 <div class="flex mt-20 gap-40">
                                     <div class="block radio-def">
-                                        <input type="radio" name="profit" id="ms-opt-231" checked="">
-                                        <label for="ms-opt-231">
+                                        <input type="radio" name="group-2" id="radio-group-21" checked="">
+                                        <label for="radio-group-21">
                                             Выручка в год
                                         </label>
                                     </div>
                                     <div class="block radio-def">
-                                        <input type="radio" name="profit" id="ms-opt-232">
-                                        <label for="ms-opt-232">
+                                        <input type="radio" name="group-2" id="radio-group-22">
+                                        <label for="radio-group-22">
                                             Ожидаемая прибыль в год
                                         </label>
                                     </div>
                                 </div>
-                                <div class="flex mt-20 gap-40">
-                                    <label for="curr" class="fs_label mt-10 flex aic gap-8 mt-10">
+                            </div>
+                        </div>
+                        <div class="step__row step__2_columns">
+                            <div class="step_col">
+                                <div class="mt-20">
+                                    <label for="curr" class="fs_label mt-10 flex aic gap-8 mt-10 dollar__icon">
                                         <span class="bef__input">От</span> <input type="text" id="curr" class="fs_input"
                                             placeholder="0">
                                     </label>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="step_1__row">
-                        <div class="step_1__col">
-                            <div class="mt-40">
-                                <label for="name" class="fs_label">
-                                    Окупаемость инвестиций <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg"
-                                        alt="" class="pt-5">
-                                    <label for="curr" class="flex aic gap-8 mt-10">
-                                        <span class="bef__input">От</span> <input type="text" id="curr" class="fs_input"
-                                            placeholder="0"> <span class="aft__input">Мес</span>
-                                    </label>
+                                <div class="mt-20">
+                                    <div class="fs_label">
+                                        Окупаемость инвестиций <sup>*</sup> <img
+                                            src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        <label for="curr" class="flex aic gap-8 mt-10 nowrap">
+                                            <span class="bef__input">От</span> <input type="text" id="curr"
+                                                class="fs_input" placeholder="0"> <span
+                                                class="aft__input flex gap-5 aic">Мес <img
+                                                    src="./img/Icon/ic_object_info_blue.svg" alt=""></span>
+                                        </label>
 
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="step_1__row">
-                        <div class="">
-                            <div class="mt-40">
-                                <div class="fz18 fw500 ff-roboto">Преимуществ для инвестора (не менее 5)</div>
-                                <div class="flex mt-20 gap-40">
-
-
-                                    <label for="ms-benefit-1" class="fs_label w-full">
-                                        Описание преимущества 1
-                                        <div class="row__input flex aie gap-20 mt-10">
-                                            <div class="row__input_items w-full">
-                                                <input type="text" id="ms-benefit-1" data-item="1" data-item='1'
-                                                    data-max='10' data-min='5' class="fs_input"
-                                                    placeholder="Описание преимущества">
-                                            </div>
-                                            <div class="add_row__wrap">
-                                                <a href="#" class="add_row">
-                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                            d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
-                                                            fill="#4272C5" />
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </label>
+                                    </div>
                                 </div>
-
                             </div>
+                            <div class="step_col"></div>
                         </div>
                     </div>
-
-
+                    <!-- Block 3 -->
+                    <div class="step__block">
+                        <!-- <div class="step__title fz18 fw500 ff-roboto">Преимуществ для инвестора (не менее 5)</div> -->
+                        <div class="block__repetitive mt-20">
+                            <div class="block__title fz16 fw500 ff-roboto">
+                                Преимуществ для инвестора (не менее 5)
+                            </div>
+                            <label for="" class="fs_label clone-container block mt-20" data-id="1" data-max="5">
+                                Описание преимущества <span class="current">1</span>
+                                <div class="row__input mt-10 flex aic gap-20 posr">
+                                    <div class="row__input_items w-full">
+                                        <input type="text" id="" class="fs_input">
+                                    </div>
+                                    <div class="clone_button">
+                                        <div class="add_block">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
+                                                    fill="#4272C5"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
                 </div>
-
-
-
-
-
-
             </div>
         </div>
         <!-- STEP 2 -->
@@ -295,68 +290,66 @@
                     </div>
                 </div>
                 <div class="mw-765 mlr-a   pb-40">
-                    <div class="step_1__row">
-                        <div class="step_1__col">
-                            <div class="mt-40">
-                                <label for="name" class="fs_label">
-                                    Напишите заголовок для 2-го блока страницы <sup>*</sup> <img
-                                        src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <input type="text" id="name" class="fs_input mt-10" placeholder="Заголовок">
-                                </label>
-                            </div>
+                    <!-- Block 1 -->
+                    <div class="step__row mb-40 mt-40">
+                        <div class="step_col">
+                            <label for="" class="fs_label">
+                                Напишите заголовок для 2-го блока страницы <sup>*</sup>
+                                <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                <input type="text" id="" class="fs_input mt-10 w-100" placeholder="Заголовок">
+                            </label>
                         </div>
                     </div>
-                    <div class="step_1__row">
-                        <div class="step_1__col">
-                            <div class="mt-40">
-                                <div class="fz18 fw500 ff-roboto">Что получает инвестор при работе со стартапом (не
-                                    более 6 )</div>
-                                <label for="ms-benefit-1" class="fs_label w-full">
-                                    Описание преимущества 1
-                                    <div class="row__input flex aie gap-20 mt-10">
-                                        <div class="row__input_items w-full">
-                                            <input type="text" id="ms-benefit-1" data-item='1' data-max='6'
-                                                class="fs_input" placeholder="Описание преимущества">
-                                        </div>
-                                        <div class="add_row__wrap">
-                                            <a href="#" class="add_row">
-                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                        d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
-                                                        fill="#4272C5" />
-                                                </svg>
-                                            </a>
+                    <!-- Block 2 -->
+                    <div class="step__block">
+                        <div class="block__repetitive mt-20">
+                            <div class="block__title fz16 fw500 ff-roboto">
+                                Что получает инвестор при работе со стартапом (не более 6 )
+                            </div>
+                            <label for="" class="fs_label clone-container block mt-20" data-id="1" data-max="6">
+                                Описание преимущества <span class="current">1</span>
+                                <div class="row__input mt-10 flex aic gap-20 posr">
+                                    <div class="row__input_items w-full">
+                                        <input type="text" id="" class="fs_input">
+                                    </div>
+                                    <div class="clone_button">
+                                        <div class="add_block">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
+                                                    fill="#4272C5"></path>
+                                            </svg>
                                         </div>
                                     </div>
-                                </label>
-                            </div>
+                                </div>
+                            </label>
                         </div>
                     </div>
-                    <div class="step_1__row">
-                        <div class="step_1__col">
-                            <div class="mt-40">
-                                <div class="fz18 fw500 ff-roboto">Факты о стартапе (не более 6)</div>
-                                <label for="ms-benefit-1" class="fs_label w-full">
-                                    Описание преимущества 1
-                                    <div class="row__input flex aie gap-20 mt-10">
-                                        <div class="row__input_items w-full">
-                                            <input type="text" id="ms-benefit-1" data-item='1' data-max='10'
-                                                data-min='6' class="fs_input" placeholder="Описание преимущества">
-                                        </div>
-                                        <div class="add_row__wrap">
-                                            <a href="#" class="add_row">
-                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                        d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
-                                                        fill="#4272C5" />
-                                                </svg>
-                                            </a>
+                    <!-- Block 3 -->
+                    <div class="step__block">
+                        <div class="block__repetitive mt-20">
+                            <div class="block__title fz16 fw500 ff-roboto">
+                                Факты о стартапе (не более 6)
+                            </div>
+                            <label for="" class="fs_label clone-container block mt-20" data-id="1" data-max="6">
+                                Описание фактов <span class="current">1</span>
+                                <div class="row__input mt-10 flex aic gap-20 posr">
+                                    <div class="row__input_items w-full">
+                                        <input type="text" id="" class="fs_input">
+                                    </div>
+                                    <div class="clone_button">
+                                        <div class="add_block">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
+                                                    fill="#4272C5"></path>
+                                            </svg>
                                         </div>
                                     </div>
-                                </label>
-                            </div>
+                                </div>
+                            </label>
                         </div>
                     </div>
                 </div>
@@ -380,18 +373,21 @@
                             <div class="forma_page_three-list posr fz14m">
                                 <div class="forma_page_three-item flex ais posr mb-20">
 
-                                    <div class="num fz20 fz18m bold white flex aic jcc bg-orang round-full fxs mr-15">1
+                                    <div class="num fz20 fz18m bold white flex aic jcc bg-orang round-full fxs mr-15">
+                                        1
                                     </div>
                                     <div class="info bg-white border round-12 shadow p-25 posr fxg z-3 wow fadeInUp"
                                         data-wow-delay="0.1s">
-                                        <h3 class="fz18 fw600 gray mb-10">Анализ ниши, конкурентов, спроса и цен</h3>
+                                        <h3 class="fz18 fw600 gray mb-10">Анализ ниши, конкурентов, спроса и цен
+                                        </h3>
                                         <p class="fz10">Прежде чем начать собирать документы и оформлять уставные
                                             документы, необходимо досконально изучить перспективы</p>
                                     </div>
                                 </div>
                                 <div class="forma_page_three-item flex ais posr mb-20">
 
-                                    <div class="num fz20 fz18m bold white flex aic jcc bg-orang round-full fxs mr-15">2
+                                    <div class="num fz20 fz18m bold white flex aic jcc bg-orang round-full fxs mr-15">
+                                        2
                                     </div>
                                     <div class="info bg-white border round-12 shadow p-25 posr fxg z-3 wow fadeInUp"
                                         data-wow-delay="0.1s">
@@ -402,24 +398,28 @@
                                 </div>
                                 <div class="forma_page_three-item flex ais posr mb-20">
 
-                                    <div class="num fz20 fz18m bold white flex aic jcc bg-orang round-full fxs mr-15">3
+                                    <div class="num fz20 fz18m bold white flex aic jcc bg-orang round-full fxs mr-15">
+                                        3
                                     </div>
                                     <div class="info bg-white border round-12 shadow p-25 posr fxg z-3 wow fadeInUp"
                                         data-wow-delay="0.1s">
                                         <h3 class="fz18 fw600 gray mb-10">Налоги, уставные документы, лицензии</h3>
-                                        <p class="fz10">Подберем самую лучшую систему налогообложения, подходящую для
+                                        <p class="fz10">Подберем самую лучшую систему налогообложения, подходящую
+                                            для
                                             вашего бизнеса, подготовим уставные документы, получим лицензии</p>
                                     </div>
                                 </div>
 
                                 <div class="forma_page_three-item flex ais posr mb-20">
 
-                                    <div class="num fz20 fz18m bold white flex aic jcc bg-orang round-full fxs mr-15">4
+                                    <div class="num fz20 fz18m bold white flex aic jcc bg-orang round-full fxs mr-15">
+                                        4
                                     </div>
                                     <div class="info bg-white border round-12 shadow p-25 posr fxg z-3 wow fadeInUp"
                                         data-wow-delay="0.1s">
                                         <h3 class="fz18 fw600 gray mb-10">Переезд в Польшу</h3>
-                                        <p class="fz10">Дополнительно можем помочь эмигрировать под ключ в Польшу вам,
+                                        <p class="fz10">Дополнительно можем помочь эмигрировать под ключ в Польшу
+                                            вам,
                                             вашей семье и коллегам/партнерам.</p>
                                     </div>
                                 </div>
@@ -428,56 +428,64 @@
                     </div>
                 </div>
                 <div class="mw-765 mlr-a   pb-40">
-                    <div class="step_1__row">
-                        <div class="step_1__col">
-                            <div class="mt-40">
-                                <label for="name" class="fs_label">
-                                    Напишите заголовок для 3-го блока страницы <sup>*</sup> <img
-                                        src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <input type="text" id="name" class="fs_input mt-10" placeholder="Заголовок">
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="step_1__row">
-                        <div class="step_1__col">
-                            <div class="mt-30">
-                                <div class="fz18 fw500 ff-roboto">Опишите как вы видите сотрудничнество <br> с
-                                    инвестором (от 2 до 4 этапов)</div>
-                                <label for="ms-benefit-1" class="fs_label w-full">
-                                    Напишите подзаголовок к 1 этапу <sup>*</sup>
-                                    <div class="row__input flex aie gap-20 mt-10">
-                                        <div class="row__input_items w-full">
-                                            <input type="text" id="ms-benefit-1" data-item='2' data-max='4'
-                                                class="fs_input" placeholder="Описание преимущества">
-                                        </div>
-                                        <div class="add_row__wrap">
-                                            <a href="#" class="add_row">
-                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                        d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
-                                                        fill="#4272C5" />
-                                                </svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="step_1__row">
-                        <div class="step_1__col">
-                            <div class="mt-20">
-                                <label for="name" class="fs_label">
-                                    Напишите заголовок для 3-го блока страницы <sup>*</sup> <img
-                                        src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <input type="text" id="name" class="fs_input mt-10" placeholder="Заголовок">
-                                </label>
-                            </div>
+
+                    <div class="step__row mt-40 mb-40">
+                        <div class="step_col">
+                            <label for="" class="fs_label">
+                                Напишите заголовок для 3-го блока страницы <sup>*</sup>
+                                <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                <input type="text" id="" class="fs_input mt-10 w-100" placeholder="Заголовок">
+                            </label>
                         </div>
                     </div>
 
+                    <!-- clone block -->
+                    <div class="step__block">
+                        <div class="step__title fz18 fw500 ff-roboto">Опишите как вы видите сотрудничнество <br> с
+                            инвестором (от 2 до 4 этапов)</div>
+                        <div class="block__repetitive clone-container mt-20" data-id="1" data-max="4" data-min="2">
+                            <div class="block__title mb-15 fz16 fw500 ff-roboto">
+                                <span class="current">1</span> этап
+                            </div>
+                            <div class="flex gap-50 aic">
+                                <div class="w-100">
+                                    <label for="name" class="fs_label">
+                                        Напишите подзаголовок к <span class="current">1</span> этапу <sup>*</sup>
+                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        <div class="row__input mt-10 flex aic gap-20 posr">
+                                            <div class="row__input_items w-full">
+                                                <input type="text" id="ms-benefit-1" class="fs_input"
+                                                    placeholder="Подзаголовок">
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label for="name" class="fs_label block mt-20">
+                                        Текст к <span class="current">1</span> этапу <sup>*</sup>
+                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        <div class="row__input mt-10 flex aic gap-20 posr">
+                                            <div class="row__input_items w-full">
+                                                <input type="text" id="ms-benefit-1" class="fs_input"
+                                                    placeholder="Текст">
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="pt-20">
+                                    <div class="clone_button">
+                                        <div class="add_block">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
+                                                    fill="#4272C5"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- clone block -->
                 </div>
             </div>
         </div>
@@ -751,7 +759,8 @@
                                                         src="img/thumb-1.jpg" alt="">
                                                 </picture>
                                             </div>
-                                            <a href="#" class="btn absolute z-2 fz10 round-10">Получить консультацию</a>
+                                            <a href="#" class="btn absolute z-2 fz10 round-10">Получить
+                                                консультацию</a>
                                         </div>
                                     </div>
                                 </div>
@@ -765,66 +774,78 @@
                     </div>
                 </div>
                 <div class="mw-765 mlr-a   pb-40">
-                    <div class="step_1__row">
-                        <div class="step_1__col">
-                            <div class="mt-40">
-                                <label for="name" class="fs_label">
-                                    Напишите заголовок для 3-го блока страницы <sup>*</sup> <img
-                                        src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <input type="text" id="name" class="fs_input mt-10" placeholder="Заголовок">
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="step_1__row">
-                        <div class="step_1__col">
-                            <div class="mt-30">
-                                <div class="fz18 fw500 ff-roboto mb-20">Загрузите фотографии стартапа, команды(не менее
-                                    1, не более 5) <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+
+
+                    <!-- Block 1 -->
+                    <div class="step__block">
+                        <div class="step__row">
+                            <div class="step__col">
+                                <div class="mt-40">
+                                    <label for="name" class="fs_label">
+                                        Напишите заголовок для 3-го блока страницы <sup>*</sup> <img
+                                            src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        <input type="text" id="name" class="fs_input mt-10" placeholder="Заголовок">
+                                    </label>
                                 </div>
-
-                                <label for="ms-benefit-1" class="fs_label w-full">Фото
-                                    <div class="row__input flex aie gap-20">
-                                        <div class="row__input_items w-full">
-                                            <form enctype="multipart/form-data" action="" method="post">
-                                                <label for="name" class="fs_label">
-                                                    <div id="drop_zone" class="drop-zone mt-10">
-                                                        <div class="drop-zone_placeholder flex gap-16">
-                                                            <img src="./img/Icon/ic_add_files.svg" alt="">
-                                                            <div>
-                                                                <p class="drop-zone_title">Загрузите фотографию</p>
-                                                                <p class="drop-zone_suptitle">1000x1000 пикселей, до 8
-                                                                    Мб</p>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="preview-container"></div>
-                                                    </div>
-                                                    <input id="file_input" accept="image/*" type="file" multiple=""
-                                                        name="file">
-                                                </label>
-                                            </form>
-                                        </div>                                        
-                                        <!-- <div class="add_row__wrap">
-                                            <a href="#" class="add_row">
-                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                        d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
-                                                        fill="#4272C5" />
-                                                </svg>
-                                            </a>
-                                        </div> -->
-                                    </div>
-                                </label>
-
                             </div>
                         </div>
                     </div>
-                    <div class="fz18 fw500 ff-roboto mt-40 ">Добавьте данные для блока с цифрами о проекте</div>
-                    <div class="step_1__row flex aic mb-40 gap-16">
-                        <div class="step_1__col">
-                            <div class="mt-20">
+
+
+                    <!-- clone -->
+                    <div class="step__block">
+                        <div class="step__title fz18 fw500 ff-roboto">Загрузите фотографии стартапа, команды(не
+                            менее
+                            1, не более 5) <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5"></div>
+                        <!-- <div class="block__repetitive clone-container mt-20" data-id="1" data-max="5"> -->
+                        <div class="mt-20" data-id="1" data-max="5">
+                            <label for="name" class="fs_label">
+                                Фото <sup>*</sup>
+                                <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                <div class="row__input mt-10 flex aic gap-20 posr">
+                                    <div class="row__input_items w-full">
+                                        <form enctype="multipart/form-data" action="" method="post">
+                                            <label for="name" class="fs_label">
+                                                <div id="drop_zone" class="drop-zone mt-10">
+                                                    <div class="drop-zone_placeholder flex gap-16">
+                                                        <img src="./img/Icon/ic_add_files.svg" alt="">
+                                                        <div>
+                                                            <p class="drop-zone_title">Загрузите фотографию</p>
+                                                            <p class="drop-zone_suptitle">1000x1000 пикселей, до
+                                                                8
+                                                                Мб</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="preview-container"></div>
+                                                </div>
+                                                <input id="file_input" accept="image/*" type="file" multiple=""
+                                                    name="file">
+                                            </label>
+                                        </form>
+                                    </div>
+                                    <!-- <div class="clone_button">
+                                        <div class="add_block">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
+                                                    fill="#4272C5"></path>
+                                            </svg>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- #clone -->
+
+                    <!-- Block 3 -->
+                    <div class="step__block">
+                        <div class="fz18 fw500 ff-roboto mt-40 mb-20">Добавьте данные для блока с цифрами о проекте
+                        </div>
+                        <div class="step__row step__2_columns">
+                            <div class="step_col">
                                 <label for="name" class="fs_label">
                                     Необходимая сумма инвестирования <sup>*</sup> <img
                                         src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
@@ -836,9 +857,7 @@
 
                                 </label>
                             </div>
-                        </div>
-                        <div class="step_1__col">
-                            <div class="mt-20">
+                            <div class="step_col">
                                 <label for="name" class="fs_label">
                                     Прибыль в месяц <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg" alt=""
                                         class="pt-5">
@@ -852,9 +871,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="step_1__row flex aic gap-16">
-                        <div class="step_1__col">
 
+                    <div class="step__row step__2_columns mt-40">
+                        <div class="step_col">
                             <label for="name" class="fs_label">
                                 Окупаемость инвестиций <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg" alt=""
                                     class="pt-5">
@@ -865,7 +884,7 @@
 
                             </label>
                         </div>
-                        <div class="step_1__col">
+                        <div class="step_col">
                         </div>
                     </div>
 
