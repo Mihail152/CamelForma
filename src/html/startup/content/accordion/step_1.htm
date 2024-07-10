@@ -65,7 +65,7 @@
                         <div id="currency__popup-placeholder" class="placeholder flex aic fz14 fw500 blue-2 fxg gap-8"
                             data-placeholder="Выберите валюту"></div>
                         <a href="#currency__popup" class=" flex aic pointer round-12 js_open_popup_startap"
-                            data-columns="3" data-placeholder="Выберите валюту" data-Icon="dollar--1.svg"
+                            data-columns="3" data-placeholder="Выберите валюту" data-Icon="Icon/dollar--1.svg"
                             data-search="true" data-openlist="true" data-listtype="radio" data-onlyvalue="true"
                             data-maxPlaceholder="3" data-defaultText="Введите валюту для поиска">
                             <span class="arrow block tr">
@@ -86,8 +86,7 @@
     <!-- #5 -->
     <div class="step__row mb-40">
         <div class="step_col">
-            <div class="fs_label">Отображение имени в профиле <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg"
-                    alt="" class="pt-5"></div>
+            <div class="fs_label">Отображение имени в профиле <sup>*</sup> @@include('../../../blocks/tips.htm')</div>
             <div class="flex mt-20 gap-40">
                 <div class="block radio-def">
                     <input type="radio" name="radio-group" id="radio-group-1" checked>
@@ -116,7 +115,7 @@
                         <div id="country__popup-placeholder" class="placeholder flex aic fz14 fw500 blue-2 fxg gap-8"
                             data-placeholder="Страна"></div>
                         <a href="#country__popup" class=" flex aic pointer round-12 js_open_popup_startap"
-                            data-columns="4" data-placeholder="Выберите страну" data-Icon="choise_country.svg"
+                            data-columns="4" data-placeholder="Выберите страну" data-Icon="Icon/choise_country.svg"
                             data-search="true" data-openlist="true" data-listtype="radio" data-onlyvalue="false"
                             data-maxPlaceholder="2" data-defaultText="Введите страну для поиска">
                             <span class="arrow block tr">
@@ -142,7 +141,7 @@
                         <div id="city__popup-placeholder" class="placeholder flex aic fz14 fw500 blue-2 fxg gap-8"
                             data-placeholder="Город"></div>
                         <a href="#city__popup" class=" flex aic pointer round-12 js_open_popup_startap" data-columns="2"
-                            data-placeholder="Выберите город" data-Icon="choise_city.svg" data-search="false"
+                            data-placeholder="Выберите город" data-Icon="Icon/choise_city.svg" data-search="false"
                             data-openlist="true" data-listtype="radio" data-onlyvalue="false" data-maxPlaceholder="2"
                             data-defaultText="Введите город для поиска">
                             <span class="arrow block tr">
@@ -162,10 +161,12 @@
     </div>
 </div>
 
+
+
 <!-- clone block -->
 <div class="step__block">
     <div class="step__title fz18 fw500 ff-roboto">Основатели и руководство стартапа или бизнеса (публичные данные)</div>
-    <div class="block__repetitive clone-container mt-20" data-id="1" data-max="3">
+    <div class="block__repetitive clone-container mt-20" data-id="1" data-max="5">
         <div class="block__title fz16 fw500 ff-roboto">
             Основатель <span class="current">1</span>
         </div>
@@ -197,7 +198,7 @@
                                 data-id="professional_skills-placeholder"></div>
                             <a href="#professional_skills__popup"
                                 class=" flex aic pointer round-12 js_open_popup_startap" data-columns="1"
-                                data-placeholder="Выберите тип" data-Icon="" data-openlist="true"
+                                data-placeholder="Выберите тип" data-openlist="true"
                                 data-listtype="checkbox" data-onlyvalue="false" data-maxPlaceholder="3"
                                 data-defaultText="Введите тип">
                                 <span class="arrow block tr">
@@ -255,7 +256,7 @@
             <div class="step_col">
                 <label for="last_xname-4_2" class="fs_label">
                     Резюме <sup>*</sup>
-                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                    @@include('../../../blocks/tips.htm')
                     <div class="flex aic gap-10 posr nowrap">
                         <span class="bef__input pt-10 lab pr-10 tar fxg flex jcfe">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -448,16 +449,7 @@
                 </div>
             </div>
         </div>
-
-        <div class="clone_button absolute right_top">
-            <div class="add_block">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
-                        fill="#4272C5"></path>
-                </svg>
-            </div>
-        </div>
+        @@include('../../../blocks/forms/_clone_button.htm')
     </div>
 </div>
 <!-- #clone block -->
@@ -467,8 +459,8 @@
     <div class="step__row">
         <div class="step_1__col">
             <div class="mt-40">
-                <div class="fs_label">Краткая информация о стартапере <sup>*</sup> <img
-                        src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5"></div>
+                <div class="fs_label">Краткая информация о стартапере <sup>*</sup> 
+                    @@include('../../../blocks/tips.htm')</div>
                 <div class="flex mt-10 gap-40">
                     <textarea name="" id="" placeholder="Краткая информация о стартапере"></textarea>
                 </div>

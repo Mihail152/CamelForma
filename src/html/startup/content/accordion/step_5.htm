@@ -3,7 +3,7 @@
 
         <!-- STEP 1 -->
         <div class="forma_page-item round-15 shadow bg-white mb-30" id="box-stpe1">
-            <div class="triger shadow pointer flex aic jcsb bg-blue-2 w-full">
+            <div class="triger shadow pointer flex aic jcsb bg-blue-2 w-full active">
                 <div class="name flex aic fz218 fw600 color-333 status_check">
                     @@include('status__tab.htm',{}) Клиенты проекта
                 </div>
@@ -11,7 +11,7 @@
                     <span class="ml-10"><img src="./img/Icon/ic_arrow.svg" alt=""></span>
                 </div>
             </div>
-            <div class="forma_page-info">
+            <div class="forma_page-info" style="display: block;">
                 <!-- B2C -->
                 <div class="forma_page-row flex bg-fa p-35">
                     <div class="tab-100-box">
@@ -34,228 +34,238 @@
                                 </tr>
                             </table>
                         </div>
-                        <div class="tab-200 flex fz16 fz14m">
-                            <div class="tab-200-nav fxs blue-2 lh-normal">
-                                <ul>
-                                    <li class="flex aic pointer posr current">По целевой аудитории</li>
-                                    <li class="flex aic pointer posr">Возраст аудитории</li>
-                                    <li class="flex aic pointer posr">Семейный статус клиентов</li>
-                                    <li class="flex aic pointer posr">Социальные статусы клиентов</li>
-                                    <li class="flex aic pointer posr">Рекламные источники</li>
-                                </ul>
-                            </div>
-                            <div class="tab-200-rr fxg">
-                                <div class="tab-200-box h-full pt-30 pb-30 pl-10 pr-10 " style="max-width: 415px">
-                                    <div class="flex vert aic h-full">
-                                        <canvas id="myChart2" class="mb-30"></canvas>
-                                        <ol class="cart-list fz14 bold last posr flex jcsb fxww gap-16">
-                                            <li class="flex aic">
-                                                <span style="background: #FB951A"
-                                                    class="block fxs round-6 posr z-3 mr-15"></span> Женщины: 25%
-                                            </li>
-                                            <li class="flex aic">
-                                                <span style="background: #377ED8"
-                                                    class="block fxs round-6 posr z-3 mr-15"></span> Мужчины: 75%
-                                            </li>
-                                        </ol>
-                                    </div>
+                        <div class="m-scroll-767">
+                            <div class="tab-200 flex fz16 fz14m">
+                                <div class="tab-200-nav fxs blue-2 lh-normal">
+                                    <ul>
+                                        <li class="flex aic pointer posr current">По целевой аудитории</li>
+                                        <li class="flex aic pointer posr">Возраст аудитории</li>
+                                        <li class="flex aic pointer posr">Семейный статус клиентов</li>
+                                        <li class="flex aic pointer posr">Социальные статусы клиентов</li>
+                                        <li class="flex aic pointer posr">Рекламные источники</li>
+                                    </ul>
                                 </div>
-                                <div class="tab-200-box h-full pt-30 pb-30 pl-10 pr-10 hide" style="max-width: 415px">
-                                    <div class="fz14 bold center mb-8">Соотношение полов</div>
-                                    <div class="flex vert aic h-full">
-                                        <canvas id="myChart3" class="mb-20"></canvas>
-                                        <ol class="cart-list fz14 bold last posr flex jcsb fxww gap-16">
-                                            <li class="flex aic">
-                                                <span style="background: #FB951A"
-                                                    class="block fxs round-6 posr z-3 mr-15"></span> Женщины 20-48 лет
-                                            </li>
-                                            <li class="flex aic">
-                                                <span style="background: #377ED8"
-                                                    class="block fxs round-6 posr z-3 mr-15"></span>Мужчины 20-48 лет
-                                            </li>
-                                        </ol>
+                                <div class="tab-200-rr fxg">
+                                    <div class="tab-200-box h-full pt-30 pb-30 pl-10 pr-10 " style="max-width: 415px">
+                                        <div class="flex vert aic h-full">
+                                            <canvas id="myChart2" class="mb-30"></canvas>
+                                            <ol class="cart-list fz14 bold last posr flex jcsb fxww gap-16">
+                                                <li class="flex aic">
+                                                    <span style="background: #FB951A"
+                                                        class="block fxs round-6 posr z-3 mr-15"></span> Женщины: 25%
+                                                </li>
+                                                <li class="flex aic">
+                                                    <span style="background: #377ED8"
+                                                        class="block fxs round-6 posr z-3 mr-15"></span> Мужчины: 75%
+                                                </li>
+                                            </ol>
+                                        </div>
                                     </div>
-                                </div>
+                                    <div class="tab-200-box h-full pt-30 pb-30 pl-10 pr-10 hide"
+                                        style="max-width: 415px">
+                                        <div class="fz14 bold center mb-8">Соотношение полов</div>
+                                        <div class="flex vert aic h-full">
+                                            <canvas id="myChart3" class="mb-20"></canvas>
+                                            <ol class="cart-list fz14 bold last posr flex jcsb fxww gap-16">
+                                                <li class="flex aic">
+                                                    <span style="background: #FB951A"
+                                                        class="block fxs round-6 posr z-3 mr-15"></span> Женщины 20-48
+                                                    лет
+                                                </li>
+                                                <li class="flex aic">
+                                                    <span style="background: #377ED8"
+                                                        class="block fxs round-6 posr z-3 mr-15"></span>Мужчины 20-48
+                                                    лет
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </div>
 
-                                <div class="tab-200-box h-full pt-20 pb-20 pl-10 pr-10 hide">
-                                    <div class="tab-200-inner flex aic ml-20">
-                                        <div class="tab-200-inner-left mr-60">
-                                            <div class="grafic">
-                                                <div class="grafic-fa">
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 30%; background: #19F1B3"><b>30%</b></span>
+                                    <div class="tab-200-box h-full pt-20 pb-20 pl-10 pr-10 hide">
+                                        <div class="tab-200-inner flex aic ml-20">
+                                            <div class="tab-200-inner-left mr-60">
+                                                <div class="grafic">
+                                                    <div class="grafic-fa">
+                                                        <div class="grafic-fa-item flex aic">
+                                                            <div class="grafic-bar">
+                                                                <span class="progres"
+                                                                    style="width: 30%; background: #19F1B3"><b>30%</b></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="grafic-fa-item flex aic">
+                                                            <div class="grafic-bar">
+                                                                <span class="progres"
+                                                                    style="width: 20%; background: #8E30FF"><b>20%</b></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="grafic-fa-item flex aic">
+                                                            <div class="grafic-bar">
+                                                                <span class="progres"
+                                                                    style="width: 50%; background: #FF7723"><b>50%</b></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="grafic-fa-item flex aic">
+                                                            <div class="grafic-bar">
+                                                                <span class="progres"
+                                                                    style="width: 75%; background: #0263FF"><b>75%</b></span>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 20%; background: #8E30FF"><b>20%</b></span>
-                                                        </div>
+                                                    <div class="grafic-fa-num flex fz12">
+                                                        <p>25%</p>
+                                                        <p>50%</p>
+                                                        <p>75%</p>
+                                                        <p>100%</p>
                                                     </div>
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 50%; background: #FF7723"><b>50%</b></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 75%; background: #0263FF"><b>75%</b></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grafic-fa-num flex fz12">
-                                                    <p>25%</p>
-                                                    <p>50%</p>
-                                                    <p>75%</p>
-                                                    <p>100%</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="tab-200-inner-right">
-                                            <ol class="cart-list fz14 last posr">
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #19F1B3"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Семьи без детей
-                                                </li>
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #8E30FF"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Семьи с детьми
-                                                </li>
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #FF7723"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Бездетные пары
-                                                </li>
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #0263FF"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Одинокие
-                                                    взрослые
-                                                </li>
-                                            </ol>
+                                            <div class="tab-200-inner-right">
+                                                <ol class="cart-list fz14 last posr">
+                                                    <li class="flex aic mb-30">
+                                                        <span style="background: #19F1B3"
+                                                            class="block fxs round-6 posr z-3 mr-15"></span> Семьи без
+                                                        детей
+                                                    </li>
+                                                    <li class="flex aic mb-30">
+                                                        <span style="background: #8E30FF"
+                                                            class="block fxs round-6 posr z-3 mr-15"></span> Семьи с
+                                                        детьми
+                                                    </li>
+                                                    <li class="flex aic mb-30">
+                                                        <span style="background: #FF7723"
+                                                            class="block fxs round-6 posr z-3 mr-15"></span> Бездетные
+                                                        пары
+                                                    </li>
+                                                    <li class="flex aic mb-30">
+                                                        <span style="background: #0263FF"
+                                                            class="block fxs round-6 posr z-3 mr-15"></span> Одинокие
+                                                        взрослые
+                                                    </li>
+                                                </ol>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="tab-200-box h-full pt-20 pb-20 pl-10 pr-10 hide">
-                                    <div class="tab-200-inner flex aic ml-20">
-                                        <div class="tab-200-inner-left mr-60">
-                                            <div class="grafic">
-                                                <div class="grafic-fa">
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 30%; background: #19F1B3"><b>30%</b></span>
+                                    <div class="tab-200-box h-full pt-20 pb-20 pl-10 pr-10 hide">
+                                        <div class="tab-200-inner flex aic ml-20">
+                                            <div class="tab-200-inner-left mr-60">
+                                                <div class="grafic">
+                                                    <div class="grafic-fa">
+                                                        <div class="grafic-fa-item flex aic">
+                                                            <div class="grafic-bar">
+                                                                <span class="progres"
+                                                                    style="width: 30%; background: #19F1B3"><b>30%</b></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="grafic-fa-item flex aic">
+                                                            <div class="grafic-bar">
+                                                                <span class="progres"
+                                                                    style="width: 20%; background: #8E30FF"><b>20%</b></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="grafic-fa-item flex aic">
+                                                            <div class="grafic-bar">
+                                                                <span class="progres"
+                                                                    style="width: 50%; background: #FF7723"><b>50%</b></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="grafic-fa-item flex aic">
+                                                            <div class="grafic-bar">
+                                                                <span class="progres"
+                                                                    style="width: 75%; background: #0263FF"><b>75%</b></span>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 20%; background: #8E30FF"><b>20%</b></span>
-                                                        </div>
+                                                    <div class="grafic-fa-num flex fz12">
+                                                        <p>25%</p>
+                                                        <p>50%</p>
+                                                        <p>75%</p>
+                                                        <p>100%</p>
                                                     </div>
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 50%; background: #FF7723"><b>50%</b></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 75%; background: #0263FF"><b>75%</b></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grafic-fa-num flex fz12">
-                                                    <p>25%</p>
-                                                    <p>50%</p>
-                                                    <p>75%</p>
-                                                    <p>100%</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="tab-200-inner-right">
-                                            <ol class="cart-list fz14 last posr">
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #19F1B3"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Дети
-                                                </li>
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #8E30FF"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Студенты
-                                                </li>
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #FF7723"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Взрослые
-                                                </li>
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #0263FF"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Пенсионеры
-                                                </li>
-                                            </ol>
+                                            <div class="tab-200-inner-right">
+                                                <ol class="cart-list fz14 last posr">
+                                                    <li class="flex aic mb-30">
+                                                        <span style="background: #19F1B3"
+                                                            class="block fxs round-6 posr z-3 mr-15"></span> Дети
+                                                    </li>
+                                                    <li class="flex aic mb-30">
+                                                        <span style="background: #8E30FF"
+                                                            class="block fxs round-6 posr z-3 mr-15"></span> Студенты
+                                                    </li>
+                                                    <li class="flex aic mb-30">
+                                                        <span style="background: #FF7723"
+                                                            class="block fxs round-6 posr z-3 mr-15"></span> Взрослые
+                                                    </li>
+                                                    <li class="flex aic mb-30">
+                                                        <span style="background: #0263FF"
+                                                            class="block fxs round-6 posr z-3 mr-15"></span> Пенсионеры
+                                                    </li>
+                                                </ol>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="tab-200-box h-full pt-20 pb-20 pl-10 pr-10 hide">
-                                    <div class="tab-200-inner flex aic ml-20">
-                                        <div class="tab-200-inner-left mr-60">
-                                            <div class="grafic">
-                                                <div class="grafic-fa">
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 30%; background: #19F1B3"><b>30%</b></span>
+                                    <div class="tab-200-box h-full pt-20 pb-20 pl-10 pr-10 hide">
+                                        <div class="tab-200-inner flex aic ml-20">
+                                            <div class="tab-200-inner-left mr-60">
+                                                <div class="grafic">
+                                                    <div class="grafic-fa">
+                                                        <div class="grafic-fa-item flex aic">
+                                                            <div class="grafic-bar">
+                                                                <span class="progres"
+                                                                    style="width: 30%; background: #19F1B3"><b>30%</b></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="grafic-fa-item flex aic">
+                                                            <div class="grafic-bar">
+                                                                <span class="progres"
+                                                                    style="width: 20%; background: #8E30FF"><b>20%</b></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="grafic-fa-item flex aic">
+                                                            <div class="grafic-bar">
+                                                                <span class="progres"
+                                                                    style="width: 50%; background: #FF7723"><b>50%</b></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="grafic-fa-item flex aic">
+                                                            <div class="grafic-bar">
+                                                                <span class="progres"
+                                                                    style="width: 75%; background: #0263FF"><b>75%</b></span>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 20%; background: #8E30FF"><b>20%</b></span>
-                                                        </div>
+                                                    <div class="grafic-fa-num flex fz12">
+                                                        <p>25%</p>
+                                                        <p>50%</p>
+                                                        <p>75%</p>
+                                                        <p>100%</p>
                                                     </div>
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 50%; background: #FF7723"><b>50%</b></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 75%; background: #0263FF"><b>75%</b></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grafic-fa-num flex fz12">
-                                                    <p>25%</p>
-                                                    <p>50%</p>
-                                                    <p>75%</p>
-                                                    <p>100%</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="tab-200-inner-right">
-                                            <ol class="cart-list fz14 last posr">
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #19F1B3"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Интернет-Онлайн
-                                                </li>
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #8E30FF"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Наружная
-                                                    реклама
-                                                </li>
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #FF7723"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Соц.сети
-                                                </li>
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #0263FF"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Email рассылка
-                                                </li>
-                                            </ol>
+                                            <div class="tab-200-inner-right">
+                                                <ol class="cart-list fz14 last posr">
+                                                    <li class="flex aic mb-30">
+                                                        <span style="background: #19F1B3"
+                                                            class="block fxs round-6 posr z-3 mr-15"></span>
+                                                        Интернет-Онлайн
+                                                    </li>
+                                                    <li class="flex aic mb-30">
+                                                        <span style="background: #8E30FF"
+                                                            class="block fxs round-6 posr z-3 mr-15"></span> Наружная
+                                                        реклама
+                                                    </li>
+                                                    <li class="flex aic mb-30">
+                                                        <span style="background: #FF7723"
+                                                            class="block fxs round-6 posr z-3 mr-15"></span> Соц.сети
+                                                    </li>
+                                                    <li class="flex aic mb-30">
+                                                        <span style="background: #0263FF"
+                                                            class="block fxs round-6 posr z-3 mr-15"></span> Email
+                                                        рассылка
+                                                    </li>
+                                                </ol>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -276,7 +286,7 @@
                         <div class="step__title mb-20 fz18 fw500 ff-roboto">B2C</div>
                         <div class="step__row step__2_columns">
                             <div class="step_col">
-                                <label for="name" class="fs_label">
+                                <label for="name" class="fs_label nowrap">
                                     Средний уровень дохода клиентов <sup>*</sup> <img
                                         src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
                                     <div class="mt-10 flex aic gap-8 posr">
@@ -292,7 +302,7 @@
                                 </label>
                             </div>
                             <div class="step_col">
-                                <label for="name" class="fs_label">
+                                <label for="name" class="fs_label nowrap">
                                     Средний чек клиентов <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg"
                                         alt="" class="pt-5">
                                     <div class="mt-10 flex aic gap-8 posr">
@@ -336,7 +346,7 @@
                         <div class="step__title mb-20 fz18 fw500 ff-roboto">Возраст аудитории</div>
                         <div class="step__row step__2_columns">
                             <div class="step_col">
-                                <label for="name" class="fs_label">
+                                <label for="name" class="fs_label nowrap">
                                     Мужчины <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg" alt=""
                                         class="pt-5">
                                     <div class="mt-10 flex aic gap-8 posr">
@@ -353,7 +363,7 @@
                                 </label>
                             </div>
                             <div class="step_col">
-                                <label for="name" class="fs_label">
+                                <label for="name" class="fs_label nowrap">
                                     Женщины <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg" alt=""
                                         class="pt-5">
                                     <div class="mt-10 flex aic gap-8 posr">
@@ -376,7 +386,7 @@
                         <div class="step__title mb-20 fz18 fw500 ff-roboto">Возраст аудитории</div>
                         <div class="step__row step__2_columns">
                             <div class="step_col">
-                                <label for="name" class="fs_label">
+                                <label for="name" class="fs_label nowrap">
                                     Мужчины <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg" alt=""
                                         class="pt-5">
                                     <div class="mt-10 flex aic gap-8 posr">
@@ -393,7 +403,7 @@
                                 </label>
                             </div>
                             <div class="step_col">
-                                <label for="name" class="fs_label">
+                                <label for="name" class="fs_label nowrap">
                                     Женщины <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg" alt=""
                                         class="pt-5">
                                     <div class="mt-10 flex aic gap-8 posr">
@@ -421,13 +431,16 @@
                                     <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
                                     <div class="mt-10 posr">
                                         <!-- popup_forma__link -->
-                                        <div class="popup_forma__link">
+                                        <div class="popup_forma__link fs_input w-100">
                                             <div id="client_status-placeholder"
-                                                class="flex aic fz14 fw500 blue-2 fxg gap-8">
-                                                Семейный статус клиентов
-                                            </div>
+                                                class="placeholder flex aic fz14 fw500 blue-2 fxg gap-8"
+                                                data-placeholder="Страна"><span class="placeholder pl-10">Семейный статус клиентов</span></div>
                                             <a href="#client_status"
-                                                class=" flex aic pointer round-12 js_open_popup_startap">
+                                                class=" flex aic pointer round-12 js_open_popup_startap"
+                                                data-columns="3" data-placeholder="Семейный статус клиентов"
+                                                data-search="true"
+                                                data-openlist="true" data-listtype="checkbox" data-onlyvalue="true"
+                                                data-maxplaceholder="3" data-defaulttext="Введите категорию для поиска">
                                                 <span class="arrow block tr">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                         viewBox="0 0 24 24" fill="none" class="loaded">
@@ -438,7 +451,7 @@
                                                 </span>
                                             </a>
                                         </div>
-                                        <!-- #popup_forma__link -->
+                                                                                <!-- #popup_forma__link -->
                                     </div>
                                 </label>
                             </div>
@@ -488,11 +501,16 @@
                                         <!-- popup_forma__link -->
                                         <div class="popup_forma__link">
                                             <div id="family_status-placeholder"
-                                                class="flex aic fz14 fw500 blue-2 fxg gap-8">
-                                                Социальный статус клиентов
-                                            </div>
+                                            class="placeholder flex aic fz14 fw500 blue-2 fxg gap-8"
+                                            data-placeholder="Страна"><span class="placeholder pl-10">
+                                                Социальный статус клиентов</span></div>
                                             <a href="#family_status"
-                                                class=" flex aic pointer round-12 js_open_popup_startap">
+                                                class=" flex aic pointer round-12 js_open_popup_startap"
+                                                data-columns="3" 
+                                                data-placeholder="Семейный статус клиентов"
+                                                data-search="true"
+                                                data-openlist="true" data-listtype="checkbox" data-onlyvalue="true"
+                                                data-maxplaceholder="3" data-defaulttext="Введите категорию для поиска">
                                                 <span class="arrow block tr">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                         viewBox="0 0 24 24" fill="none" class="loaded">
@@ -561,11 +579,16 @@
                                         <!-- popup_forma__link -->
                                         <div class="popup_forma__link">
                                             <div id="adv_source-placeholder"
-                                                class="flex aic fz14 fw500 blue-2 fxg gap-8">
-                                                Рекламные источники
-                                            </div>
+                                            class="placeholder flex aic fz14 fw500 blue-2 fxg gap-8"
+                                            data-placeholder="Страна"><span class="placeholder pl-10">
+                                                Рекламные источники</span></div>
                                             <a href="#adv_source"
-                                                class=" flex aic pointer round-12 js_open_popup_startap">
+                                                class=" flex aic pointer round-12 js_open_popup_startap"
+                                                data-columns="3" 
+                                                data-placeholder="Семейный статус клиентов"
+                                                data-search="true"
+                                                data-openlist="true" data-listtype="checkbox" data-onlyvalue="true"
+                                                data-maxplaceholder="3" data-defaulttext="Введите категорию для поиска">
                                                 <span class="arrow block tr">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                         viewBox="0 0 24 24" fill="none" class="loaded">
@@ -576,7 +599,7 @@
                                                 </span>
                                             </a>
                                         </div>
-                                        <!-- #popup_forma__link -->
+                                        <!-- #popup_forma__link -->                                        
                                     </div>
                                 </label>
                             </div>
@@ -638,228 +661,238 @@
                                 </tr>
                             </table>
                         </div>
-                        <div class="tab-200 flex fz16 fz14m">
-                            <div class="tab-200-nav fxs blue-2 lh-normal">
-                                <ul>
-                                    <li class="flex aic pointer posr current">По целевой аудитории</li>
-                                    <li class="flex aic pointer posr">Возраст аудитории</li>
-                                    <li class="flex aic pointer posr">Семейный статус клиентов</li>
-                                    <li class="flex aic pointer posr">Социальные статусы клиентов</li>
-                                    <li class="flex aic pointer posr">Рекламные источники</li>
-                                </ul>
-                            </div>
-                            <div class="tab-200-rr fxg">
-                                <div class="tab-200-box h-full pt-30 pb-30 pl-10 pr-10 " style="max-width: 415px">
-                                    <div class="flex vert aic h-full">
-                                        <canvas id="myChart2" class="mb-30"></canvas>
-                                        <ol class="cart-list fz14 bold last posr flex jcsb fxww gap-16">
-                                            <li class="flex aic">
-                                                <span style="background: #FB951A"
-                                                    class="block fxs round-6 posr z-3 mr-15"></span> Женщины: 25%
-                                            </li>
-                                            <li class="flex aic">
-                                                <span style="background: #377ED8"
-                                                    class="block fxs round-6 posr z-3 mr-15"></span> Мужчины: 75%
-                                            </li>
-                                        </ol>
-                                    </div>
+                        <div class="m-scroll-767">
+                            <div class="tab-200 flex fz16 fz14m">
+                                <div class="tab-200-nav fxs blue-2 lh-normal">
+                                    <ul>
+                                        <li class="flex aic pointer posr current">По целевой аудитории</li>
+                                        <li class="flex aic pointer posr">Возраст аудитории</li>
+                                        <li class="flex aic pointer posr">Семейный статус клиентов</li>
+                                        <li class="flex aic pointer posr">Социальные статусы клиентов</li>
+                                        <li class="flex aic pointer posr">Рекламные источники</li>
+                                    </ul>
                                 </div>
-                                <div class="tab-200-box h-full pt-30 pb-30 pl-10 pr-10 hide" style="max-width: 415px">
-                                    <div class="fz14 bold center mb-8">Соотношение полов</div>
-                                    <div class="flex vert aic h-full">
-                                        <canvas id="myChart3" class="mb-20"></canvas>
-                                        <ol class="cart-list fz14 bold last posr flex jcsb fxww gap-16">
-                                            <li class="flex aic">
-                                                <span style="background: #FB951A"
-                                                    class="block fxs round-6 posr z-3 mr-15"></span> Женщины 20-48 лет
-                                            </li>
-                                            <li class="flex aic">
-                                                <span style="background: #377ED8"
-                                                    class="block fxs round-6 posr z-3 mr-15"></span>Мужчины 20-48 лет
-                                            </li>
-                                        </ol>
+                                <div class="tab-200-rr fxg">
+                                    <div class="tab-200-box h-full pt-30 pb-30 pl-10 pr-10 " style="max-width: 415px">
+                                        <div class="flex vert aic h-full">
+                                            <canvas id="myChart2" class="mb-30"></canvas>
+                                            <ol class="cart-list fz14 bold last posr flex jcsb fxww gap-16">
+                                                <li class="flex aic">
+                                                    <span style="background: #FB951A"
+                                                        class="block fxs round-6 posr z-3 mr-15"></span> Женщины: 25%
+                                                </li>
+                                                <li class="flex aic">
+                                                    <span style="background: #377ED8"
+                                                        class="block fxs round-6 posr z-3 mr-15"></span> Мужчины: 75%
+                                                </li>
+                                            </ol>
+                                        </div>
                                     </div>
-                                </div>
+                                    <div class="tab-200-box h-full pt-30 pb-30 pl-10 pr-10 hide"
+                                        style="max-width: 415px">
+                                        <div class="fz14 bold center mb-8">Соотношение полов</div>
+                                        <div class="flex vert aic h-full">
+                                            <canvas id="myChart3" class="mb-20"></canvas>
+                                            <ol class="cart-list fz14 bold last posr flex jcsb fxww gap-16">
+                                                <li class="flex aic">
+                                                    <span style="background: #FB951A"
+                                                        class="block fxs round-6 posr z-3 mr-15"></span> Женщины 20-48
+                                                    лет
+                                                </li>
+                                                <li class="flex aic">
+                                                    <span style="background: #377ED8"
+                                                        class="block fxs round-6 posr z-3 mr-15"></span>Мужчины 20-48
+                                                    лет
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </div>
 
-                                <div class="tab-200-box h-full pt-20 pb-20 pl-10 pr-10 hide">
-                                    <div class="tab-200-inner flex aic ml-20">
-                                        <div class="tab-200-inner-left mr-60">
-                                            <div class="grafic">
-                                                <div class="grafic-fa">
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 30%; background: #19F1B3"><b>30%</b></span>
+                                    <div class="tab-200-box h-full pt-20 pb-20 pl-10 pr-10 hide">
+                                        <div class="tab-200-inner flex aic ml-20">
+                                            <div class="tab-200-inner-left mr-60">
+                                                <div class="grafic">
+                                                    <div class="grafic-fa">
+                                                        <div class="grafic-fa-item flex aic">
+                                                            <div class="grafic-bar">
+                                                                <span class="progres"
+                                                                    style="width: 30%; background: #19F1B3"><b>30%</b></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="grafic-fa-item flex aic">
+                                                            <div class="grafic-bar">
+                                                                <span class="progres"
+                                                                    style="width: 20%; background: #8E30FF"><b>20%</b></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="grafic-fa-item flex aic">
+                                                            <div class="grafic-bar">
+                                                                <span class="progres"
+                                                                    style="width: 50%; background: #FF7723"><b>50%</b></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="grafic-fa-item flex aic">
+                                                            <div class="grafic-bar">
+                                                                <span class="progres"
+                                                                    style="width: 75%; background: #0263FF"><b>75%</b></span>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 20%; background: #8E30FF"><b>20%</b></span>
-                                                        </div>
+                                                    <div class="grafic-fa-num flex fz12">
+                                                        <p>25%</p>
+                                                        <p>50%</p>
+                                                        <p>75%</p>
+                                                        <p>100%</p>
                                                     </div>
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 50%; background: #FF7723"><b>50%</b></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 75%; background: #0263FF"><b>75%</b></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grafic-fa-num flex fz12">
-                                                    <p>25%</p>
-                                                    <p>50%</p>
-                                                    <p>75%</p>
-                                                    <p>100%</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="tab-200-inner-right">
-                                            <ol class="cart-list fz14 last posr">
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #19F1B3"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Семьи без детей
-                                                </li>
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #8E30FF"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Семьи с детьми
-                                                </li>
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #FF7723"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Бездетные пары
-                                                </li>
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #0263FF"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Одинокие
-                                                    взрослые
-                                                </li>
-                                            </ol>
+                                            <div class="tab-200-inner-right">
+                                                <ol class="cart-list fz14 last posr">
+                                                    <li class="flex aic mb-30">
+                                                        <span style="background: #19F1B3"
+                                                            class="block fxs round-6 posr z-3 mr-15"></span> Семьи без
+                                                        детей
+                                                    </li>
+                                                    <li class="flex aic mb-30">
+                                                        <span style="background: #8E30FF"
+                                                            class="block fxs round-6 posr z-3 mr-15"></span> Семьи с
+                                                        детьми
+                                                    </li>
+                                                    <li class="flex aic mb-30">
+                                                        <span style="background: #FF7723"
+                                                            class="block fxs round-6 posr z-3 mr-15"></span> Бездетные
+                                                        пары
+                                                    </li>
+                                                    <li class="flex aic mb-30">
+                                                        <span style="background: #0263FF"
+                                                            class="block fxs round-6 posr z-3 mr-15"></span> Одинокие
+                                                        взрослые
+                                                    </li>
+                                                </ol>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="tab-200-box h-full pt-20 pb-20 pl-10 pr-10 hide">
-                                    <div class="tab-200-inner flex aic ml-20">
-                                        <div class="tab-200-inner-left mr-60">
-                                            <div class="grafic">
-                                                <div class="grafic-fa">
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 30%; background: #19F1B3"><b>30%</b></span>
+                                    <div class="tab-200-box h-full pt-20 pb-20 pl-10 pr-10 hide">
+                                        <div class="tab-200-inner flex aic ml-20">
+                                            <div class="tab-200-inner-left mr-60">
+                                                <div class="grafic">
+                                                    <div class="grafic-fa">
+                                                        <div class="grafic-fa-item flex aic">
+                                                            <div class="grafic-bar">
+                                                                <span class="progres"
+                                                                    style="width: 30%; background: #19F1B3"><b>30%</b></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="grafic-fa-item flex aic">
+                                                            <div class="grafic-bar">
+                                                                <span class="progres"
+                                                                    style="width: 20%; background: #8E30FF"><b>20%</b></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="grafic-fa-item flex aic">
+                                                            <div class="grafic-bar">
+                                                                <span class="progres"
+                                                                    style="width: 50%; background: #FF7723"><b>50%</b></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="grafic-fa-item flex aic">
+                                                            <div class="grafic-bar">
+                                                                <span class="progres"
+                                                                    style="width: 75%; background: #0263FF"><b>75%</b></span>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 20%; background: #8E30FF"><b>20%</b></span>
-                                                        </div>
+                                                    <div class="grafic-fa-num flex fz12">
+                                                        <p>25%</p>
+                                                        <p>50%</p>
+                                                        <p>75%</p>
+                                                        <p>100%</p>
                                                     </div>
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 50%; background: #FF7723"><b>50%</b></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 75%; background: #0263FF"><b>75%</b></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grafic-fa-num flex fz12">
-                                                    <p>25%</p>
-                                                    <p>50%</p>
-                                                    <p>75%</p>
-                                                    <p>100%</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="tab-200-inner-right">
-                                            <ol class="cart-list fz14 last posr">
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #19F1B3"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Дети
-                                                </li>
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #8E30FF"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Студенты
-                                                </li>
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #FF7723"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Взрослые
-                                                </li>
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #0263FF"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Пенсионеры
-                                                </li>
-                                            </ol>
+                                            <div class="tab-200-inner-right">
+                                                <ol class="cart-list fz14 last posr">
+                                                    <li class="flex aic mb-30">
+                                                        <span style="background: #19F1B3"
+                                                            class="block fxs round-6 posr z-3 mr-15"></span> Дети
+                                                    </li>
+                                                    <li class="flex aic mb-30">
+                                                        <span style="background: #8E30FF"
+                                                            class="block fxs round-6 posr z-3 mr-15"></span> Студенты
+                                                    </li>
+                                                    <li class="flex aic mb-30">
+                                                        <span style="background: #FF7723"
+                                                            class="block fxs round-6 posr z-3 mr-15"></span> Взрослые
+                                                    </li>
+                                                    <li class="flex aic mb-30">
+                                                        <span style="background: #0263FF"
+                                                            class="block fxs round-6 posr z-3 mr-15"></span> Пенсионеры
+                                                    </li>
+                                                </ol>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="tab-200-box h-full pt-20 pb-20 pl-10 pr-10 hide">
-                                    <div class="tab-200-inner flex aic ml-20">
-                                        <div class="tab-200-inner-left mr-60">
-                                            <div class="grafic">
-                                                <div class="grafic-fa">
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 30%; background: #19F1B3"><b>30%</b></span>
+                                    <div class="tab-200-box h-full pt-20 pb-20 pl-10 pr-10 hide">
+                                        <div class="tab-200-inner flex aic ml-20">
+                                            <div class="tab-200-inner-left mr-60">
+                                                <div class="grafic">
+                                                    <div class="grafic-fa">
+                                                        <div class="grafic-fa-item flex aic">
+                                                            <div class="grafic-bar">
+                                                                <span class="progres"
+                                                                    style="width: 30%; background: #19F1B3"><b>30%</b></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="grafic-fa-item flex aic">
+                                                            <div class="grafic-bar">
+                                                                <span class="progres"
+                                                                    style="width: 20%; background: #8E30FF"><b>20%</b></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="grafic-fa-item flex aic">
+                                                            <div class="grafic-bar">
+                                                                <span class="progres"
+                                                                    style="width: 50%; background: #FF7723"><b>50%</b></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="grafic-fa-item flex aic">
+                                                            <div class="grafic-bar">
+                                                                <span class="progres"
+                                                                    style="width: 75%; background: #0263FF"><b>75%</b></span>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 20%; background: #8E30FF"><b>20%</b></span>
-                                                        </div>
+                                                    <div class="grafic-fa-num flex fz12">
+                                                        <p>25%</p>
+                                                        <p>50%</p>
+                                                        <p>75%</p>
+                                                        <p>100%</p>
                                                     </div>
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 50%; background: #FF7723"><b>50%</b></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="grafic-fa-item flex aic">
-                                                        <div class="grafic-bar">
-                                                            <span class="progres"
-                                                                style="width: 75%; background: #0263FF"><b>75%</b></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="grafic-fa-num flex fz12">
-                                                    <p>25%</p>
-                                                    <p>50%</p>
-                                                    <p>75%</p>
-                                                    <p>100%</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="tab-200-inner-right">
-                                            <ol class="cart-list fz14 last posr">
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #19F1B3"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Интернет-Онлайн
-                                                </li>
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #8E30FF"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Наружная
-                                                    реклама
-                                                </li>
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #FF7723"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Соц.сети
-                                                </li>
-                                                <li class="flex aic mb-30">
-                                                    <span style="background: #0263FF"
-                                                        class="block fxs round-6 posr z-3 mr-15"></span> Email рассылка
-                                                </li>
-                                            </ol>
+                                            <div class="tab-200-inner-right">
+                                                <ol class="cart-list fz14 last posr">
+                                                    <li class="flex aic mb-30">
+                                                        <span style="background: #19F1B3"
+                                                            class="block fxs round-6 posr z-3 mr-15"></span>
+                                                        Интернет-Онлайн
+                                                    </li>
+                                                    <li class="flex aic mb-30">
+                                                        <span style="background: #8E30FF"
+                                                            class="block fxs round-6 posr z-3 mr-15"></span> Наружная
+                                                        реклама
+                                                    </li>
+                                                    <li class="flex aic mb-30">
+                                                        <span style="background: #FF7723"
+                                                            class="block fxs round-6 posr z-3 mr-15"></span> Соц.сети
+                                                    </li>
+                                                    <li class="flex aic mb-30">
+                                                        <span style="background: #0263FF"
+                                                            class="block fxs round-6 posr z-3 mr-15"></span> Email
+                                                        рассылка
+                                                    </li>
+                                                </ol>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -886,7 +919,7 @@
                         <div class="step__title mb-20 fz18 fw500 ff-roboto">В2В</div>
                         <div class="step__row step__2_columns">
                             <div class="step_col">
-                                <label for="name" class="fs_label">
+                                <label for="name" class="fs_label nowrap">
                                     Средний уровень дохода клиентов <sup>*</sup> <img
                                         src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
                                     <div class="mt-10 flex aic gap-8 posr">
@@ -902,7 +935,7 @@
                                 </label>
                             </div>
                             <div class="step_col">
-                                <label for="name" class="fs_label">
+                                <label for="name" class="fs_label nowrap">
                                     Средний чек клиентов <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg"
                                         alt="" class="pt-5">
                                     <div class="mt-10 flex aic gap-8 posr">
@@ -928,14 +961,19 @@
                                     Величина компании клиентов <sup>*</sup>
                                     <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
                                     <div class="mt-10 posr">
-                                        <!-- popup_forma__link -->
-                                        <div class="popup_forma__link">
+                                         <!-- popup_forma__link -->
+                                         <div class="popup_forma__link">
                                             <div id="company_size-placeholder"
-                                                class="flex aic fz14 fw500 blue-2 fxg gap-8">
-                                                Величина компании клиентов
-                                            </div>
+                                            class="placeholder flex aic fz14 fw500 blue-2 fxg gap-8"
+                                            data-placeholder="Страна"><span class="placeholder pl-10">
+                                                Величина компании клиентов</span></div>
                                             <a href="#company_size"
-                                                class=" flex aic pointer round-12 js_open_popup_startap">
+                                                class=" flex aic pointer round-12 js_open_popup_startap"
+                                                data-columns="3" 
+                                                data-placeholder="Семейный статус клиентов"
+                                                data-search="true"
+                                                data-openlist="true" data-listtype="checkbox" data-onlyvalue="true"
+                                                data-maxplaceholder="3" data-defaulttext="Введите категорию для поиска">
                                                 <span class="arrow block tr">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                         viewBox="0 0 24 24" fill="none" class="loaded">
@@ -946,7 +984,7 @@
                                                 </span>
                                             </a>
                                         </div>
-                                        <!-- #popup_forma__link -->
+                                        <!-- #popup_forma__link -->                                              
                                     </div>
                                 </label>
                             </div>
@@ -993,14 +1031,19 @@
                                     Сегментация клиентов заводы <sup>*</sup>
                                     <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
                                     <div class="mt-10 posr">
-                                        <!-- popup_forma__link -->
-                                        <div class="popup_forma__link">
+                                         <!-- popup_forma__link -->
+                                         <div class="popup_forma__link">
                                             <div id="segment_client-placeholder"
-                                                class="flex aic fz14 fw500 blue-2 fxg gap-8">
-                                                Сегментация клиентов заводы
-                                            </div>
+                                            class="placeholder flex aic fz14 fw500 blue-2 fxg gap-8"
+                                            data-placeholder="Страна"><span class="placeholder pl-10">
+                                                Сегментация клиентов заводы</span></div>
                                             <a href="#segment_client"
-                                                class=" flex aic pointer round-12 js_open_popup_startap">
+                                                class=" flex aic pointer round-12 js_open_popup_startap"
+                                                data-columns="3" 
+                                                data-placeholder="Семейный статус клиентов"
+                                                data-search="true"
+                                                data-openlist="true" data-listtype="checkbox" data-onlyvalue="true"
+                                                data-maxplaceholder="3" data-defaulttext="Введите категорию для поиска">
                                                 <span class="arrow block tr">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                         viewBox="0 0 24 24" fill="none" class="loaded">
@@ -1011,7 +1054,7 @@
                                                 </span>
                                             </a>
                                         </div>
-                                        <!-- #popup_forma__link -->
+                                        <!-- #popup_forma__link -->                                         
                                     </div>
                                 </label>
                             </div>
@@ -1069,11 +1112,16 @@
                                         <!-- popup_forma__link -->
                                         <div class="popup_forma__link">
                                             <div id="adv_source_b2b-placeholder"
-                                                class="flex aic fz14 fw500 blue-2 fxg gap-8">
-                                                Рекламные источники
-                                            </div>
+                                            class="placeholder flex aic fz14 fw500 blue-2 fxg gap-8"
+                                            data-placeholder="Страна"><span class="placeholder pl-10">
+                                                Рекламные источники</span></div>
                                             <a href="#adv_source_b2b"
-                                                class=" flex aic pointer round-12 js_open_popup_startap">
+                                                class=" flex aic pointer round-12 js_open_popup_startap"
+                                                data-columns="3" 
+                                                data-placeholder="Семейный статус клиентов"
+                                                data-search="true"
+                                                data-openlist="true" data-listtype="checkbox" data-onlyvalue="true"
+                                                data-maxplaceholder="3" data-defaulttext="Введите категорию для поиска">
                                                 <span class="arrow block tr">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                         viewBox="0 0 24 24" fill="none" class="loaded">
@@ -1084,7 +1132,7 @@
                                                 </span>
                                             </a>
                                         </div>
-                                        <!-- #popup_forma__link -->
+                                        <!-- #popup_forma__link -->  
                                     </div>
                                 </label>
                             </div>
@@ -1137,7 +1185,7 @@
         </div>
         <!-- STEP 2 -->
         <div class="forma_page-item round-15 shadow bg-white mb-30" id="box-step2">
-            <div class="triger shadow pointer flex aic jcsb bg-blue-2 w-full active">
+            <div class="triger shadow pointer flex aic jcsb bg-blue-2 w-full ">
                 <div class="name flex aic fz218 fw600 color-333 status_check">
                     @@include('status__tab.htm',{}) Целевое назначение инвестиций
                 </div>
@@ -1145,7 +1193,7 @@
                     <span class="ml-10"><img src="./img/Icon/ic_arrow.svg" alt=""></span>
                 </div>
             </div>
-            <div class="forma_page-info" style="display: block;">
+            <div class="forma_page-info">
                 <!-- B2C -->
                 <div class="forma_page-row flex bg-fa p-35">
                     <div class="tab-100-box">
@@ -1264,21 +1312,12 @@
                                     <label for="name" class="fs_label">
                                         Процент от суммы <sup>*</sup>
                                         <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                        <div class="row__input mt-10 flex aic gap-35 posr ">
+                                        <div class="row__input mt-10 flex aic gap-8 posr ">
                                             <div class="row__input_items w-full percent__icon">
                                                 <input type="text" id="ms-benefit-1" data-item="1" data-max="6"
                                                     data-min="3" class="fs_input" placeholder="Описание состояния">
                                             </div>
-                                            <div class="add_row__wrap">
-                                                <a href="#" class="add_block clone_button">
-                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                            d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
-                                                            fill="#4272C5"></path>
-                                                    </svg>
-                                                </a>
-                                            </div>
+                                            @@include('../../../blocks/forms/_clone_button_row.htm')
                                         </div>
                                     </label>
                                 </div>
@@ -1302,8 +1341,7 @@
                                 <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
                             </div>
                             <div class="flex mt-10 gap-40">
-                                <textarea name="" id=""
-                                    placeholder="Подробности о проблемах и возможностях"></textarea>
+                                <textarea name="" id="" placeholder="Подробности о проблемах и возможностях"></textarea>
                             </div>
                         </div>
                     </div>

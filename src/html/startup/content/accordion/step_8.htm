@@ -369,8 +369,8 @@
                     </div>
                 </div>
 
-                <!-- Container 795width -->
-                <div class="mw-795 mlr-a pb-40">
+                <!-- Container 715width -->
+                <div class="mw-715 mlr-a pb-40">
                     <!-- Block 1 -->
                     <div class="step__block">
                         <div class="step__title fz18 fw500 ff-roboto">Структура компании</div>
@@ -396,7 +396,7 @@
                             <div class="step_col">
                                 <label for="" class="fs_label mw-full">
                                     <div class="fs_label mb-10">Юридическая форма компания <sup>*</sup>
-                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        @@include('../../../blocks/tips.htm')
                                     </div>
                                     <select name="basic[]" multiple="multiple" class="cloneselect"
                                         data-placeholder="Юридическая форма компания">
@@ -411,7 +411,7 @@
                             <div class="step_col">
                                 <label for="" class="fs_label mw-full">
                                     НДС у компании <sup>*</sup>
-                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                    @@include('../../../blocks/tips.htm')
                                     <div class="mt-10 flex aic gap-8 posr percent__icon">
                                         <input type="text" id="" class="fs_input mw-full" placeholder="0">
                                     </div>
@@ -419,9 +419,9 @@
                                 </label>
                             </div>
                             <div class="step_col">
-                                <label for="name" class="fs_label">
+                                <label for="name" class="fs_label nowrap">
                                     <div class="fs_label mb-10">Налоги на зарплаты для сотрудников <sup>*</sup>
-                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        @@include('../../../blocks/tips.htm')
                                     </div>
                                     <div class="flex aic gap-20 posr">
                                         <div class="flex aic gap-8">
@@ -444,7 +444,7 @@
                             <div class="step_col">
                                 <label for="" class="fs_label mw-full">
                                     <div class="fs_label mb-10">Налог на прибыль компании <sup>*</sup>
-                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        @@include('../../../blocks/tips.htm')
                                     </div>
                                     <select name="basic[]" multiple="multiple" class="cloneselect"
                                         data-placeholder="Налог на прибыль">
@@ -456,11 +456,11 @@
                             </div>
                             <div class="step_col"></div>
                         </div>
-                        <div class="step__row step__2_columns mt-40">
+                        <div class="step__row step__2_columns mt-40 nowrap">
                             <div class="step_col">
                                 <label for="" class="fs_label mw-full">
                                     Налог для новой компании <sup>*</sup>
-                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                    @@include('../../../blocks/tips.htm')
                                     <div class="mt-10 flex aic gap-8 posr dollar__icon">
                                         <span class="bef__input">До</span>
                                         <input type="text" id="" class="fs_input mw-full" placeholder="0">
@@ -470,7 +470,7 @@
                             <div class="step_col">
                                 <label for="" class="fs_label mw-full">
                                     Ставка <sup>*</sup>
-                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                    @@include('../../../blocks/tips.htm')
                                     <div class="mt-10 flex aic gap-8 posr percent__icon">
                                         <input type="text" id="" class="fs_input mw-full" placeholder="0">
                                     </div>
@@ -488,9 +488,9 @@
                             </div>
                             <div class="step__row step__2_columns aie">
                                 <div class="step_col">
-                                    <label for="" class="fs_label mw-full">
+                                    <label for="" class="fs_label mw-full nowrap">
                                         I порог налогообложения <sup>*</sup>
-                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        @@include('../../../blocks/tips.htm')
                                         <div class="mt-10 flex aic gap-8 posr dollar__icon">
                                             <span class="bef__input">До</span>
                                             <input type="text" id="" class="fs_input mw-full" placeholder="0">
@@ -498,24 +498,19 @@
                                     </label>
                                 </div>
                                 <div class="step_col">
-                                    <label for="name" class="fs_label mw-full">
+                                    <label for="name" class="fs_label">
                                         Ставка <sup>*</sup>
-                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                        <div class="mt-10 flex aic gap-8 posr percent__icon">
-                                            <input type="text" id="" class="fs_input mw-full" placeholder="0">
+                                        @@include('../../../blocks/tips.htm')
+                                        <div class="row__input mt-10 flex aic gap-8 posr ">
+                                            <div class="row__input_items w-full percent__icon">
+                                                <input type="text" id="ms-benefit-1" data-item="1" data-max="6"
+                                                    data-min="3" class="fs_input" placeholder="0">
+                                            </div>
+                                            @@include('../../../blocks/forms/_clone_button_row.htm')
                                         </div>
                                     </label>
-                                </div>
-                                <div class="clone_button">
-                                    <div class="add_block">
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
-                                                fill="#4272C5"></path>
-                                        </svg>
-                                    </div>
-                                </div>
+                                </div>   
+                                
                             </div>
                         </div>
                     </div>
@@ -531,9 +526,9 @@
                             </div>
                             <div class="step__row step__2_columns aie mr-60">
                                 <div class="step_col">
-                                    <label for="" class="fs_label mw-full">
+                                    <label for="" class="fs_label mw-full nowrap">
                                         Тип документа <sup>*</sup>
-                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        @@include('../../../blocks/tips.htm')
                                         <div class="mt-10 flex aic gap-8 posr">
                                             <span class="bef__input">До</span>
                                             <input type="text" id="" class="fs_input mw-full"
@@ -544,7 +539,7 @@
                                 <div class="step_col">
                                     <label for="name" class="fs_label mw-full">
                                         Название документа <sup>*</sup>
-                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        @@include('../../../blocks/tips.htm')
                                         <div class="mt-10 flex aic gap-8 posr">
                                             <input type="text" id="" class="fs_input mw-full"
                                                 placeholder="Название документа">
@@ -557,7 +552,7 @@
                                 <div class="step_col">
                                     <label for="" class="fs_label mw-full">
                                         Срок действия <sup>*</sup>
-                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        @@include('../../../blocks/tips.htm')
                                         <div class="mt-10 flex aic gap-8 posr calendar__icon">
                                             <img src="img/Icon/calendar-outline.svg" alt=""
                                                 class="absolute calendar_icon">
@@ -569,23 +564,14 @@
                                 <div class="step_col">
                                     <label for="name" class="fs_label mw-full">
                                         Цена <sup>*</sup>
-                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        @@include('../../../blocks/tips.htm')
                                         <div class="mt-10 flex aic gap-8 posr dollar__icon">
                                             <input type="text" id="" class="fs_input mw-full" placeholder="0">
                                         </div>
                                     </label>
                                 </div>
                             </div>
-                            <div class="clone_button absolute right_top">
-                                <div class="add_block">
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
-                                            fill="#4272C5"></path>
-                                    </svg>
-                                </div>
-                            </div>
+                            @@include('../../../blocks/forms/_clone_button.htm')
                         </div>
                     </div>
                     <!-- #clone block -->
@@ -597,7 +583,7 @@
                             <div class="step_col">
                                 <label for="" class="fs_label mw-full">
                                     <div class="fs_label mb-10">Налог на прибыль физ. лица <sup>*</sup>
-                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        @@include('../../../blocks/tips.htm')
                                     </div>
                                     <select name="basic[]" multiple="multiple" class="cloneselect"
                                         data-placeholder="Налог на прибыль">
@@ -613,7 +599,7 @@
                             <div class="step_col">
                                 <label for="" class="fs_label mw-full">
                                     Необлагаемая налогом сумма <sup>*</sup>
-                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                    @@include('../../../blocks/tips.htm')
                                     <div class="mt-10 flex aic gap-8 posr dollar__icon">
                                         <span class="bef__input">До</span>
                                         <input type="text" id="" class="fs_input mw-full" placeholder="0">
@@ -623,7 +609,7 @@
                             <div class="step_col">
                                 <label for="" class="fs_label mw-full">
                                     Ставка <sup>*</sup>
-                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                    @@include('../../../blocks/tips.htm')
                                     <div class="mt-10 flex aic gap-8 posr percent__icon">
                                         <input type="text" id="" class="fs_input mw-full" placeholder="0">
                                     </div>
@@ -640,9 +626,9 @@
                             </div>
                             <div class="step__row step__2_columns aie">
                                 <div class="step_col">
-                                    <label for="" class="fs_label mw-full">
+                                    <label for="" class="fs_label mw-full nowrap">
                                         I порог налогообложения <sup>*</sup>
-                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        @@include('../../../blocks/tips.htm')
                                         <div class="mt-10 flex aic gap-8 posr dollar__icon">
                                             <span class="bef__input">До</span>
                                             <input type="text" id="" class="fs_input mw-full" placeholder="0">
@@ -650,24 +636,19 @@
                                     </label>
                                 </div>
                                 <div class="step_col">
-                                    <label for="name" class="fs_label mw-full">
+                                    <label for="name" class="fs_label">
                                         Ставка <sup>*</sup>
-                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                        <div class="mt-10 flex aic gap-8 posr percent__icon">
-                                            <input type="text" id="" class="fs_input mw-full" placeholder="0">
+                                        @@include('../../../blocks/tips.htm')
+                                        <div class="row__input mt-10 flex aic gap-8 posr ">
+                                            <div class="row__input_items w-full percent__icon">
+                                                <input type="text" id="ms-benefit-1" data-item="1" data-max="6"
+                                                    data-min="3" class="fs_input" placeholder="0">
+                                            </div>
+                                            @@include('../../../blocks/forms/_clone_button_row.htm')
                                         </div>
                                     </label>
-                                </div>
-                                <div class="clone_button">
-                                    <div class="add_block">
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
-                                                fill="#4272C5"></path>
-                                        </svg>
-                                    </div>
-                                </div>
+                                </div>   
+                                
                             </div>
                         </div>
                     </div>
@@ -971,7 +952,7 @@
                                 Распределение расходов с использованием нашей статистической модели:
                             </div>
                             <div class="box-292 flex ais">
-                                <div class="left fxs mr-100" style="width: 370px">
+                                <div class="left fxs mr-100">
                                     <canvas id="myChart5"></canvas>
                                 </div>
                                 <div class="right">
@@ -1603,8 +1584,8 @@
                     </div>
                 </div>
 
-                <!-- Container 795width -->
-                <div class="mw-795 mlr-a pb-40">
+                <!-- Container 715width -->
+                <div class="mw-715 mlr-a pb-40">
 
 
                     <!-- clone block -->
@@ -1650,16 +1631,7 @@
                                 </div>
 
                             </div>
-                            <div class="clone_button absolute right_top">
-                                <div class="add_block">
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
-                                            fill="#4272C5"></path>
-                                    </svg>
-                                </div>
-                            </div>
+                            @@include('../../../blocks/forms/_clone_button.htm')
                         </div>
                     </div>
                     <!-- #clone block -->
@@ -1749,8 +1721,8 @@
                     </div>
                 </div>
 
-                <!-- Container 795width -->
-                <div class="mw-795 mlr-a pb-40">
+                <!-- Container 715width -->
+                <div class="mw-715 mlr-a pb-40">
 
 
                     <!-- clone block -->
@@ -1762,9 +1734,9 @@
                             </div>
                             <div class="step__row step__2_columns aie mr-60">
                                 <div class="step_col">
-                                    <label for="" class="fs_label mw-full">
+                                    <label for="" class="fs_label mw-full nowrap">
                                         Наименование риска <sup>*</sup>
-                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        @@include('../../../blocks/tips.htm')
                                         <div class="mt-10 flex aic gap-8 posr">
                                             <span class="bef__input">До</span>
                                             <input type="text" id="" class="fs_input mw-full"
@@ -1775,7 +1747,7 @@
                                 <div class="step_col">
                                     <label for="name" class="fs_label mw-full">
                                         Решение <sup>*</sup>
-                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        @@include('../../../blocks/tips.htm')
                                         <div class="mt-10 flex aic gap-8 posr">
                                             <input type="text" id="" class="fs_input mw-full" placeholder="Решение">
                                         </div>
@@ -1787,7 +1759,7 @@
                                 <div class="step_col">
                                     <label for="" class="fs_label mw-full">
                                         Срок <sup>*</sup>
-                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        @@include('../../../blocks/tips.htm')
                                         <div class="mt-10 flex aic gap-8 posr calendar__icon">
                                             <img src="img/Icon/calendar-outline.svg" alt=""
                                                 class="absolute calendar_icon">
@@ -1799,23 +1771,14 @@
                                 <div class="step_col">
                                     <label for="name" class="fs_label mw-full">
                                         Стоимость <sup>*</sup>
-                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        @@include('../../../blocks/tips.htm')
                                         <div class="mt-10 flex aic gap-8 posr dollar__icon">
                                             <input type="text" id="" class="fs_input mw-full" placeholder="0">
                                         </div>
                                     </label>
                                 </div>
                             </div>
-                            <div class="clone_button absolute right_top">
-                                <div class="add_block">
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
-                                            fill="#4272C5"></path>
-                                    </svg>
-                                </div>
-                            </div>
+                            @@include('../../../blocks/forms/_clone_button.htm')
                         </div>
                     </div>
                     <!-- #clone block -->
@@ -1823,7 +1786,7 @@
                     <div class="step__block">
                         <div class="step__row">
                             <div class="fs_label">Детали бизнес-модели <sup>*</sup>
-                                <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                @@include('../../../blocks/tips.htm')
                             </div>
                             <div class="flex mt-10 gap-40">
                                 <textarea name="" id="" placeholder="Дополнительная о деталях бизнес-модели"></textarea>
@@ -1866,16 +1829,27 @@
                                 <td>
                                     <ul class="fz16 fw600">
                                         <li class="flex aic">
-                                            En <span class="ml-5"><picture><source srcset="img/flag/eng.webp" type="image/webp"><img src="img/flag/eng.png" alt=""></picture></span>
+                                            En <span class="ml-5">
+                                                <picture>
+                                                    <source srcset="img/flag/eng.webp" type="image/webp"><img
+                                                        src="img/flag/eng.png" alt="">
+                                                </picture>
+                                            </span>
                                         </li>
                                         <li class="flex aic">
-                                            Pl <span class="ml-5"><picture><source srcset="img/flag/pl.webp" type="image/webp"><img src="img/flag/pl.png" alt=""></picture></span>
+                                            Pl <span class="ml-5">
+                                                <picture>
+                                                    <source srcset="img/flag/pl.webp" type="image/webp"><img
+                                                        src="img/flag/pl.png" alt="">
+                                                </picture>
+                                            </span>
                                         </li>
                                     </ul>
                                 </td>
                                 <td>
                                     <div class="flex jcc">
-                                        <a href="" class="block mc"><i data-svg='img/business/table/download.svg'></i></a>
+                                        <a href="" class="block mc"><i
+                                                data-svg='img/business/table/download.svg'></i></a>
                                     </div>
                                 </td>
                             </tr>
@@ -1886,16 +1860,27 @@
                                 <td>
                                     <ul class="fz16 fw600">
                                         <li class="flex aic">
-                                            En <span class="ml-5"><picture><source srcset="img/flag/eng.webp" type="image/webp"><img src="img/flag/eng.png" alt=""></picture></span>
+                                            En <span class="ml-5">
+                                                <picture>
+                                                    <source srcset="img/flag/eng.webp" type="image/webp"><img
+                                                        src="img/flag/eng.png" alt="">
+                                                </picture>
+                                            </span>
                                         </li>
                                         <li class="flex aic">
-                                            Pl <span class="ml-5"><picture><source srcset="img/flag/pl.webp" type="image/webp"><img src="img/flag/pl.png" alt=""></picture></span>
+                                            Pl <span class="ml-5">
+                                                <picture>
+                                                    <source srcset="img/flag/pl.webp" type="image/webp"><img
+                                                        src="img/flag/pl.png" alt="">
+                                                </picture>
+                                            </span>
                                         </li>
                                     </ul>
                                 </td>
                                 <td>
                                     <div class="flex jcc">
-                                        <a href="" class="block mc"><i data-svg='img/business/table/download.svg'></i></a>
+                                        <a href="" class="block mc"><i
+                                                data-svg='img/business/table/download.svg'></i></a>
                                     </div>
                                 </td>
                             </tr>
@@ -1906,16 +1891,27 @@
                                 <td>
                                     <ul class="fz16 fw600">
                                         <li class="flex aic">
-                                            En <span class="ml-5"><picture><source srcset="img/flag/eng.webp" type="image/webp"><img src="img/flag/eng.png" alt=""></picture></span>
+                                            En <span class="ml-5">
+                                                <picture>
+                                                    <source srcset="img/flag/eng.webp" type="image/webp"><img
+                                                        src="img/flag/eng.png" alt="">
+                                                </picture>
+                                            </span>
                                         </li>
                                         <li class="flex aic">
-                                            Pl <span class="ml-5"><picture><source srcset="img/flag/pl.webp" type="image/webp"><img src="img/flag/pl.png" alt=""></picture></span>
+                                            Pl <span class="ml-5">
+                                                <picture>
+                                                    <source srcset="img/flag/pl.webp" type="image/webp"><img
+                                                        src="img/flag/pl.png" alt="">
+                                                </picture>
+                                            </span>
                                         </li>
                                     </ul>
                                 </td>
                                 <td>
                                     <div class="flex jcc">
-                                        <a href="" class="block mc"><i data-svg='img/business/table/download.svg'></i></a>
+                                        <a href="" class="block mc"><i
+                                                data-svg='img/business/table/download.svg'></i></a>
                                     </div>
                                 </td>
                             </tr>
@@ -1923,15 +1919,19 @@
                     </div>
                     <div class="set-blue fz16 p-20 round-12">
                         <p><b>Детали бизнес-модели</b></p>
-                        <p>Рынок России на середину 2022 года насчитывает почти 5000 рекламных агентств и более 100 000 специалистов по рекламе.</p>
-                        <p>Еще в начале года как минимум 10% агентств и 1% индивидуальны специалистов вели рекламные кампании для иностранных партнеров.</p>
-                        <p>Средний бюджет на рекламу по 1 иностранному проекту в год - 120 000 €. Что в общей сумме составляет - 180 000 000 €</p>
-                        <p>Многие Российские IT-компании до сих пор в поиске решений для сотрудничества с иностранным бизнесом.</p>
+                        <p>Рынок России на середину 2022 года насчитывает почти 5000 рекламных агентств и более 100 000
+                            специалистов по рекламе.</p>
+                        <p>Еще в начале года как минимум 10% агентств и 1% индивидуальны специалистов вели рекламные
+                            кампании для иностранных партнеров.</p>
+                        <p>Средний бюджет на рекламу по 1 иностранному проекту в год - 120 000 €. Что в общей сумме
+                            составляет - 180 000 000 €</p>
+                        <p>Многие Российские IT-компании до сих пор в поиске решений для сотрудничества с иностранным
+                            бизнесом.</p>
                     </div>
                 </div>
 
-                <!-- Container 795width -->
-                <div class="mw-795 mlr-a pb-40">
+                <!-- Container 715width -->
+                <div class="mw-715 mlr-a pb-40">
 
 
                     <!-- clone block -->
@@ -1943,9 +1943,9 @@
                             </div>
                             <div class="step__row step__2_columns aie mr-60">
                                 <div class="step_col">
-                                    <label for="" class="fs_label mw-full">
+                                    <label for="" class="fs_label mw-full nowrap">
                                         Наименование риска <sup>*</sup>
-                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        @@include('../../../blocks/tips.htm')
                                         <div class="mt-10 flex aic gap-8 posr">
                                             <span class="bef__input">До</span>
                                             <input type="text" id="" class="fs_input mw-full"
@@ -1956,7 +1956,7 @@
                                 <div class="step_col">
                                     <label for="name" class="fs_label mw-full">
                                         Решение <sup>*</sup>
-                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        @@include('../../../blocks/tips.htm')
                                         <div class="mt-10 flex aic gap-8 posr">
                                             <input type="text" id="" class="fs_input mw-full" placeholder="Решение">
                                         </div>
@@ -1968,7 +1968,7 @@
                                 <div class="step_col">
                                     <label for="" class="fs_label mw-full">
                                         Срок <sup>*</sup>
-                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        @@include('../../../blocks/tips.htm')
                                         <div class="mt-10 flex aic gap-8 posr calendar__icon">
                                             <img src="img/Icon/calendar-outline.svg" alt=""
                                                 class="absolute calendar_icon">
@@ -1980,23 +1980,14 @@
                                 <div class="step_col">
                                     <label for="name" class="fs_label mw-full">
                                         Стоимость <sup>*</sup>
-                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        @@include('../../../blocks/tips.htm')
                                         <div class="mt-10 flex aic gap-8 posr dollar__icon">
                                             <input type="text" id="" class="fs_input mw-full" placeholder="0">
                                         </div>
                                     </label>
                                 </div>
                             </div>
-                            <div class="clone_button absolute right_top">
-                                <div class="add_block">
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
-                                            fill="#4272C5"></path>
-                                    </svg>
-                                </div>
-                            </div>
+                            @@include('../../../blocks/forms/_clone_button.htm')
                         </div>
                     </div>
                     <!-- #clone block -->
@@ -2018,24 +2009,29 @@
             <div class="forma_page-info" style="display: block;">
                 <div class="bg-fa p-35">
                     <div class="video-play oh round-12 posr mt-20">
-                        <a href="" class="block"><picture><source srcset="img/slide-1.webp" type="image/webp"><img src="img/slide-1.jpg" alt=""></picture></a>
+                        <a href="" class="block">
+                            <picture>
+                                <source srcset="img/slide-1.webp" type="image/webp"><img src="img/slide-1.jpg" alt="">
+                            </picture>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Container 795width -->
-                <div class="mw-795 mlr-a pb-40">
+                <!-- Container 715width -->
+                <div class="mw-715 mlr-a pb-40">
 
 
                     <!-- clone block -->
                     <div class="step__block">
-                        
+
                         <div class="step__row  mt-20">
                             <div class="step_col">
                                 <label for="" class="fs_label mw-full">
                                     Загрузите ваши видеоматериалы, презентацию компании, команды, и т.д. <sup>*</sup>
-                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                    @@include('../../../blocks/tips.htm')
                                     <div class="mt-10 flex aic gap-8 posr">
-                                        <input type="text" id="" class="fs_input mw-full" placeholder="Ссылка на видеоматериалы">
+                                        <input type="text" id="" class="fs_input mw-full"
+                                            placeholder="Ссылка на видеоматериалы">
                                     </div>
                                 </label>
                             </div>

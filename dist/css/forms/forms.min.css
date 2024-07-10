@@ -1,0 +1,59 @@
+.clone_button,
+.add_block1,
+.add_row1 {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(66, 114, 197, 0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.clone_button:hover,
+.add_block1:hover,
+.add_row1:hover {
+  background-color: #4272c5;
+}
+.clone_button:hover path,
+.add_block1:hover path,
+.add_row1:hover path {
+  fill: #fff;
+}
+
+.remove_button:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.wrap_clone_buttons.right_top,
+.clone_button.right_top {
+  right: 20px;
+  top: 20px;
+}
+
+.wrap_clone_buttons {
+  width: 70px;
+  height: 40px;
+}
+
+.block__repetitive .row__input_items {
+  max-width: 637px;
+}
+.block__repetitive .step__2_columns .step_col:last-child .row__input_items {
+  max-width: 260px;
+}
+.block__repetitive .step__3_columns .step_col:last-child .row__input_items {
+  max-width: 182px;
+}
+
+.clone-container[data-id="1"] .wrap_clone_buttons {
+  justify-content: end;
+}
+
+@media (max-width: 480px) {
+  .clone_button.right_top {
+    right: 15px;
+    top: 15px;
+  }
+}

@@ -3,7 +3,7 @@
 
         <!-- STEP 1 -->
         <div class="forma_page-item round-15 shadow bg-white mb-30" id="box-team">
-            <div class="triger shadow pointer flex aic jcsb bg-blue-2 w-full">
+            <div class="triger shadow pointer flex aic jcsb bg-blue-2 w-full active">
                 <div class="name flex aic fz218 fw600 color-333 status_check">
                     @@include('status__tab.htm',{}) Идея
                 </div>
@@ -11,7 +11,7 @@
                     <span class="ml-10"><img src="./img/Icon/ic_arrow.svg" alt=""></span>
                 </div>
             </div>
-            <div class="forma_page-info">
+            <div class="forma_page-info" style="display: block;">
                 <div class="forma_page-row flex bg-fa p-35">
                     <div class="forma_page-ll fxg mr-30">
                         <div class="m-scroll">
@@ -167,7 +167,7 @@
                         <div class="step__title mb-20 fz18 fw500 ff-roboto">Годовая метрика</div>
                         <div class="step__row step__2_columns">
                             <div class="step_col">
-                                <label for="name" class="fs_label">
+                                <label for="name" class="fs_label nowrap">
                                     Сроки запуска <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg" alt=""
                                         class="pt-5">
                                     <div class="mt-10 flex aic gap-8 posr">
@@ -178,7 +178,7 @@
                                 </label>
                             </div>
                             <div class="step_col">
-                                <label for="name" class="fs_label">
+                                <label for="name" class="fs_label nowrap">
                                     Годовые инвестиции <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg" alt=""
                                         class="pt-5">
                                     <div class="mt-10 flex aic gap-8 posr">
@@ -196,7 +196,7 @@
                         </div>
                         <div class="step__row step__2_columns mt-40">
                             <div class="step_col">
-                                <label for="name" class="fs_label">
+                                <label for="name" class="fs_label nowrap">
                                     Расходы на оборудование/мат. аквивы <sup>*</sup>
                                     <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
                                     <div class="mt-10 flex aic gap-8 posr">
@@ -308,7 +308,7 @@
                         <div class="step__title mb-20 fz18 fw500 ff-roboto">Окупаемость инвестиций</div>
                         <div class="step__row step__2_columns">
                             <div class="step_col">
-                                <label for="name" class="fs_label">
+                                <label for="name" class="fs_label nowrap">
                                     Окупаемость инвестиций <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg"
                                         alt="" class="pt-5">
                                     <div class="mt-10 flex aic gap-8 posr">
@@ -540,97 +540,107 @@
                     <!-- Block 1 -->
                     <div class="step__block">
                         <div class="step__title mb-20 fz18 fw500 ff-roboto">Ежемесячная метрика</div>
-                        <div class="step__row">
-                            <div class="step_col">
-                                <label for="ms-benefit-1" class="fs_label w-full">
-                                    Статья доходов <sup>*</sup>
-                                    <div class="row__input flex aie gap-20 mt-10 mw-full">
-                                        <div class="row__input_items w-full">
-                                            <input type="text" id="ms-benefit-1" data-item='2' data-max='4'
-                                                class="fs_input mw-full" placeholder="Статья доходов">
+                        <div class="block__repetitive clone-container mt-20" data-id="1" data-max="3">
+                            <div class="block__title mb-15 fz16 fw500 ff-roboto">
+                                Статья доходов <span class="current">1</span>
+                            </div>
+
+                            <div class="step__row">
+                                <div class="step_col">
+                                    <label for="name" class="fs_label">
+                                        Себестоимость продукта <sup>*</sup>
+                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        <div class="mt-10 flex aic gap-8 posr dollar__icon">
+                                            <input type="text" id="ms-benefit-1" class="fs_input mw-full"
+                                                placeholder="Статья доходов">
                                         </div>
-                                        <div class="add_row__wrap">
-                                            <a href="#" class="add_row">
-                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                        d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
-                                                        fill="#4272C5" />
-                                                </svg>
-                                            </a>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="step__row step__3_columns mt-30 fxww">
+                                <div class="step_col">
+                                    <label for="name" class="fs_label">
+                                        Кол-во продаж <sup>*</sup>
+                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        <div class="mt-10 flex aic gap-8 posr">
+                                            <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
                                         </div>
-                                    </div>
-                                </label>
+                                    </label>
+                                </div>
+                                <div class="step_col">
+                                    <label for="name" class="fs_label">
+                                        Цена продукта <sup>*</sup>
+                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        <div class="mt-10 flex aic gap-8 posr dollar__icon">
+                                            <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="step_col">
+                                    <label for="name" class="fs_label">
+                                        Себестоимость продукта <sup>*</sup>
+                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        <div class="mt-10 flex aic gap-8 posr dollar__icon">
+                                            <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                        </div>
+                                    </label>
+                                </div>
                             </div>
+                            <div class="step__row step__3_columns mt-30 fxww">
+                                <div class="step_col">
+                                    <label for="name" class="fs_label">
+                                        Себестоимость продукта <sup>*</sup>
+                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        <div class="mt-10 flex aic gap-8 posr dollar__icon">
+                                            <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="step_col">
+                                    <label for="name" class="fs_label">
+                                        Расходы компании <sup>*</sup>
+                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        <div class="mt-10 flex aic gap-8 posr dollar__icon">
+                                            <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="step_col">
+                                    <label for="name" class="fs_label">
+                                        Чистая прибыль <sup>*</sup>
+                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        <div class="mt-10 flex aic gap-8 posr dollar__icon">
+                                            <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+
+                            @@include('../../../blocks/forms/_clone_button.htm')
                         </div>
-                        <div class="step__row step__3_columns mt-30">
-                            <div class="step_col">
-                                <label for="name" class="fs_label">
-                                    Кол-во продаж <sup>*</sup>
-                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <div class="mt-10 flex aic gap-8 posr">
-                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="step_col">
-                                <label for="name" class="fs_label">
-                                    Цена продукта <sup>*</sup>
-                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <div class="mt-10 flex aic gap-8 posr dollar__icon">
-                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="step_col">
-                                <label for="name" class="fs_label">
-                                    Себестоимость продукта <sup>*</sup>
-                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <div class="mt-10 flex aic gap-8 posr dollar__icon">
-                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="step__row step__3_columns mt-30">
-                            <div class="step_col">
-                                <label for="name" class="fs_label">
-                                    Себестоимость продукта <sup>*</sup>
-                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <div class="mt-10 flex aic gap-8 posr dollar__icon">
-                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="step_col">
-                                <label for="name" class="fs_label">
-                                    Расходы компании <sup>*</sup>
-                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <div class="mt-10 flex aic gap-8 posr dollar__icon">
-                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="step_col">
-                                <label for="name" class="fs_label">
-                                    Чистая прибыль <sup>*</sup>
-                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <div class="mt-10 flex aic gap-8 posr dollar__icon">
-                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
+                    </div>
+
+
+                    <!-- ################### -->
+                    <div class="step__block">
+
+
+
+
+
+
                     </div>
                     <!-- Block 2 -->
                     <div class="step__block">
                         <div class="step__title mb-20 fz18 fw500 ff-roboto">Годовая метрика</div>
-                        <div class="step__row step__3_columns mt-30">
+                        <div class="step__row step__3_columns mt-30 fxww">
                             <div class="step_col">
                                 <label for="name" class="fs_label">
                                     Оборот <sup>*</sup>
                                     <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <div class="mt-10 flex aic gap-8 posr">
+                                    <div class="mt-10 flex aic gap-8 posr dollar__icon">
                                         <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
                                     </div>
                                 </label>
@@ -659,7 +669,8 @@
                                 <div class="fs_label">Подробнее о доходах <sup>*</sup> <img
                                         src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5"></div>
                                 <div class="flex mt-10 gap-40">
-                                    <textarea name="" id="" placeholder="Обоснование финансовых показателей"></textarea>
+                                    <textarea name="" id="" placeholder="Обоснование финансовых показателей"
+                                        class="mh-280"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -981,7 +992,7 @@
                                 </label>
                             </div>
                             <div class="step_col">
-                                <label for="name" class="fs_label">
+                                <label for="name" class="fs_label nowrap">
                                     Время на погружение в детали <sup>*</sup> <img
                                         src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
                                     <div class="mt-10 flex aic gap-8 posr">
@@ -1014,173 +1025,163 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="step__row mt-40">
-                            <div class="step_col">
-                                <label for="ms-benefit-1" class="fs_label w-full">
+                        <div class="step__block">
+                            <div class="step__title fz18 fw500 ff-roboto">Обучающие материалы</div>
+                            <div class="block__repetitive clone-container mt-20" data-id="1" data-max="3">
+                                <div class="block__title mb-15 fz16 fw500 ff-roboto">
+                                    Материал <span class="current">1</span>
+                                </div>
+                                <label for="name" class="fs_label">
                                     Какие обучающие материалы будут предоставлены инвестору <sup>*</sup>
-                                    <div class="row__input flex aie gap-20 mt-10 mw-full">
+                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                    <div class="row__input mt-10 flex aic gap-8 posr w-100">
                                         <div class="row__input_items w-full">
-                                            <input type="text" id="ms-benefit-1" data-item="2" data-max="4"
-                                                class="fs_input mw-full"
+                                            <input type="text" id="ms-benefit-1" class="fs_input w-100"
                                                 placeholder="Наименование обучающего материала">
                                         </div>
-                                        <div class="add_row__wrap">
-                                            <a href="#" class="add_row">
-                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                        d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
-                                                        fill="#4272C5"></path>
-                                                </svg>
-                                            </a>
-                                        </div>
+                                        @@include('../../../blocks/forms/_clone_button_row.htm')
                                     </div>
                                 </label>
                             </div>
                         </div>
-                        <div class="step__row mt-40">
-                            <div class="step_col">
-                                <label for="ms-benefit-1" class="fs_label w-full">
-                                    Какие договора будут предоставлены инвестору? <sup>*</sup>
-                                    <div class="row__input flex aie gap-20 mt-10 mw-full">
+                        <!-- # -->
+                        <div class="step__block">
+                            <div class="step__title fz18 fw500 ff-roboto">Какие договора будут предоставлены инвестору?
+                            </div>
+                            <div class="block__repetitive clone-container mt-20" data-id="1" data-max="3">
+                                <div class="block__title mb-15 fz16 fw500 ff-roboto">
+                                    Договора <span class="current">1</span>
+                                </div>
+                                <label for="name" class="fs_label">
+                                    Какие обучающие материалы будут предоставлены инвестору <sup>*</sup>
+                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                    <div class="row__input mt-10 flex aic gap-8 posr w-100">
                                         <div class="row__input_items w-full">
-                                            <input type="text" id="ms-benefit-1" data-item="2" data-max="4"
-                                                class="fs_input mw-full" placeholder="Наименование договора">
+                                            <input type="text" id="ms-benefit-1" class="fs_input w-100"
+                                                placeholder="Наименование договора">
                                         </div>
-                                        <div class="add_row__wrap">
-                                            <a href="#" class="add_row">
-                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                        d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
-                                                        fill="#4272C5"></path>
-                                                </svg>
-                                            </a>
-                                        </div>
+                                        @@include('../../../blocks/forms/_clone_button_row.htm')
                                     </div>
                                 </label>
                             </div>
                         </div>
-                    </div>
-                    <!-- Block 2 -->
-                    <div class="step__block">
-                        <div class="step__title mb-20 fz18 fw500 ff-roboto">Ежемесячные статические расходы</div>
-                        <div class="step__row step__3_columns mt-30">
-                            <div class="step_col step_col-2">
-                                <label for="name" class="fs_label">
-                                    Персонал <sup>*</sup>
-                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <div class="mt-10 flex aic gap-8 posr">
-                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="Персонал">
-                                    </div>
-                                </label>
+                        <!-- # -->
+                        <div class="step__block">
+                            <div class="step__title fz18 fw500 ff-roboto mb-15">Ежемесячные статические расходы
                             </div>
-                            <div class="step_col step_col-1">
-                                <label for="name" class="fs_label">
-                                    Кол-во <sup>*</sup>
-                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <div class="mt-10 flex aic gap-8 posr dollar__icon">
-                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                            <div class="block__repetitive clone-container mt-20" data-id="1" data-max="3">
+                                <div class="block__title mb-15 fz16 fw500 ff-roboto">
+                                    Наименование специалиста <span class="current">1</span>
+                                </div>
+                                <div class="step__row step__3_columns mt-20 fxww">
+                                    <div class="step_col step_col-2">
+                                        <label for="name" class="fs_label">
+                                            Персонал <sup>*</sup>
+                                            <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                            <div class="mt-10 flex aic gap-8 posr">
+                                                <input type="text" id="curr" class="fs_input minw-no"
+                                                    placeholder="Персонал">
+                                            </div>
+                                        </label>
                                     </div>
-                                </label>
-                            </div>
-                            <div class="step_col step_col-2">
-                                <label for="name" class="fs_label">
-                                    Средняя зарплата/мес <sup>*</sup>
-                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <div class="row__input flex aie gap-20 mt-10 mw-full">
-                                        <div class="row__input_items w-full">
-                                            <input type="text" id="ms-benefit-1" data-item="2" data-max="4"
-                                                class="fs_input minw-no" placeholder="0">
-                                        </div>
-                                        <div class="add_row__wrap">
-                                            <a href="#" class="add_row">
-                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                        d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
-                                                        fill="#4272C5"></path>
-                                                </svg>
-                                            </a>
-                                        </div>
+                                    <div class="step_col step_col-1">
+                                        <label for="name" class="fs_label">
+                                            Кол-во <sup>*</sup>
+                                            <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                            <div class="mt-10 flex aic gap-8 posr dollar__icon">
+                                                <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                            </div>
+                                        </label>
                                     </div>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Block 3 -->
-                    <div class="step__block">
-                        <div class="step__title mb-20 fz18 fw500 ff-roboto">Ежемесячные динамические расходы</div>
-                        <div class="step__row step__3_columns mt-30">
-                            <div class="step_col">
-                                <label for="name" class="fs_label">
-                                    Статья расходов <sup>*</sup>
-                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <div class="mt-10 flex aic gap-8 posr">
-                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="Персонал">
+                                    <div class="step_col step_col-2">
+                                        <label for="name" class="fs_label">
+                                            Средняя зарплата/мес <sup>*</sup>
+                                            <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                            <div class="row__input flex aie gap-8 mt-10 mw-full">
+                                                <div class="row__input_items w-full dollar__icon">
+                                                    <input type="text" id="ms-benefit-1" data-item="2" data-max="4"
+                                                        class="fs_input minw-no" placeholder="0">
+                                                </div>
+                                                @@include('../../../blocks/forms/_clone_button_row.htm')
+                                            </div>
+                                        </label>
                                     </div>
-                                </label>
-                            </div>
-                            <div class="step_col">
-                                <label for="name" class="fs_label">
-                                    Стоимость <sup>*</sup>
-                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <div class="row__input flex aie gap-20 mt-10 mw-full">
-                                        <div class="row__input_items w-full">
-                                            <input type="text" id="ms-benefit-1" data-item="2" data-max="4"
-                                                class="fs_input minw-no" placeholder="0">
-                                        </div>
-                                        <div class="add_row__wrap">
-                                            <a href="#" class="add_row">
-                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                        d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
-                                                        fill="#4272C5"></path>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </label>
+                                </div>
+
                             </div>
                         </div>
-                    </div>
-                    <!-- Block 4 -->
-                    <div class="step__block">
-                        <div class="step__title mb-20 fz18 fw500 ff-roboto">Единоразовые расходы</div>
-                        <div class="step__row step__3_columns mt-30">
-                            <div class="step_col">
-                                <label for="name" class="fs_label">
-                                    Статья расходов <sup>*</sup>
-                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <div class="mt-10 flex aic gap-8 posr">
-                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="Персонал">
-                                    </div>
-                                </label>
+                        <!-- # -->
+                        <div class="step__block">
+                            <div class="step__title fz18 fw500 ff-roboto mb-15">Ежемесячные динамические расходы
                             </div>
-                            <div class="step_col">
-                                <label for="name" class="fs_label">
-                                    Стоимость <sup>*</sup>
-                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <div class="row__input flex aie gap-20 mt-10 mw-full">
-                                        <div class="row__input_items w-full">
-                                            <input type="text" id="ms-benefit-1" data-item="2" data-max="4"
-                                                class="fs_input minw-no" placeholder="0">
-                                        </div>
-                                        <div class="add_row__wrap">
-                                            <a href="#" class="add_row">
-                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                        d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
-                                                        fill="#4272C5"></path>
-                                                </svg>
-                                            </a>
-                                        </div>
+                            <div class="block__repetitive clone-container mt-20" data-id="1" data-max="3">
+                                <div class="block__title mb-15 fz16 fw500 ff-roboto">
+                                    Наименование специалиста <span class="current">1</span>
+                                </div>
+                                <div class="step__row step__2_columns mt-30">
+                                    <div class="step_col">
+                                        <label for="name" class="fs_label">
+                                            Статья расходов <sup>*</sup>
+                                            <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                            <div class="mt-10 flex aic gap-8 posr">
+                                                <input type="text" id="curr" class="fs_input minw-no"
+                                                    placeholder="Персонал">
+                                            </div>
+                                        </label>
                                     </div>
-                                </label>
+                                    <div class="step_col">
+                                        <label for="name" class="fs_label">
+                                            Стоимость <sup>*</sup>
+                                            <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                            <div class="row__input flex aie gap-8 mt-10 mw-full">
+                                                <div class="row__input_items w-full dollar__icon">
+                                                    <input type="text" id="ms-benefit-1" data-item="2" data-max="4"
+                                                        class="fs_input minw-no" placeholder="0">
+                                                </div>
+                                                @@include('../../../blocks/forms/_clone_button_row.htm')
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
+                        <!-- # -->
+                        <div class="step__block">
+                            <div class="step__title fz18 fw500 ff-roboto mb-15">Единоразовые расходы
+                            </div>
+                            <div class="block__repetitive clone-container mt-20" data-id="1" data-max="3">
+                                <div class="block__title mb-15 fz16 fw500 ff-roboto">
+                                    Статья расхода <span class="current">1</span>
+                                </div>
+                                <div class="step__row step__2_columns mt-30">
+                                    <div class="step_col">
+                                        <label for="name" class="fs_label">
+                                            Статья расходов <sup>*</sup>
+                                            <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                            <div class="mt-10 flex aic gap-8 posr">
+                                                <input type="text" id="curr" class="fs_input minw-no"
+                                                    placeholder="Персонал">
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="step_col">
+                                        <label for="name" class="fs_label">
+                                            Стоимость <sup>*</sup>
+                                            <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                            <div class="row__input flex aie gap-8 mt-10 mw-full">
+                                                <div class="row__input_items w-full dollar__icon">
+                                                    <input type="text" id="ms-benefit-1" data-item="2" data-max="4"
+                                                        class="fs_input minw-no" placeholder="0">
+                                                </div>
+                                                @@include('../../../blocks/forms/_clone_button_row.htm')
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- # -->
                         <div class="step__row mt-40">
                             <div class="fs_label">Детали бизнес-модели <sup>*</sup>
                                 <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
@@ -1190,267 +1191,281 @@
                                     placeholder="Напишите более подробно о деталях бизнес-модели компании, от 4-8 предложений"></textarea>
                             </div>
                         </div>
+
                     </div>
                 </div>
+
+
             </div>
         </div>
+    </div>
 
-        <!-- STEP 4 -->
+    <!-- STEP 4 -->
 
-        <div class="forma_page-item forma_page-block_2 oh round-15 bg-white mb-30" id="box-team">
-            <div class="triger shadow pointer flex aic jcsb bg-blue-2 w-full active">
-                <div class="name flex aic fz218 fw600 color-333">
-                    @@include('status__tab.htm',{}) Маркетинг и продажи
-                </div>
-                <div class="arrow flex aic fz14 bold orang">
-                    <span class="ml-10"><img src="./img/Icon/ic_arrow.svg" alt=""></span>
-                </div>
+    <div class="forma_page-item forma_page-block_2 oh round-15 bg-white mb-30" id="box-team">
+        <div class="triger shadow pointer flex aic jcsb bg-blue-2 w-full ">
+            <div class="name flex aic fz218 fw600 color-333">
+                @@include('status__tab.htm',{}) Маркетинг и продажи
             </div>
-            <div class="forma_page-info" style="display: block;">
-                <div class="forma_page-row bg-fa p-35">
-                    <div class="biznes_tab-name flex aic mb-20 fz18 fz16m fw600 blue-2">
-                        <div class="fxs mr-5"><img src="img/svg/rupor.svg" alt=""></div>
-                        Ежемесячные показатели маркетинга
-                    </div>
-                    <div class="m-scroll-767">
-                        <table class="cust_table cust_table_500 mb-40" style="max-width: 857px">
-                            <tr>
-                                <td class="bg-blue fz14" colspan="2">Показатели конверсии</td>
-                                <td class="bg-blue"><b>От 15%</b></td>
-                                <td class="bg-blue"><b>От 15%</b></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" class="fz14">Стоимость лида из таргета:</td>
-                                <td><b>От 2$</b></td>
-                                <td><b>до 2$</b></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" class="fz14">Стоимость лида из контекста:</td>
-                                <td><b>От 2$</b></td>
-                                <td><b>до 2$</b></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" class="fz14">Стоимость лида из других источников:</td>
-                                <td><b>От 2$</b></td>
-                                <td><b>до 2$</b></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="biznes_tab-name flex aic mb-20 fz18 fz16m fw600 blue-2">
-                        <div class="fxs mr-5"><img src="img/svg/cel.svg" alt=""></div>
-                        Ежемесячные показатели продаж
-                    </div>
-                    <div class="m-scroll-767">
-                        <table class="cust_table cust_table_500 mb-40" style="max-width: 857px">
-                            <tr>
-                                <td class="bg-blue fz14" colspan="2">Средняя конверсия продаж в %:</td>
-                                <td class="bg-blue"><b>От 15%</b></td>
-                                <td class="bg-blue"><b>От 15%</b></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" class="fz14">Количество сделок ежемесячно:</td>
-                                <td><b>От 10 дн</b></td>
-                                <td><b>до 60 шт</b></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" class="fz14">Сроки сделки в днях:</td>
-                                <td><b>От 10 дн</b></td>
-                                <td><b>до 60 шт</b></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" class="fz14">Себестоимость сделки в траффике:</td>
-                                <td><b>От 10 дн</b></td>
-                                <td><b>до 60 шт</b></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" class="fz14">Себестоимость сделки траффик + отдела маркетинга:</td>
-                                <td><b>От 10 дн</b></td>
-                                <td><b>до 60 шт</b></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" class="fz14">Себестоимость сделки с отделами продаж, маркетинга,
-                                    траффика:</td>
-                                <td><b>От 10 дн</b></td>
-                                <td><b>до 60 шт</b></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <!-- Container 715width -->
-                <div class="mw-715  pb-40">
-                    <!-- Block 1 -->
-                    <div class="step__block">
-                        <div class="step__title mb-20 fz18 fw500 ff-roboto">Ежемесячные показатели маркетинга</div>
-                        <div class="step__row step__2_columns">                           
-                            <div class="step_col">
-                                <label for="name" class="fs_label">
-                                    Показатели конверсии <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <div class="mt-10 flex aic gap-8 posr">
-                                        <span class="bef__input">От</span>
-                                        <span class="percent__icon">
-                                            <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
-                                        </span>
-                                        <span class="bef__input">до</span>
-                                        <span class="percent__icon">
-                                            <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
-                                        </span>
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="step_col">
-                                <label for="name" class="fs_label">
-                                    Стоимость лида из таргета <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <div class="mt-10 flex aic gap-8 posr">
-                                        <span class="bef__input">От</span>
-                                        <span class="dollar__icon">
-                                            <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
-                                        </span>
-                                        <span class="bef__input">до</span>
-                                        <span class="dollar__icon">
-                                            <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
-                                        </span>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="step__row step__2_columns mt-40">                           
-                            <div class="step_col">
-                                <label for="name" class="fs_label">
-                                    Стоимость лида из контекста <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <div class="mt-10 flex aic gap-8 posr">
-                                        <span class="bef__input">От</span>
-                                        <span class="dollar__icon">
-                                            <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
-                                        </span>
-                                        <span class="bef__input">до</span>
-                                        <span class="dollar__icon">
-                                            <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
-                                        </span>
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="step_col">
-                                <label for="name" class="fs_label">
-                                    Стоимость лида из других источников <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <div class="mt-10 flex aic gap-8 posr">
-                                        <span class="bef__input">От</span>
-                                        <span class="dollar__icon">
-                                            <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
-                                        </span>
-                                        <span class="bef__input">до</span>
-                                        <span class="dollar__icon">
-                                            <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
-                                        </span>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Block 2 -->
-                    <div class="step__block">
-                        <div class="step__title mb-20 fz18 fw500 ff-roboto">Ежемесячные показатели продаж</div>
-                        <div class="step__row step__2_columns">                           
-                            <div class="step_col">
-                                <label for="name" class="fs_label">
-                                    Средняя конверсия продаж <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <div class="mt-10 flex aic gap-8 posr">
-                                        <span class="bef__input">От</span>
-                                        <span class="percent__icon">
-                                            <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
-                                        </span>
-                                        <span class="bef__input">до</span>
-                                        <span class="percent__icon">
-                                            <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
-                                        </span>
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="step_col">
-                                <label for="name" class="fs_label">
-                                    Количество сделок ежемесячно <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <div class="mt-10 flex aic gap-8 posr">
-                                        <span class="bef__input">От</span>
-                                        <span class="">
-                                            <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
-                                        </span>
-                                        <span class="bef__input">до</span>
-                                        <span class="">
-                                            <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
-                                        </span>
-                                        <span class="bef__input">штук</span>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="step__row step__2_columns mt-40">                           
-                            <div class="step_col">
-                                <label for="name" class="fs_label">
-                                    Сроки сделки <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <div class="mt-10 flex aic gap-8 posr">
-                                        <span class="bef__input">От</span>
-                                        <span class="">
-                                            <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
-                                        </span>
-                                        <span class="bef__input">до</span>
-                                        <span class="">
-                                            <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
-                                        </span>
-                                        <span class="bef__input">дней</span>
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="step_col">
-                                <label for="name" class="fs_label">
-                                    Себестоимость сделки в траффике <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <div class="mt-10 flex aic gap-8 posr">
-                                        <span class="bef__input">От</span>
-                                        <span class="dollar__icon">
-                                            <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
-                                        </span>
-                                        <span class="bef__input">до</span>
-                                        <span class="dollar__icon">
-                                            <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
-                                        </span>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="step__row step__2_columns mt-40">                           
-                            <div class="step_col">
-                                <label for="name" class="fs_label">
-                                    Себестоимость сделки отдела маркетинга <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <div class="mt-10 flex aic gap-8 posr">
-                                        <span class="bef__input">От</span>
-                                        <span class="dollar__icon">
-                                            <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
-                                        </span>
-                                        <span class="bef__input">до</span>
-                                        <span class="dollar__icon">
-                                            <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
-                                        </span>
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="step_col">
-                                <label for="name" class="fs_label">
-                                    Себестоимость сделки всех отделов <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                    <div class="mt-10 flex aic gap-8 posr">
-                                        <span class="bef__input">От</span>
-                                        <span class="dollar__icon">
-                                            <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
-                                        </span>
-                                        <span class="bef__input">до</span>
-                                        <span class="dollar__icon">
-                                            <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
-                                        </span>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                   
-                </div>
+            <div class="arrow flex aic fz14 bold orang">
+                <span class="ml-10"><img src="./img/Icon/ic_arrow.svg" alt=""></span>
             </div>
         </div>
+        <div class="forma_page-info">
+            <div class="forma_page-row bg-fa p-35">
+                <div class="biznes_tab-name flex aic mb-20 fz18 fz16m fw600 blue-2">
+                    <div class="fxs mr-5"><img src="img/Icon/rupor.svg" alt=""></div>
+                    Ежемесячные показатели маркетинга
+                </div>
+                <div class="m-scroll-767">
+                    <table class="cust_table cust_table_500 mb-40" style="max-width: 857px">
+                        <tr>
+                            <td class="bg-blue fz14" colspan="2">Показатели конверсии</td>
+                            <td class="bg-blue"><b>От 15%</b></td>
+                            <td class="bg-blue"><b>От 15%</b></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fz14">Стоимость лида из таргета:</td>
+                            <td><b>От 2$</b></td>
+                            <td><b>до 2$</b></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fz14">Стоимость лида из контекста:</td>
+                            <td><b>От 2$</b></td>
+                            <td><b>до 2$</b></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fz14">Стоимость лида из других источников:</td>
+                            <td><b>От 2$</b></td>
+                            <td><b>до 2$</b></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="biznes_tab-name flex aic mb-20 fz18 fz16m fw600 blue-2">
+                    <div class="fxs mr-5"><img src="img/Icon/cel.svg" alt=""></div>
+                    Ежемесячные показатели продаж
+                </div>
+                <div class="m-scroll-767">
+                    <table class="cust_table cust_table_500 mb-40" style="max-width: 857px">
+                        <tr>
+                            <td class="bg-blue fz14" colspan="2">Средняя конверсия продаж в %:</td>
+                            <td class="bg-blue"><b>От 15%</b></td>
+                            <td class="bg-blue"><b>От 15%</b></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fz14">Количество сделок ежемесячно:</td>
+                            <td><b>От 10 дн</b></td>
+                            <td><b>до 60 шт</b></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fz14">Сроки сделки в днях:</td>
+                            <td><b>От 10 дн</b></td>
+                            <td><b>до 60 шт</b></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fz14">Себестоимость сделки в траффике:</td>
+                            <td><b>От 10 дн</b></td>
+                            <td><b>до 60 шт</b></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fz14">Себестоимость сделки траффик + отдела маркетинга:</td>
+                            <td><b>От 10 дн</b></td>
+                            <td><b>до 60 шт</b></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fz14">Себестоимость сделки с отделами продаж, маркетинга,
+                                траффика:</td>
+                            <td><b>От 10 дн</b></td>
+                            <td><b>до 60 шт</b></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- Container 715width -->
+            <div class="mw-715  pb-40">
+                <!-- Block 1 -->
+                <div class="step__block">
+                    <div class="step__title mb-20 fz18 fw500 ff-roboto">Ежемесячные показатели маркетинга</div>
+                    <div class="step__row step__2_columns">
+                        <div class="step_col">
+                            <label for="name" class="fs_label nowrap">
+                                Показатели конверсии <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg" alt=""
+                                    class="pt-5">
+                                <div class="mt-10 flex aic gap-8 posr">
+                                    <span class="bef__input">От</span>
+                                    <span class="percent__icon">
+                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                    </span>
+                                    <span class="bef__input">до</span>
+                                    <span class="percent__icon">
+                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                    </span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="step_col">
+                            <label for="name" class="fs_label nowrap">
+                                Стоимость лида из таргета <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg"
+                                    alt="" class="pt-5">
+                                <div class="mt-10 flex aic gap-8 posr">
+                                    <span class="bef__input">От</span>
+                                    <span class="dollar__icon">
+                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                    </span>
+                                    <span class="bef__input">до</span>
+                                    <span class="dollar__icon">
+                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                    </span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="step__row step__2_columns mt-40">
+                        <div class="step_col">
+                            <label for="name" class="fs_label nowrap">
+                                Стоимость лида из контекста <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg"
+                                    alt="" class="pt-5">
+                                <div class="mt-10 flex aic gap-8 posr">
+                                    <span class="bef__input">От</span>
+                                    <span class="dollar__icon">
+                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                    </span>
+                                    <span class="bef__input">до</span>
+                                    <span class="dollar__icon">
+                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                    </span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="step_col">
+                            <label for="name" class="fs_label nowrap">
+                                Стоимость лида из других источников <sup>*</sup> <img
+                                    src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                <div class="mt-10 flex aic gap-8 posr">
+                                    <span class="bef__input">От</span>
+                                    <span class="dollar__icon">
+                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                    </span>
+                                    <span class="bef__input">до</span>
+                                    <span class="dollar__icon">
+                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                    </span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Block 2 -->
+                <div class="step__block">
+                    <div class="step__title mb-20 fz18 fw500 ff-roboto">Ежемесячные показатели продаж</div>
+                    <div class="step__row step__2_columns">
+                        <div class="step_col">
+                            <label for="name" class="fs_label nowrap">
+                                Средняя конверсия продаж <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg"
+                                    alt="" class="pt-5">
+                                <div class="mt-10 flex aic gap-8 posr">
+                                    <span class="bef__input">От</span>
+                                    <span class="percent__icon">
+                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                    </span>
+                                    <span class="bef__input">до</span>
+                                    <span class="percent__icon">
+                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                    </span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="step_col">
+                            <label for="name" class="fs_label nowrap">
+                                Количество сделок ежемесячно <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg"
+                                    alt="" class="pt-5">
+                                <div class="mt-10 flex aic gap-8 posr">
+                                    <span class="bef__input">От</span>
+                                    <span class="">
+                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                    </span>
+                                    <span class="bef__input">до</span>
+                                    <span class="">
+                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                    </span>
+                                    <span class="bef__input">штук</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="step__row step__2_columns mt-40">
+                        <div class="step_col">
+                            <label for="name" class="fs_label nowrap">
+                                Сроки сделки <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg" alt=""
+                                    class="pt-5">
+                                <div class="mt-10 flex aic gap-8 posr">
+                                    <span class="bef__input">От</span>
+                                    <span class="">
+                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                    </span>
+                                    <span class="bef__input">до</span>
+                                    <span class="">
+                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                    </span>
+                                    <span class="bef__input">дней</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="step_col">
+                            <label for="name" class="fs_label nowrap">
+                                Себестоимость сделки в траффике <sup>*</sup> <img
+                                    src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                <div class="mt-10 flex aic gap-8 posr">
+                                    <span class="bef__input">От</span>
+                                    <span class="dollar__icon">
+                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                    </span>
+                                    <span class="bef__input">до</span>
+                                    <span class="dollar__icon">
+                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                    </span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="step__row step__2_columns mt-40">
+                        <div class="step_col">
+                            <label for="name" class="fs_label nowrap">
+                                Себестоимость сделки отдела маркетинга <sup>*</sup> <img
+                                    src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                <div class="mt-10 flex aic gap-8 posr">
+                                    <span class="bef__input">От</span>
+                                    <span class="dollar__icon">
+                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                    </span>
+                                    <span class="bef__input">до</span>
+                                    <span class="dollar__icon">
+                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                    </span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="step_col">
+                            <label for="name" class="fs_label nowrap">
+                                Себестоимость сделки всех отделов <sup>*</sup> <img
+                                    src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                <div class="mt-10 flex aic gap-8 posr">
+                                    <span class="bef__input">От</span>
+                                    <span class="dollar__icon">
+                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                    </span>
+                                    <span class="bef__input">до</span>
+                                    <span class="dollar__icon">
+                                        <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                    </span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
     </div>
 </section>

@@ -8,7 +8,7 @@ import gulpSass from "gulp-sass";
 const sass = gulpSass(dartSass);
 
 export const css = () => {
-	return app.gulp.src(`src/scss/style.scss`, {})
+	return app.gulp.src([`src/scss/style.scss`, `src/html/blocks/**/**.scss`], {})
 		.pipe(app.plugins.plumber(
 			app.plugins.notify.onError({
 				title: "CSS",

@@ -33,7 +33,13 @@ $(".go-a").click(function (e) {
   $(lsle).find(".forma_page-info").show("");
 });
 
-new WOW().init();
+// new WOW().init();
+
+$(document).on('click', function (e) {
+  if (!$(e.target).closest('.ms-active').length) {
+    $('.ms-active').removeClass('ms-active');
+  }
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   if (window.innerWidth > 768) {
@@ -115,13 +121,61 @@ if ($("#datepicker").length) {
   $("#datepicker").attr("placeholder", currentDate);
 }
 
+
+
+function init_select(){
+  $('.multiselect').each(function (index) {
+    const selectElement = $(this);
+    // const onlyvalue = $(this).attr('data-onlyvalue') || false;
+    selectElement.multiselect({
+      columns: 1,
+      placeholder: $(this).attr("data-placeholder"),
+      icon: "",
+      search: false,
+      openList: false,
+      listType: "radio",
+      minHeight: "150",
+      // onlyValue: onlyvalue,
+      maxPlaceholderOpts: 2,
+      searchOptions: {
+        default: "Введите страну для поиска",
+      },
+      selectAll: false,
+    });
+  });
+}
+
+
+
+
+// Удаляем блок 
+$(document).on("click", ".remove_button", function (e) {
+  e.preventDefault();
+  const container = $(this).closest(".clone-container");
+  let remove_count = parseInt($(this).siblings('.clone_button').attr('data-remove')) + 1;
+  if (isNaN(remove_count)) {
+    remove_count = 1;
+  }
+  if (!container.prev().find('.clone_button').length) { // если такой кнопки нет, то добавляем
+    const clone_btn_html = '<div class="clone_button" data-remove="' + remove_count + '"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd"d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"fill="#4272C5"></path></svg></div>';
+    container.prev().find('.wrap_clone_buttons').append(clone_btn_html);
+  }else{
+    remove_count = parseInt(container.prev().find('.clone_button').attr('data-remove')) + 1;
+    console.log(remove_count);
+    container.prev().find('.clone_button').attr('data-remove',remove_count)
+  }
+  container.remove();
+})
+
+
+// Добавляем блок
 $(document).on("click", ".clone_button", function (e) {
   e.preventDefault();
   const container = $(this).closest(".clone-container");
   const maxClones = parseInt(container.data("max")) || 0;
   const curContainer = parseInt(container.data("id")) || 0;
-
   if (curContainer < maxClones) {
+
     const newClone = container.clone();
 
     // задаем id и name в input[type="text"] и сбрасываем значение
@@ -132,20 +186,36 @@ $(document).on("click", ".clone_button", function (e) {
       $(this).attr('id', newInput_ID);
       $(this).val("");
     })
-
-    // 
+    // задаем id и name в input[type="radio"] и сбрасываем значение
     newClone.find('input[type="radio"]').each(function () {
       const newName = $(this).attr("name") + "_" + curContainer;
       $(this).attr("name", newName);
       const id = $(this).attr("id") + "_" + curContainer;
       $(this).attr("id", id);
-
       $(this).siblings("label").attr("for", id);
     });
 
     // 
     newClone.attr("data-id", curContainer + 1);
     newClone.find(".current").text(curContainer + 1);
+
+    // Добавляем второму блоку кнопку удаления
+    if (curContainer == 1 && !newClone.find('.remove_button').length) { // если такой кнопки нет, то добавляем
+      const close_html = '<div class="remove_button"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.75 6.75L13.44 11.7625C13.361 13.043 13.3215 13.6835 13 14.144C12.8413 14.3716 12.637 14.5637 12.4 14.708C11.9215 15 11.28 15 9.997 15C8.712 15 8.0695 15 7.59 14.7075C7.35294 14.5629 7.14861 14.3704 6.99 14.1425C6.669 13.6815 6.63 13.04 6.553 11.7575L6.25 6.75M5.5 6.75H14.5M12.028 6.75L11.6865 6.046C11.46 5.578 11.3465 5.3445 11.151 5.1985C11.1076 5.16616 11.0616 5.1374 11.0135 5.1125C10.797 5 10.537 5 10.0175 5C9.4845 5 9.218 5 8.9975 5.117C8.94876 5.14311 8.90227 5.17321 8.8585 5.207C8.661 5.3585 8.5505 5.601 8.3295 6.0855L8.0265 6.75M8.75 12.25V9.25M11.25 12.25V9.25" stroke="#E52E2E" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="10" r="9.5" stroke="#E52E2E"/></svg></div>';
+      $(newClone).find('.clone_button').before(close_html)
+    }
+
+    // Убавляем поличество добавлений кнопки
+    if ($(this).attr('data-remove') > 0) {
+      let remove_count = parseInt($(this).data('remove'));
+      if (remove_count == 1 && container.next('.clone-container').length) {
+        newClone.find('.clone_button').remove();
+      } else {
+        remove_count--;
+        newClone.find('.clone_button').attr('data-remove', remove_count)
+      }
+    }
+
 
     // Сбрасываем селект в popup
     if (newClone.find(".js_open_popup_startap").length) {
@@ -184,13 +254,13 @@ $(document).on("click", ".clone_button", function (e) {
 
         container_popup.after(newContainer_popup);
         $('select.' + newSelectClass).multiselect({
-          columns: 1, // сюда через дата передать параметры
-          placeholder: placeholderText, // сюда через дата передать параметры
+          columns: 1,
+          placeholder: placeholderText,
           icon: "",
           search: data_search,
-          openList: data_openlist, // сюда через дата передать параметры
-          onlyValue: data_onlyvalue, // сюда через дата передать параметры
-          listType: data_listtype, // сюда через дата передать параметры
+          openList: data_openlist,
+          onlyValue: data_onlyvalue,
+          listType: data_listtype,
           btncalssreset: ".btn-reset",
           categoryInput: newPlaceholderId,
           maxPlaceholderOpts: 3,
@@ -199,9 +269,6 @@ $(document).on("click", ".clone_button", function (e) {
           },
           selectAll: false,
         });
-        // console.log(href)
-        // console.log(newIdContainer)
-        // console.log(container_popup)
       })
     }
 
@@ -253,52 +320,53 @@ $(document).on("click", ".clone_button", function (e) {
         selectAll: false,
       });
     }
-    if (newClone.find(".your-country").length) {
-      newClone.find(".your-country").each(function (index) {
-        const href = $(this).attr("href");
-        const container_popup = $(href);
-        const newHref = href.replace("#", "") + "_" + curContainer;
+    // if (newClone.find(".your-country").length) {
+    //   newClone.find(".your-country").each(function (index) {
+    //     const href = $(this).attr("href");
+    //     const container_popup = $(href);
+    //     const newHref = href.replace("#", "") + "_" + curContainer;
 
-        // $(this).find('#location-country').attr('id', countryId);
-        // $(this).find('#location-city').attr('id', cityId);
+    //     // $(this).find('#location-country').attr('id', countryId);
+    //     // $(this).find('#location-city').attr('id', cityId);
 
-        const newContainer_popup = container_popup.clone();
-        const placeholder = newContainer_popup.attr("id");
-        const newPlaceholder = placeholder + "_" + curContainer;
-        $(this).attr("id", newPlaceholder);
-        newContainer_popup.attr("id", newHref);
-        container_popup.after(newContainer_popup);
-        $(this).attr("href", "#" + newHref);
-        newContainer_popup.find(".ms-options-wrap").remove();
-        newContainer_popup
-          .find("select")
-          .removeClass('active jqmsLoaded [class*="ms-list-"]');
-      });
+    //     const newContainer_popup = container_popup.clone();
+    //     const placeholder = newContainer_popup.attr("id");
+    //     const newPlaceholder = placeholder + "_" + curContainer;
+    //     $(this).attr("id", newPlaceholder);
+    //     newContainer_popup.attr("id", newHref);
+    //     container_popup.after(newContainer_popup);
+    //     $(this).attr("href", "#" + newHref);
+    //     newContainer_popup.find(".ms-options-wrap").remove();
+    //     newContainer_popup
+    //       .find("select")
+    //       .removeClass('active jqmsLoaded [class*="ms-list-"]');
+    //   });
 
-      // $("select.languageselect").multiselect({
-      //   columns: 4,
-      //   placeholder: "Выберите языки",
-      //   icon: "./img/Icon/choise_country.svg",
-      //   search: true,
-      //   openList: true,
-      //   listType: "checkbox",
-      //   btncalssreset: ".btn-reset",
-      //   categoryInput: newPlaceholder,
-      //   maxPlaceholderOpts: 4,
-      //   searchOptions: {
-      //     default: "Введите страну для поиска",
-      //   },
-      //   selectAll: false,
-      // });
-    }
+    //   // $("select.languageselect").multiselect({
+    //   //   columns: 4,
+    //   //   placeholder: "Выберите языки",
+    //   //   icon: "./img/Icon/choise_country.svg",
+    //   //   search: true,
+    //   //   openList: true,
+    //   //   listType: "checkbox",
+    //   //   btncalssreset: ".btn-reset",
+    //   //   categoryInput: newPlaceholder,
+    //   //   maxPlaceholderOpts: 4,
+    //   //   searchOptions: {
+    //   //     default: "Введите страну для поиска",
+    //   //   },
+    //   //   selectAll: false,
+    //   // });
+    // }
 
     newClone.find(".ms-options-wrap").remove();
-    newClone.find(".cloneselect").removeClass('jqmsLoaded [class*="ms-list-"]');
+    newClone.find(".cloneselect, .multiselect").removeClass('jqmsLoaded [class*="ms-list-"]');
 
     $(this).remove();
     if (curContainer == maxClones - 1) {
       newClone.find(".clone_button").remove();
     }
+
     container.after(newClone);
 
     if (newClone.find(".datepicker_calendar").length) {
@@ -338,6 +406,9 @@ $(document).on("click", ".clone_button", function (e) {
     },
     selectAll: false,
   });
+
+
+  init_select();
 });
 // 
 // 
@@ -388,26 +459,9 @@ $(document).on('click', '.remove__item', function () {
   $(this).parent().remove();
 })
 
+init_select();
 
-$('.multiselect').each(function (index) {
-  const selectElement = $(this);
-  // const onlyvalue = $(this).attr('data-onlyvalue') || false;
-  selectElement.multiselect({
-    columns: 1,
-    placeholder: $(this).attr("data-placeholder"),
-    icon: "",
-    search: false,
-    openList: false,
-    listType: "radio",
-    minHeight: "150",
-    // onlyValue: onlyvalue,
-    maxPlaceholderOpts: 2,
-    searchOptions: {
-      default: "Введите страну для поиска",
-    },
-    selectAll: false,
-  });
-});
+
 
 $('.js_open_popup_startap').each(function () {
   const this_id = $(this).attr('href').replace('#', '');
@@ -425,7 +479,7 @@ $('.js_open_popup_startap').each(function () {
 
   let icon_path = false;
   if (icon) {
-    icon_path = "./img/Icon/" + icon;
+    icon_path = "./img/" + icon;
   }
 
   $("select." + this_id).multiselect({
@@ -446,6 +500,33 @@ $('.js_open_popup_startap').each(function () {
   });
 })
 
+
+
+$(".m-scroll").bind("touchstart", (function () {
+  $(this).addClass("start-scroll");
+}));
+$(".m-scroll-767").bind("touchstart", (function () {
+  $(this).addClass("start-scroll");
+}));
+$(".history").bind("touchstart", (function () {
+  $(this).addClass("start-scroll");
+}));
+$("#polzunok").slider({
+  animate: "slow",
+  range: "min",
+  value: 50,
+  slide: function (event, ui) {
+    $("#send-result-polzunok").val(ui.value);
+  }
+});
+$(".go-tab-200").click((function () {
+  $("html, body").animate({
+    scrollTop: $(".tab-200").offset().top - 130
+  }, 500);
+}));
+$(".tab-200-nav").delegate("li:not(.current)", "click", (function () {
+  $(this).addClass("current").siblings().removeClass("current").parents(".tab-200").find("div.tab-200-box").hide().eq($(this).index()).fadeIn(0);
+}));
 // Валюта
 // $("select.currency").multiselect({
 //   columns: 3,
@@ -635,20 +716,7 @@ $("select.sprosselect").multiselect({
   selectAll: false,
 });
 
-$("select[multiple].choise-industry").multiselect({
-  columns: 3,
-  placeholder: "Выберите отрасль",
-  icon: "img/choise_cat.webp",
-  search: true,
-  openList: true,
-  listType: "checkbox",
-  categoryInput: "choise-industry-placeholder",
-  maxPlaceholderOpts: 2,
-  searchOptions: {
-    default: "Введите категорию для поиска",
-  },
-  selectAll: false,
-});
+
 
 $("select[multiple].local_industry").multiselect({
   columns: 3,
@@ -664,92 +732,92 @@ $("select[multiple].local_industry").multiselect({
   },
   selectAll: false,
 });
-$("select[multiple].client_status-select").multiselect({
-  columns: 3,
-  placeholder: "Семейный статус клиентов",
-  icon: "",
-  search: true,
-  openList: true,
-  listType: "checkbox",
-  categoryInput: "client_status-placeholder",
-  maxPlaceholderOpts: 3,
-  searchOptions: {
-    default: "Введите категорию для поиска",
-  },
-  selectAll: false,
-});
-$("select[multiple].family_status-select").multiselect({
-  columns: 2,
-  placeholder: "Социальные статусы клиентов",
-  icon: "",
-  search: true,
-  openList: true,
-  listType: "checkbox",
-  categoryInput: "family_status-placeholder",
-  maxPlaceholderOpts: 4,
-  searchOptions: {
-    default: "Введите категорию для поиска",
-  },
-  selectAll: false,
-});
-$("select[multiple].adv_source-select").multiselect({
-  columns: 3,
-  placeholder: "Социальные статусы клиентов",
-  icon: "",
-  search: true,
-  openList: true,
-  listType: "checkbox",
-  categoryInput: "adv_source-placeholder",
-  maxPlaceholderOpts: 3,
-  searchOptions: {
-    default: "Введите категорию для поиска",
-  },
-  selectAll: false,
-});
-$("select[multiple].company_size-select").multiselect({
-  columns: 3,
-  placeholder: "Социальные статусы клиентов",
-  icon: "",
-  search: true,
-  openList: true,
-  listType: "checkbox",
-  categoryInput: "company_size-placeholder",
-  maxPlaceholderOpts: 3,
-  searchOptions: {
-    default: "Введите категорию для поиска",
-  },
-  selectAll: false,
-});
+// $("select[multiple].client_status-select").multiselect({
+//   columns: 3,
+//   placeholder: "Семейный статус клиентов",
+//   icon: "",
+//   search: true,
+//   openList: true,
+//   listType: "checkbox",
+//   categoryInput: "client_status-placeholder",
+//   maxPlaceholderOpts: 3,
+//   searchOptions: {
+//     default: "Введите категорию для поиска",
+//   },
+//   selectAll: false,
+// });
+// $("select[multiple].family_status-select").multiselect({
+//   columns: 2,
+//   placeholder: "Социальные статусы клиентов",
+//   icon: "",
+//   search: true,
+//   openList: true,
+//   listType: "checkbox",
+//   categoryInput: "family_status-placeholder",
+//   maxPlaceholderOpts: 4,
+//   searchOptions: {
+//     default: "Введите категорию для поиска",
+//   },
+//   selectAll: false,
+// });
+// $("select[multiple].adv_source-select").multiselect({
+//   columns: 3,
+//   placeholder: "Социальные статусы клиентов",
+//   icon: "",
+//   search: true,
+//   openList: true,
+//   listType: "checkbox",
+//   categoryInput: "adv_source-placeholder",
+//   maxPlaceholderOpts: 3,
+//   searchOptions: {
+//     default: "Введите категорию для поиска",
+//   },
+//   selectAll: false,
+// });
+// $("select[multiple].company_size-select").multiselect({
+//   columns: 3,
+//   placeholder: "Социальные статусы клиентов",
+//   icon: "",
+//   search: true,
+//   openList: true,
+//   listType: "checkbox",
+//   categoryInput: "company_size-placeholder",
+//   maxPlaceholderOpts: 3,
+//   searchOptions: {
+//     default: "Введите категорию для поиска",
+//   },
+//   selectAll: false,
+// });
 
-$("select[multiple].segment_client-select").multiselect({
-  columns: 2,
-  placeholder: "Социальные статусы клиентов",
-  icon: "",
-  search: true,
-  openList: true,
-  listType: "checkbox",
-  categoryInput: "segment_client-placeholder",
-  maxPlaceholderOpts: 4,
-  searchOptions: {
-    default: "Введите категорию для поиска",
-  },
-  selectAll: false,
-});
+// $("select[multiple].segment_client-select").multiselect({
+//   columns: 2,
+//   placeholder: "Социальные статусы клиентов",
+//   icon: "",
+//   search: true,
+//   openList: true,
+//   listType: "checkbox",
+//   categoryInput: "segment_client-placeholder",
+//   maxPlaceholderOpts: 4,
+//   searchOptions: {
+//     default: "Введите категорию для поиска",
+//   },
+//   selectAll: false,
+// });
 
-$("select[multiple].adv_source_b2b-select").multiselect({
-  columns: 4,
-  placeholder: "Социальные статусы клиентов",
-  icon: "",
-  search: true,
-  openList: true,
-  listType: "checkbox",
-  categoryInput: "adv_source_b2b-placeholder",
-  maxPlaceholderOpts: 4,
-  searchOptions: {
-    default: "Введите категорию для поиска",
-  },
-  selectAll: false,
-});
+// $("select[multiple].adv_source_b2b-select").multiselect({
+//   columns: 4,
+//   placeholder: "Социальные статусы клиентов",
+//   icon: "",
+//   search: true,
+//   openList: true,
+//   listType: "checkbox",
+//   categoryInput: "adv_source_b2b-placeholder",
+//   maxPlaceholderOpts: 4,
+//   searchOptions: {
+//     default: "Введите категорию для поиска",
+//   },
+//   selectAll: false,
+// });
 
 $(".forma_slider").slick({
   slidesToShow: 1,
