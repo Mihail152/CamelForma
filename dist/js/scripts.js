@@ -1,5 +1,22 @@
 
-$(document).on('click', '.upload-btn', function(e){
+$((function () {
+  if ($(window).width() > 993) {
+    var columns = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    for (let i = 1; i <= 22; i++) $(`.js_height_${i}`).each((function () {
+      const h = $(this).height();
+      if (h > columns[i - 1]) columns[i - 1] = h;
+    })).height(columns[i - 1]);
+  }
+}));
+$(".box_8987 .button-open").click((function () {
+  $(this).parent().parent().parent().find(".sevice_table-path-mobile").show(0);
+  $(this).parent().parent().parent().find(".bottom ").hide(0);
+}));
+$(".sevice_table-path-mobile-close").click((function () {
+  $(this).parent().parent().parent().find(".sevice_table-path-mobile").hide(0);
+  $(this).parent().parent().parent().find(".bottom ").show(0);
+}));
+$(document).on('click', '.upload-btn', function (e) {
   e.preventDefault();
   $(this).siblings('input[type="file"]').trigger('click');
 })
@@ -29,9 +46,9 @@ $(document).on(
 
 $(".forma_page_tab .triger").click(function () {
   $(this).toggleClass("active");
-  if($(this).hasClass("active")){
+  if ($(this).hasClass("active")) {
     $(this).closest('.forma_page-item').addClass("active");
-  }else{
+  } else {
     $(this).closest('.forma_page-item').removeClass("active");
   }
   $(this).parent().find(".forma_page-info").toggle("");
@@ -133,7 +150,7 @@ if ($("#datepicker").length) {
 
 
 
-function init_select(){
+function init_select() {
   $('.multiselect').each(function (index) {
     const selectElement = $(this);
     // const onlyvalue = $(this).attr('data-onlyvalue') || false;
@@ -169,10 +186,10 @@ $(document).on("click", ".remove_button", function (e) {
   if (!container.prev().find('.clone_button').length) { // если такой кнопки нет, то добавляем
     const clone_btn_html = '<div class="clone_button" data-remove="' + remove_count + '"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd"d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"fill="#4272C5"></path></svg></div>';
     container.prev().find('.wrap_clone_buttons').append(clone_btn_html);
-  }else{
+  } else {
     remove_count = parseInt(container.prev().find('.clone_button').attr('data-remove')) + 1;
     console.log(remove_count);
-    container.prev().find('.clone_button').attr('data-remove',remove_count)
+    container.prev().find('.clone_button').attr('data-remove', remove_count)
   }
   container.remove();
 })

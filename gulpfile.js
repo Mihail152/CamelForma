@@ -38,10 +38,10 @@ import { otfToTtf, ttfToWoff, fonstStyle } from "./config/gulp-tasks/fonts.js";
 function serve() {
 	sync.init({ server: "./dist" });
   
-	// gulp.watch(["src/**/**.html"], gulp.series(html)).on("change", sync.reload);
+	gulp.watch(["src/**/**.html"], gulp.series(html)).on("change", sync.reload);
 	gulp.watch(["src/**/**.htm"], gulp.series(html)).on("change", sync.reload);
 	gulp.watch(["src/**/**.scss"], gulp.series(css)).on("change", sync.reload);
-	// gulp.watch(["src/img/**/*"], gulp.series(images)).on("change", sync.reload);
+	gulp.watch(["src/img/**/*"], gulp.series(images)).on("change", sync.reload);
 	gulp.watch(["src/**/**.js"], gulp.series(js)).on("change", sync.reload);
   }
 

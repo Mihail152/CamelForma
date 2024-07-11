@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Тарифы"
+})
+
+<body class="body">
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page forms-wrapper">
+			@@include('html/_bread.htm',{
+			"parent_title": "",
+			"parent_link": "",
+			"title": "Разместить стартап"
+			})
+
+			<div class="steps_header__container">
+				@@include('html/startup/_header.htm',{
+					"backlink": '/',
+					"title":"Разместить стартап"
+				})
+			</div>
+			@@include('html/blocks/tarif.htm',{})
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
