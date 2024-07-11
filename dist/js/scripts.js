@@ -1,4 +1,9 @@
 
+$(document).on('click', '.upload-btn', function(e){
+  e.preventDefault();
+  $(this).siblings('input[type="file"]').trigger('click');
+})
+
 $(document).on("click", ".js_open_popup_startap", function (e) {
   e.preventDefault();
   const id = $(this).attr("href");
@@ -24,6 +29,11 @@ $(document).on(
 
 $(".forma_page_tab .triger").click(function () {
   $(this).toggleClass("active");
+  if($(this).hasClass("active")){
+    $(this).closest('.forma_page-item').addClass("active");
+  }else{
+    $(this).closest('.forma_page-item').removeClass("active");
+  }
   $(this).parent().find(".forma_page-info").toggle("");
 });
 $(".go-a").click(function (e) {

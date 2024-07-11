@@ -46,6 +46,9 @@
 .block__repetitive .step__3_columns .step_col:last-child .row__input_items {
   max-width: 182px;
 }
+.block__repetitive .clone-container.mb-20:last-child {
+  margin-bottom: 0;
+}
 
 .clone-container[data-id="1"] .wrap_clone_buttons {
   justify-content: end;

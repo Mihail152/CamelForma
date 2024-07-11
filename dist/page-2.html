@@ -7,22 +7,22 @@
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20240711015410" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20240711115305" rel="stylesheet">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap&_v=20240711015410" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap&_v=20240711115305" rel="stylesheet">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap&_v=20240711015410"
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap&_v=20240711115305"
         rel="stylesheet">
-		<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css?_v=20240711015410">
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css?_v=20240711115305">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap&_v=20240711015410" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap&_v=20240711115305" rel="stylesheet">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240711015410">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240711115305">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1099,12 +1099,32 @@
         with each project:
     </div>
 </div>
-                                    <div class="mt-10 posr"> <!-- select --> <select name="basic[]" multiple="multiple"
+                                    
+                                    <!-- popup_forma__link -->
+                                    <div class="popup_forma__link fs_input mt-10">
+                                        <div id="currency__popup-placeholder" class="placeholder flex aic fz14 fw500 blue-2 fxg gap-8"
+                                            data-placeholder="Выберите валюту"></div>
+                                        <a href="#currency__popup" class=" flex aic pointer round-12 js_open_popup_startap"
+                                            data-columns="3" data-placeholder="Выберите валюту"
+                                            data-search="true" data-openlist="true" data-listtype="radio" data-onlyvalue="true"
+                                            data-maxPlaceholder="3" data-defaultText="Введите валюту для поиска">
+                                            <span class="arrow block tr">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                                    fill="none" class="loaded">
+                                                    <path
+                                                        d="M18 12.998H13V17.998C13 18.2633 12.8946 18.5176 12.7071 18.7052C12.5196 18.8927 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8927 11.2929 18.7052C11.1054 18.5176 11 18.2633 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8927 5.29289 12.7052C5.10536 12.5176 5 12.2633 5 11.998C5 11.7328 5.10536 11.4785 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.99805C11 5.73283 11.1054 5.47848 11.2929 5.29094C11.4804 5.1034 11.7348 4.99805 12 4.99805C12.2652 4.99805 12.5196 5.1034 12.7071 5.29094C12.8946 5.47848 13 5.73283 13 5.99805V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4785 19 11.7328 19 11.998C19 12.2633 18.8946 12.5176 18.7071 12.7052C18.5196 12.8927 18.2652 12.998 18 12.998Z"
+                                                        fill="#212E44"></path>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <!-- #popup_forma__link -->
+                                    <!-- <div class="mt-10 posr"> <select name="basic[]" multiple="multiple"
                                             class="multiselect" data-placeholder="Выберите тип контента">
                                             <option value="Dollar">Dollar ($)</option>
                                             <option value="Рубль">Рубль (Р)</option>
-                                        </select> <!-- #select -->
-                                    </div>
+                                        </select>
+                                    </div> -->
                                 </label>
                             </div>
                             <div class="step_col">
@@ -3952,24 +3972,24 @@
 </div>		
 	</div>
 </div>
-	<script src="https://code.jquery.com/jquery-3.7.1.js?_v=20240711015410"></script>
-<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js?_v=20240711015410"></script>
-<script src="https://test.camel.expert/wp-content/themes/camelexpert/assets/js/vendor/wow.min.js?ver=1.0.0&_v=20240711015410"></script>
+	<script src="https://code.jquery.com/jquery-3.7.1.js?_v=20240711115305"></script>
+<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js?_v=20240711115305"></script>
+<script src="https://test.camel.expert/wp-content/themes/camelexpert/assets/js/vendor/wow.min.js?ver=1.0.0&_v=20240711115305"></script>
 
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://unpkg.com/multiple-select@1.7.0/dist/multiple-select.min.js?_v=20240711015410"></script>
+<script src="https://unpkg.com/multiple-select@1.7.0/dist/multiple-select.min.js?_v=20240711115305"></script>
 
-<!-- <script src="js/percentChart.js?_v=20240711015410"></script> -->
-<script src="js/jquery.smartuploader.js?_v=20240711015410"></script>
-<script src="js/jquery.multiselect.js?_v=20240711015410"></script>
-<script src="js/chart.js?_v=20240711015410"></script>
-<script src="js/chart-init.js?_v=20240711015410"></script>
-<script src="js/app.min.js?_v=20240711015410"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js?_v=20240711015410" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css?_v=20240711015410" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js?_v=20240711015410"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js?_v=20240711015410"></script>
-<script src="js/scripts.js?_v=20240711015410"></script>
+<!-- <script src="js/percentChart.js?_v=20240711115305"></script> -->
+<script src="js/jquery.smartuploader.js?_v=20240711115305"></script>
+<script src="js/jquery.multiselect.js?_v=20240711115305"></script>
+<script src="js/chart.js?_v=20240711115305"></script>
+<script src="js/chart-init.js?_v=20240711115305"></script>
+<script src="js/app.min.js?_v=20240711115305"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js?_v=20240711115305" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css?_v=20240711115305" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js?_v=20240711115305"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js?_v=20240711115305"></script>
+<script src="js/scripts.js?_v=20240711115305"></script>
 
 
 <script>

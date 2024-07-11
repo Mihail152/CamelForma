@@ -7,22 +7,22 @@
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20240711015410" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20240711115305" rel="stylesheet">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap&_v=20240711015410" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap&_v=20240711115305" rel="stylesheet">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap&_v=20240711015410"
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap&_v=20240711115305"
         rel="stylesheet">
-		<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css?_v=20240711015410">
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css?_v=20240711115305">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap&_v=20240711015410" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap&_v=20240711115305" rel="stylesheet">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240711015410">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240711115305">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1053,7 +1053,13 @@
                             <div class="step_col">
                                 <label for="name" class="fs_label">
                                     Опишите идею стартапа <sup>*</sup>
-                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                    <div class="tooltip posr">
+    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="">
+    <div class="hide absolute fz14 white p-20 round-12 z-3">
+        The outlines of our work with each project: The outlines of our work
+        with each project:
+    </div>
+</div>
                                     <textarea name="" id="" placeholder="Идея стартапа" class="mh-384 mt-10"></textarea>
                                 </label>
                             </div>
@@ -1062,19 +1068,26 @@
                     <div class="step__block">
                         <div class="step__title fz18 fw500 ff-roboto">Опишите текущее состояние стартапа (от 3 до 6
                             пуктов)</div>
-                        <div class="block__repetitive clone-container mt-20" data-id="1" data-max="6">
-                            <div class="block__title mb-15 fz16 fw500 ff-roboto">
-                                Cостояниe <span class="current">1</span>
-                            </div>
-                            <div class="fs_label">
-                                Описание состояния <sup>*</sup>
-                                <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
-                                <div class="row__input mt-10 flex aic gap-8 posr w-100">
-                                    <div class="row__input_items w-full">
-                                        <input type="text" id="ms-benefit-1" data-item="1" data-max="6" data-min="3"
-                                            class="fs_input w-100" placeholder="Описание состояния">
-                                    </div>
-                                    <div class="wrap_clone_buttons flex gap-8 aic">
+                        <div class="block__repetitive mt-20">
+                            <div class=" clone-container mb-20" data-id="1" data-max="6">
+                                <div class="block__title mb-15 fz16 fw500 ff-roboto">
+                                    Cостояниe <span class="current">1</span>
+                                </div>
+                                <div class="fs_label">
+                                    Описание состояния <sup>*</sup>
+                                    <div class="tooltip posr">
+    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="">
+    <div class="hide absolute fz14 white p-20 round-12 z-3">
+        The outlines of our work with each project: The outlines of our work
+        with each project:
+    </div>
+</div>
+                                    <div class="row__input mt-10 flex aic gap-8 posr w-100">
+                                        <div class="row__input_items w-full">
+                                            <input type="text" id="ms-benefit-1" data-item="1" data-max="6" data-min="3"
+                                                class="fs_input w-100" placeholder="Описание состояния">
+                                        </div>
+                                        <div class="wrap_clone_buttons flex gap-8 aic">
     <div class="clone_button" data-remove="0">
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -1083,6 +1096,7 @@
         </svg>
     </div>
 </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1115,7 +1129,13 @@
                             <div class="step_col">
                                 <label for="" class="fs_label mw-full">
                                     Количество долей <sup>*</sup>
-                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                    <div class="tooltip posr">
+    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="">
+    <div class="hide absolute fz14 white p-20 round-12 z-3">
+        The outlines of our work with each project: The outlines of our work
+        with each project:
+    </div>
+</div>
                                     <div class="mt-10 flex aic gap-8 posr">
                                         <input type="text" id="" class="fs_input mw-full" placeholder="0">
                                     </div>
@@ -1124,7 +1144,13 @@
                             <div class="step_col">
                                 <label for="" class="fs_label mw-full">
                                     Чистая прибыль на 100 долей <sup>*</sup>
-                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                    <div class="tooltip posr">
+    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="">
+    <div class="hide absolute fz14 white p-20 round-12 z-3">
+        The outlines of our work with each project: The outlines of our work
+        with each project:
+    </div>
+</div>
                                     <div class="mt-10 flex aic gap-8 posr dollar__icon">
                                         <input type="text" id="" class="fs_input mw-full" placeholder="0">
                                     </div>
@@ -1136,7 +1162,13 @@
                             <div class="step_col">
                                 <label for="" class="fs_label mw-full">
                                     Сумма инвестирования <sup>*</sup>
-                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                    <div class="tooltip posr">
+    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="">
+    <div class="hide absolute fz14 white p-20 round-12 z-3">
+        The outlines of our work with each project: The outlines of our work
+        with each project:
+    </div>
+</div>
                                     <div class="mt-10 flex aic gap-8 posr dollar__icon">
                                         <input type="text" id="" class="fs_input mw-full" placeholder="0">
                                     </div>
@@ -1179,7 +1211,13 @@
                             <div class="step_col">
                                 <label for="" class="fs_label mw-full">
                                     Направление стартапа <sup>*</sup>
-                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                    <div class="tooltip posr">
+    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="">
+    <div class="hide absolute fz14 white p-20 round-12 z-3">
+        The outlines of our work with each project: The outlines of our work
+        with each project:
+    </div>
+</div>
                                     <div class="mt-10 flex aic gap-8 posr dollar__icon">
                                         <input type="text" id="" class="fs_input mw-full"
                                             placeholder="Направление стартапа">
@@ -1463,7 +1501,13 @@
                             <div class="step_col">
                                 <label for="name" class="fs_label">
                                     Мировой объём рынка <sup>*</sup>
-                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                    <div class="tooltip posr">
+    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="">
+    <div class="hide absolute fz14 white p-20 round-12 z-3">
+        The outlines of our work with each project: The outlines of our work
+        with each project:
+    </div>
+</div>
                                     <div class="mt-10 flex aic gap-8 posr">
                                         <!-- <span class="bef__input">От</span>  -->
                                         <input type="text" id="curr" class="fs_input" placeholder="0">
@@ -1553,7 +1597,13 @@
                             <div class="step_col">
                                 <label for="name" class="fs_label">
                                     Локальный объём рынка <sup>*</sup>
-                                    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                    <div class="tooltip posr">
+    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="">
+    <div class="hide absolute fz14 white p-20 round-12 z-3">
+        The outlines of our work with each project: The outlines of our work
+        with each project:
+    </div>
+</div>
                                     <div class="mt-10 flex aic gap-8 posr">
                                         <!-- <span class="bef__input">От</span>  -->
                                         <input type="text" id="curr" class="fs_input" placeholder="0">
@@ -1581,7 +1631,13 @@
                                 <div class="mt-40">
                                     <div class="fz18 fw500 ff-roboto fs_label">Игроки на рынке
                                         <sup>*</sup>
-                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        <div class="tooltip posr">
+    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="">
+    <div class="hide absolute fz14 white p-20 round-12 z-3">
+        The outlines of our work with each project: The outlines of our work
+        with each project:
+    </div>
+</div>
                                     </div>
                                     <div class="flex mt-20 gap-40">
                                         <div class="block radio-def">
@@ -1613,7 +1669,13 @@
                                 <div class="step_col">
                                     <label for="name" class="fs_label">
                                         Название компании конкурента <sup>*</sup>
-                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        <div class="tooltip posr">
+    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="">
+    <div class="hide absolute fz14 white p-20 round-12 z-3">
+        The outlines of our work with each project: The outlines of our work
+        with each project:
+    </div>
+</div>
                                         <div class="row__input mt-10 flex aic gap-8 posr">
                                             <div class="row__input_items w-full">
                                                 <input type="text" id="ms-benefit-1" class="fs_input"
@@ -1625,7 +1687,13 @@
                                 <div class="step_col">
                                     <label for="name" class="fs_label">
                                         Покрытие рынка в % <sup>*</sup>
-                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        <div class="tooltip posr">
+    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="">
+    <div class="hide absolute fz14 white p-20 round-12 z-3">
+        The outlines of our work with each project: The outlines of our work
+        with each project:
+    </div>
+</div>
                                         <div class="row__input mt-10 flex aic gap-8 posr">
                                             <div class="row__input_items w-full">
                                                 <input type="text" id="ms-benefit-1" class="fs_input" placeholder="0">
@@ -1816,7 +1884,13 @@
                                 <div class="step_col">
                                     <label for="name" class="fs_label">
                                         Название компании конкурента <sup>*</sup>
-                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        <div class="tooltip posr">
+    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="">
+    <div class="hide absolute fz14 white p-20 round-12 z-3">
+        The outlines of our work with each project: The outlines of our work
+        with each project:
+    </div>
+</div>
                                         <div class="row__input mt-10 flex aic gap-8 posr">
                                             <div class="row__input_items w-full">
                                                 <input type="text" id="ms-benefit-1" class="fs_input"
@@ -1828,7 +1902,13 @@
                                 <div class="step_col">
                                     <label for="name" class="fs_label">
                                         Покрытие <sup>*</sup>
-                                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5">
+                                        <div class="tooltip posr">
+    <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="">
+    <div class="hide absolute fz14 white p-20 round-12 z-3">
+        The outlines of our work with each project: The outlines of our work
+        with each project:
+    </div>
+</div>
                                         <div class="row__input mt-10 flex aic gap-8 posr">
                                             <div class="row__input_items w-full">
                                                 <input type="text" id="ms-benefit-1" class="fs_input" placeholder="0">
@@ -4018,24 +4098,24 @@
 </div>		
 	</div>
 </div>
-	<script src="https://code.jquery.com/jquery-3.7.1.js?_v=20240711015410"></script>
-<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js?_v=20240711015410"></script>
-<script src="https://test.camel.expert/wp-content/themes/camelexpert/assets/js/vendor/wow.min.js?ver=1.0.0&_v=20240711015410"></script>
+	<script src="https://code.jquery.com/jquery-3.7.1.js?_v=20240711115305"></script>
+<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js?_v=20240711115305"></script>
+<script src="https://test.camel.expert/wp-content/themes/camelexpert/assets/js/vendor/wow.min.js?ver=1.0.0&_v=20240711115305"></script>
 
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://unpkg.com/multiple-select@1.7.0/dist/multiple-select.min.js?_v=20240711015410"></script>
+<script src="https://unpkg.com/multiple-select@1.7.0/dist/multiple-select.min.js?_v=20240711115305"></script>
 
-<!-- <script src="js/percentChart.js?_v=20240711015410"></script> -->
-<script src="js/jquery.smartuploader.js?_v=20240711015410"></script>
-<script src="js/jquery.multiselect.js?_v=20240711015410"></script>
-<script src="js/chart.js?_v=20240711015410"></script>
-<script src="js/chart-init.js?_v=20240711015410"></script>
-<script src="js/app.min.js?_v=20240711015410"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js?_v=20240711015410" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css?_v=20240711015410" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js?_v=20240711015410"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js?_v=20240711015410"></script>
-<script src="js/scripts.js?_v=20240711015410"></script>
+<!-- <script src="js/percentChart.js?_v=20240711115305"></script> -->
+<script src="js/jquery.smartuploader.js?_v=20240711115305"></script>
+<script src="js/jquery.multiselect.js?_v=20240711115305"></script>
+<script src="js/chart.js?_v=20240711115305"></script>
+<script src="js/chart-init.js?_v=20240711115305"></script>
+<script src="js/app.min.js?_v=20240711115305"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js?_v=20240711115305" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css?_v=20240711115305" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js?_v=20240711115305"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js?_v=20240711115305"></script>
+<script src="js/scripts.js?_v=20240711115305"></script>
 
 
 <script>

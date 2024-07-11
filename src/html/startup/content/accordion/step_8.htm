@@ -1,7 +1,7 @@
 <section class="forma_page_tab pb-20">
     <div class="last">
         <!-- STEP 1 -->
-        <div class="forma_page-item round-15 shadow bg-white mb-30" id="box-step2">
+        <div class="forma_page-item round-15 shadow bg-white mb-30 active" id="box-step2">
             <div class="triger shadow pointer flex aic jcsb bg-blue-2 w-full active">
                 <div class="name flex aic fz218 fw600 color-333 status_check">
                     @@include('status__tab.htm',{}) Юридические и налоговые детали компании
@@ -659,7 +659,7 @@
         </div>
         <!-- STEP 2 -->
         <div class="forma_page-item round-15 shadow bg-white mb-30" id="box-step2">
-            <div class="triger shadow pointer flex aic jcsb bg-blue-2 w-full active">
+            <div class="triger shadow pointer flex aic jcsb bg-blue-2 w-full">
                 <div class="name flex aic fz218 fw600 color-333 status_check">
                     @@include('status__tab.htm',{}) Стоимость жизни в локации сбыта услуг или продукта
                 </div>
@@ -667,7 +667,7 @@
                     <span class="ml-10"><img src="./img/Icon/ic_arrow.svg" alt=""></span>
                 </div>
             </div>
-            <div class="forma_page-info" style="display: block;">
+            <div class="forma_page-info">
                 <!-- Специалисты -->
                 <div class="bg-fa p-35">
                     <div class="tab-100 mt-20">
@@ -1631,6 +1631,14 @@
                                 </div>
 
                             </div>
+                            <div class="step__row">
+                                <div class="step_col">
+                                    <a href="#" class="btn inline-block mt-20 round-12 fz-14 style-15-35">Собрать данные</a>
+                                </div>
+                                <div class="step_col">
+                                </div>
+
+                            </div>
                             @@include('../../../blocks/forms/_clone_button.htm')
                         </div>
                     </div>
@@ -1644,7 +1652,7 @@
         <!-- STEP 3 -->
 
         <div class="forma_page-item round-15 shadow bg-white mb-30" id="box-step2">
-            <div class="triger shadow pointer flex aic jcsb bg-blue-2 w-full active">
+            <div class="triger shadow pointer flex aic jcsb bg-blue-2 w-full">
                 <div class="name flex aic fz218 fw600 color-333 status_check">
                     @@include('status__tab.htm',{}) Риски
                 </div>
@@ -1652,7 +1660,7 @@
                     <span class="ml-10"><img src="./img/Icon/ic_arrow.svg" alt=""></span>
                 </div>
             </div>
-            <div class="forma_page-info" style="display: block;">
+            <div class="forma_page-info">
                 <div class="bg-fa p-35">
                     <div class="m-scroll-767">
                         <table class="cust_table mb-40" style="max-width: 950px">
@@ -1799,7 +1807,7 @@
         </div>
         <!-- STEP 4 -->
         <div class="forma_page-item round-15 shadow bg-white mb-30" id="box-step2">
-            <div class="triger shadow pointer flex aic jcsb bg-blue-2 w-full active">
+            <div class="triger shadow pointer flex aic jcsb bg-blue-2 w-full">
                 <div class="name flex aic fz218 fw600 color-333 status_check">
                     @@include('status__tab.htm',{}) Документация для инвестора
                 </div>
@@ -1807,7 +1815,7 @@
                     <span class="ml-10"><img src="./img/Icon/ic_arrow.svg" alt=""></span>
                 </div>
             </div>
-            <div class="forma_page-info" style="display: block;">
+            <div class="forma_page-info">
                 <div class="bg-fa p-35">
                     <div class="m-scroll-767">
                         <table class="cust_table mb-40">
@@ -1936,27 +1944,29 @@
 
                     <!-- clone block -->
                     <div class="step__block">
-                        <div class="step__title fz18 fw500 ff-roboto">Перечень рисков</div>
+                        <div class="step__title fz18 fw500 ff-roboto">Материалы проекта </div>
                         <div class="block__repetitive clone-container mt-20" data-id="1" data-max="3">
-                            <div class="block__title mb-15 fz16 fw500 ff-roboto">Риск
+                            <div class="block__title mb-15 fz16 fw500 ff-roboto">Документ
                                 <span class="current">1</span>
                             </div>
                             <div class="step__row step__2_columns aie mr-60">
                                 <div class="step_col">
                                     <label for="" class="fs_label mw-full nowrap">
-                                        Наименование риска <sup>*</sup>
+                                        Название документа <sup>*</sup>
                                         @@include('../../../blocks/tips.htm')
                                         <div class="mt-10 flex aic gap-8 posr">
                                             <span class="bef__input">До</span>
                                             <input type="text" id="" class="fs_input mw-full"
-                                                placeholder="Наименование риска">
+                                                placeholder="Название документа">
                                         </div>
                                     </label>
                                 </div>
                                 <div class="step_col">
                                     <label for="name" class="fs_label mw-full">
-                                        Решение <sup>*</sup>
+                                        Язык <sup>*</sup>
                                         @@include('../../../blocks/tips.htm')
+
+                                        Добавить языки 
                                         <div class="mt-10 flex aic gap-8 posr">
                                             <input type="text" id="" class="fs_input mw-full" placeholder="Решение">
                                         </div>
@@ -1967,22 +1977,24 @@
                             <div class="step__row step__2_columns aie mr-60 mt-40">
                                 <div class="step_col">
                                     <label for="" class="fs_label mw-full">
-                                        Срок <sup>*</sup>
-                                        @@include('../../../blocks/tips.htm')
-                                        <div class="mt-10 flex aic gap-8 posr calendar__icon">
-                                            <img src="img/Icon/calendar-outline.svg" alt=""
-                                                class="absolute calendar_icon">
-                                            <input type="text" id="datepicker"
-                                                class="fs_input mw-full datepicker_calendar" placeholder="">
+                                        Выберите тип документа <sup>*</sup>
+                                        @@include('../../../blocks/tips.htm')                                        
+                                        <div class="mt-10 posr">
+                                            <select name="basic[]" multiple="multiple" class="multiselect active w-100" data-placeholder="Тип документа">
+                                                <option value="var-project-1">тип документа 1</option>
+                                                <option value="var-project-2">тип документа 2</option>
+                                                <option value="var-project-3">тип документа 3</option>
+                                            </select>
                                         </div>
                                     </label>
                                 </div>
-                                <div class="step_col">
-                                    <label for="name" class="fs_label mw-full">
-                                        Стоимость <sup>*</sup>
+                                <div class="step_col tac">
+                                    <label for="name" class="fs_label mw-full tac">
+                                        Прикрепите документ <sup>*</sup>
                                         @@include('../../../blocks/tips.htm')
-                                        <div class="mt-10 flex aic gap-8 posr dollar__icon">
-                                            <input type="text" id="" class="fs_input mw-full" placeholder="0">
+                                        <div class="mt-10 posr">
+                                            <a href="#" class="btn btn-border-orang style-15-35 inline-block upload-btn">Загрузить документ</a>
+                                            <input type="file" id="" class="imgupload" placeholder="0" style="display: none;">
                                         </div>
                                     </label>
                                 </div>
@@ -1998,7 +2010,7 @@
         </div>
         <!-- STEP 5 -->
         <div class="forma_page-item round-15 shadow bg-white mb-30" id="box-step2">
-            <div class="triger shadow pointer flex aic jcsb bg-blue-2 w-full active">
+            <div class="triger shadow pointer flex aic jcsb bg-blue-2 w-full">
                 <div class="name flex aic fz218 fw600 color-333 status_check">
                     @@include('status__tab.htm',{}) Видео-материалы
                 </div>
@@ -2006,7 +2018,7 @@
                     <span class="ml-10"><img src="./img/Icon/ic_arrow.svg" alt=""></span>
                 </div>
             </div>
-            <div class="forma_page-info" style="display: block;">
+            <div class="forma_page-info">
                 <div class="bg-fa p-35">
                     <div class="video-play oh round-12 posr mt-20">
                         <a href="" class="block">
