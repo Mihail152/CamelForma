@@ -7,22 +7,22 @@
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20240712185358" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20240712233003" rel="stylesheet">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap&_v=20240712185358" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap&_v=20240712233003" rel="stylesheet">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap&_v=20240712185358"
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap&_v=20240712233003"
         rel="stylesheet">
-		<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css?_v=20240712185358">
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css?_v=20240712233003">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap&_v=20240712185358" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap&_v=20240712233003" rel="stylesheet">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240712185358">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240712233003">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -852,10 +852,27 @@
     <h1 class="fs__h1">Разместить стартап</h1>
 </div>
 			</div>
-			<div class="step__container step_tarif mt-40 pl-30 pr-30 pt-60 pb-60">
+			<div class="step__container plan_header mt-40 pl-30 pr-30 pt-60 pb-60">
     <div class="step__inner mlr-a">
         <div class="step_2__row flex aic jcsb">
-            <div class="step_2__col">
+            <div class="plan_title-selected flex aic gap-100">
+
+                <div class="step_col flex aic gap-16">
+                    <div class="logo" data-plan="1"><img src="./img/tarif/Icon/service-1.svg" alt=""></div>
+                    <div class="logo" data-plan="2"><img src="./img/tarif/Icon/service-2.svg" alt=""></div>
+                    <div class="logo" data-plan="3"><img src="./img/tarif/Icon/service-3.svg" alt=""></div>
+                    <div class="info">
+                        <div class="flex aic mb-8 fz14 badge"><img src="./img/Icon/cart-orange.svg" alt=""
+                                class="mr-5">Приобретенный тариф</div>
+                        <div class="fz22">Обычная продажа</div>
+                    </div>
+                </div>
+                <div class="step_col">
+                    <a href="#" class="btn fz16 fw600 flex aic jcc">Опубликовать стартап/бизнес</a>
+                </div>
+
+            </div>
+            <div class="step_2__col plan_title">
                 <div class="flex gap-10 ais">
                     <img src="./img/Icon/ic_object_info.svg" alt="" class="pt-5">
                     <div class="fz24 fz20m fw500 blue ff-roboto">
@@ -866,7 +883,7 @@
             <div class="step_2__col">
                 <div class="flex gap-16 percent__block">
                     <div class="posr">
-                        <img src="./img/tarif/Icon/ic_crown.svg" alt="">
+                        <img src="./img/Icon/ic_crown.svg" alt="">
                     </div>
                     <div class="percent__percent">
                         <div class="fz14 percent__label mb-10">
@@ -884,7 +901,7 @@
     </div>
 </div>
 
-<section id="group_8" class="page-form-tarif group_8 posr cover white lh-normal posr mb-120">
+<section id="group_8" class="page-form-plan group_8 posr cover white lh-normal posr mb-120">
 
     <!-- group_8__container -->
     <div class="group_8__container">
@@ -911,12 +928,11 @@
                             <!-- left_col_text -->
 
                             <!-- select -->
-
-                            <select name="months" id="months-amount" class="service-quantity">
-                                <option value="1">1 Quarter </option>
-                                <option value="2">2 Quarter </option>
-                                <option value="3">3 Quarter </option>
-                                <option value="4">4 Quarter </option>
+                            <select name="basic[]" multiple="multiple" id="months-amount"
+                                class="multiselect service-quantity" data-placeholder="Приобретено на 6 месяц">
+                                <option value="1">На 3 месяца</option>
+                                <option value="2">На на 6 месяцев</option>
+                                <option value="3">На на 12 месяцев</option>
                             </select>
                             <!-- /select -->
 
@@ -1234,10 +1250,15 @@
                             <!-- /button-open -->
 
                             <!-- button -->
-                            <a href="#" data-popup="#popup" data-target="17" data-budget="5000" data-product="9374"
-                                data-quantity="1" title="Select" class="product-btn btn fz16 fw600 flex aic jcc"
-                                listener="true">
-                                Выбрать </a>
+                            <a href="#" class="product-btn btn fz16 fw600 flex aic jcc" data-product="1">
+                                <span class="flex aic jcc plan-selected">
+                                    <img src="./img/Icon/cart.svg" alt="">
+                                    Приобретен
+                                </span>
+                                <div class="plan">
+                                    Выбрать
+                                </div>
+                            </a>
                             <!-- /button -->
 
                             <!-- button -->
@@ -1350,11 +1371,11 @@
                                 <!-- price_month_text -->
 
                                 <!-- select -->
-                                <select class="service-quantity">
-                                    <option value="1"> 1 Quarter </option>
-                                    <option value="2"> 2 Quarter </option>
-                                    <option value="3"> 3 Quarter </option>
-                                    <option value="4"> 4 Quarter </option>
+                                <select name="basic[]" multiple="multiple" id="months-amount"
+                                    class="multiselect service-quantity" data-placeholder="Приобретено на 6 месяц">
+                                    <option value="1">На 3 месяца</option>
+                                    <option value="2">На на 6 месяцев</option>
+                                    <option value="3">На на 12 месяцев</option>
                                 </select>
                                 <!-- /select -->
 
@@ -1388,11 +1409,19 @@
                             <!-- ksoe -->
                             <div class="ksoe">
                                 <!-- button -->
-                                <a href="#" data-popup="#popup" data-target="17" data-budget="5000" data-product="9374"
-                                    data-quantity="1" title="Select"
-                                    class="product-btn btn w-full flex aic jcc fz16m mb-25" listener="true">Select </a>
+                                <a href="#" class="product-btn btn fz16 fw600 flex aic jcc" data-product="1">
+                                    <span class="flex aic jcc plan-selected">
+                                        <img src="./img/Icon/cart.svg" alt="">
+                                        Приобретен
+                                    </span>
+                                    <div class="plan">
+                                        Выбрать
+                                    </div>
+                                </a>
                                 <!-- /button -->
-                                <div class="sevice_table-path-mobile-close flex aic jcc mc">Hide </div>
+                                <a href="#" class="btn flex aic jcc fz16 bold center">
+                                    Опубликовать услугу с пакетом «Люкс» </a>
+                                <div class="sevice_table-path-mobile-close flex aic jcc mc">Свернуть </div>
                             </div>
                             <!-- /ksoe -->
 
@@ -1508,10 +1537,15 @@
                             <!-- /button-open -->
 
                             <!-- button -->
-                            <a href="#" data-popup="#popup" data-target="14" data-budget="2000" data-product="9375"
-                                data-quantity="1" title="Select" class="product-btn btn fz16 fw600 flex aic jcc"
-                                listener="true">
-                                Выбрать </a>
+                            <a href="#" class="product-btn btn fz16 fw600 flex aic jcc" data-product="2">
+                                <span class="flex aic jcc plan-selected">
+                                    <img src="./img/Icon/cart.svg" alt="">
+                                    Приобретен
+                                </span>
+                                <div class="plan">
+                                    Выбрать
+                                </div>
+                            </a>
                             <!-- /button -->
 
                             <!-- button -->
@@ -1688,14 +1722,13 @@
                                 <!-- /price_month_text -->
 
                                 <!-- select -->
-                                <select name="" class="service-quantity">
-                                    <option value="3"> 2 Quarter </option>
-                                    <option value="6"> 2 Quarter </option>
-                                    <option value="9"> 2 Quarter </option>
-                                    <option value="12"> 2 Quarter </option>
-                                    <option value="1"> 2 Quarter </option>
+                                <select name="basic[]" multiple="multiple" id="months-amount"
+                                    class="multiselect service-quantity" data-placeholder="Приобретено на 6 месяц">
+                                    <option value="1">На 3 месяца</option>
+                                    <option value="2">На на 6 месяцев</option>
+                                    <option value="3">На на 12 месяцев</option>
                                 </select>
-                                <!-- select -->
+                                <!-- /select -->
 
                             </div>
                             <!-- /box_price_month_2 -->
@@ -1729,11 +1762,19 @@
                             <!-- ksoe -->
                             <div class="ksoe">
                                 <!-- button -->
-                                <a href="#" data-popup="#popup" data-target="14" data-budget="2000" data-product="9375"
-                                    data-quantity="1" title="Select"
-                                    class="product-btn btn w-full flex aic jcc fz16m mb-25" listener="true">Select </a>
+                                <a href="#" class="product-btn btn fz16 fw600 flex aic jcc" data-product="1">
+                                    <span class="flex aic jcc plan-selected">
+                                        <img src="./img/Icon/cart.svg" alt="">
+                                        Приобретен
+                                    </span>
+                                    <div class="plan">
+                                        Выбрать
+                                    </div>
+                                </a>
                                 <!-- /button -->
-                                <div class="sevice_table-path-mobile-close flex aic jcc mc">Hide </div>
+                                <a href="#" class="btn flex aic jcc fz16 bold center">
+                                    Опубликовать услугу с пакетом «Люкс» </a>
+                                <div class="sevice_table-path-mobile-close flex aic jcc mc">Свернуть </div>
                             </div>
                             <!-- /ksoe -->
 
@@ -1868,10 +1909,15 @@
                             <!-- /button-open -->
 
                             <!-- button -->
-                            <a href="#" data-popup="#popup" data-target="9" data-budget="2000" data-product="9379"
-                                data-quantity="1" title="Select" class="product-btn btn fz16 fw600 flex aic jcc"
-                                listener="true">
-                                Выбрать </a>
+                            <a href="#" class="product-btn btn fz16 fw600 flex aic jcc" data-product="3">
+                                <span class="flex aic jcc plan-selected">
+                                    <img src="./img/Icon/cart.svg" alt="">
+                                    Приобретен
+                                </span>
+                                <div class="plan">
+                                    Выбрать
+                                </div>
+                            </a>
                             <!-- /button -->
 
                             <!-- button -->
@@ -2160,13 +2206,14 @@
                                 </div>
                                 <!-- /price_month_text -->
 
-                                <!-- quantity -->
-                                <select name="" class="service-quantity">
-                                    <option value="1"> 1 Quarter </option>
-                                    <option value="2"> 2 Quarter </option>
-                                    <option value="3"> 3 Quarter </option>
+                                <!-- select -->
+                                <select name="basic[]" multiple="multiple" id="months-amount"
+                                    class="multiselect service-quantity" data-placeholder="Приобретено на 6 месяц">
+                                    <option value="1">На 3 месяца</option>
+                                    <option value="2">На на 6 месяцев</option>
+                                    <option value="3">На на 12 месяцев</option>
                                 </select>
-                                <!-- /quantity -->
+                                <!-- /select -->
                             </div>
                             <!-- /box_price_month_2 -->
 
@@ -2200,11 +2247,19 @@
                             <!-- ksoe -->
                             <div class="ksoe">
                                 <!-- button -->
-                                <a href="#" data-popup="#popup" data-target="9" data-budget="2000" data-product="9379"
-                                    data-quantity="1" title="Select"
-                                    class="product-btn btn w-full flex aic jcc fz16m mb-25" listener="true">Select </a>
+                                <a href="#" class="product-btn btn fz16 fw600 flex aic jcc" data-product="1">
+                                    <span class="flex aic jcc plan-selected">
+                                        <img src="./img/Icon/cart.svg" alt="">
+                                        Приобретен
+                                    </span>
+                                    <div class="plan">
+                                        Выбрать
+                                    </div>
+                                </a>
                                 <!-- /button -->
-                                <div class="sevice_table-path-mobile-close flex aic jcc mc">Hide </div>
+                                <a href="#" class="btn flex aic jcc fz16 bold center">
+                                    Опубликовать услугу с пакетом «Люкс» </a>
+                                <div class="sevice_table-path-mobile-close flex aic jcc mc">Свернуть </div>
                             </div>
                             <!-- /ksoe -->
                         </div>
@@ -2284,7 +2339,7 @@
             <div class="inner round-26 flex jcsb aic pl-75 pr-50 pt-45 pb-45">
                 <div class="ll flex aic">
                     <div class="fz20 fw500 mr-10">
-                        Total:
+                        Итого:
                     </div>
                     <div class="fz24 bold gray-b mr-10">
                         €3500
@@ -2293,11 +2348,11 @@
                         €2900
                     </div>
                     <div class="fz24">
-                        Economy <span class="bold orang">-22%</span>
+                        Экономия <span class="bold orang">-22%</span>
                     </div>
                 </div>
                 <a href="#" class="btn flex aic jcc fz16 bold center">
-                    Publish a service with the “Lux” package </a>
+                    Опубликовать услугу с пакетом «Люкс» </a>
             </div>
         </div>
         <!-- !!!/sevice_table-bottom -->
@@ -4214,24 +4269,24 @@
 </div>		
 	</div>
 </div>
-	<script src="https://code.jquery.com/jquery-3.7.1.js?_v=20240712185358"></script>
-<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js?_v=20240712185358"></script>
-<script src="https://test.camel.expert/wp-content/themes/camelexpert/assets/js/vendor/wow.min.js?ver=1.0.0&_v=20240712185358"></script>
+	<script src="https://code.jquery.com/jquery-3.7.1.js?_v=20240712233003"></script>
+<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js?_v=20240712233003"></script>
+<script src="https://test.camel.expert/wp-content/themes/camelexpert/assets/js/vendor/wow.min.js?ver=1.0.0&_v=20240712233003"></script>
 
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://unpkg.com/multiple-select@1.7.0/dist/multiple-select.min.js?_v=20240712185358"></script>
+<script src="https://unpkg.com/multiple-select@1.7.0/dist/multiple-select.min.js?_v=20240712233003"></script>
 
-<!-- <script src="js/percentChart.js?_v=20240712185358"></script> -->
-<script src="js/jquery.smartuploader.js?_v=20240712185358"></script>
-<script src="js/jquery.multiselect.js?_v=20240712185358"></script>
-<script src="js/chart.js?_v=20240712185358"></script>
-<script src="js/chart-init.js?_v=20240712185358"></script>
-<script src="js/app.min.js?_v=20240712185358"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js?_v=20240712185358" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css?_v=20240712185358" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js?_v=20240712185358"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js?_v=20240712185358"></script>
-<script src="js/scripts.js?_v=20240712185358"></script>
+<!-- <script src="js/percentChart.js?_v=20240712233003"></script> -->
+<script src="js/jquery.smartuploader.js?_v=20240712233003"></script>
+<script src="js/jquery.multiselect.js?_v=20240712233003"></script>
+<script src="js/chart.js?_v=20240712233003"></script>
+<script src="js/chart-init.js?_v=20240712233003"></script>
+<script src="js/app.min.js?_v=20240712233003"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js?_v=20240712233003" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css?_v=20240712233003" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js?_v=20240712233003"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js?_v=20240712233003"></script>
+<script src="js/scripts.js?_v=20240712233003"></script>
 
 
 <script>

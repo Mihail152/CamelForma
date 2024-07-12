@@ -12,14 +12,34 @@ $(".box_8987 .button-open").click((function () {
   $(this).parent().parent().parent().find(".sevice_table-path-mobile").show(0);
   $(this).parent().parent().parent().find(".bottom ").hide(0);
 }));
+
 $(".sevice_table-path-mobile-close").click((function () {
   $(this).parent().parent().parent().find(".sevice_table-path-mobile").hide(0);
   $(this).parent().parent().parent().find(".bottom ").show(0);
 }));
+
 $(document).on('click', '.upload-btn', function (e) {
   e.preventDefault();
   $(this).siblings('input[type="file"]').trigger('click');
 })
+
+$('.product-btn').on('click', function (e) {
+  e.preventDefault();  
+  $('.plan_title-selected .logo').hide();
+  if($(this).hasClass('active')){
+    $('.product-btn, .td_col').removeClass('active');
+    $('.plan_header').removeClass('active');        
+  }else {
+    $('.product-btn, .td_col').removeClass('active');
+    $(this).closest('.td_col').addClass('active');
+    $(this).toggleClass('active');
+    $('.plan_header').addClass('active');    
+    const data_product = $(this).attr('data-product');    
+    $('.plan_title-selected .logo[data-plan="' + data_product + '"]').show();
+  }  
+})
+
+
 
 $(document).on("click", ".js_open_popup_startap", function (e) {
   e.preventDefault();

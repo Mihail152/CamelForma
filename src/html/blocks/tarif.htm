@@ -1,7 +1,24 @@
-<div class="step__container step_tarif mt-40 pl-30 pr-30 pt-60 pb-60">
+<div class="step__container plan_header mt-40 pl-30 pr-30 pt-60 pb-60">
     <div class="step__inner mlr-a">
         <div class="step_2__row flex aic jcsb">
-            <div class="step_2__col">
+            <div class="plan_title-selected flex aic gap-100">
+
+                <div class="step_col flex aic gap-16">
+                    <div class="logo" data-plan="1"><img src="./img/tarif/Icon/service-1.svg" alt=""></div>
+                    <div class="logo" data-plan="2"><img src="./img/tarif/Icon/service-2.svg" alt=""></div>
+                    <div class="logo" data-plan="3"><img src="./img/tarif/Icon/service-3.svg" alt=""></div>
+                    <div class="info">
+                        <div class="flex aic mb-8 fz14 badge"><img src="./img/Icon/cart-orange.svg" alt=""
+                                class="mr-5">Приобретенный тариф</div>
+                        <div class="fz22">Обычная продажа</div>
+                    </div>
+                </div>
+                <div class="step_col">
+                    <a href="#" class="btn fz16 fw600 flex aic jcc">Опубликовать стартап/бизнес</a>
+                </div>
+
+            </div>
+            <div class="step_2__col plan_title">
                 <div class="flex gap-10 ais">
                     <img src="./img/Icon/ic_object_info.svg" alt="" class="pt-5">
                     <div class="fz24 fz20m fw500 blue ff-roboto">
@@ -12,7 +29,7 @@
             <div class="step_2__col">
                 <div class="flex gap-16 percent__block">
                     <div class="posr">
-                        <img src="./img/tarif/Icon/ic_crown.svg" alt="">
+                        <img src="./img/Icon/ic_crown.svg" alt="">
                     </div>
                     <div class="percent__percent">
                         <div class="fz14 percent__label mb-10">
@@ -30,7 +47,7 @@
     </div>
 </div>
 
-<section id="group_8" class="page-form-tarif group_8 posr cover white lh-normal posr mb-120">
+<section id="group_8" class="page-form-plan group_8 posr cover white lh-normal posr mb-120">
 
     <!-- group_8__container -->
     <div class="group_8__container">
@@ -57,12 +74,11 @@
                             <!-- left_col_text -->
 
                             <!-- select -->
-
-                            <select name="months" id="months-amount" class="service-quantity">
-                                <option value="1">1 Quarter </option>
-                                <option value="2">2 Quarter </option>
-                                <option value="3">3 Quarter </option>
-                                <option value="4">4 Quarter </option>
+                            <select name="basic[]" multiple="multiple" id="months-amount"
+                                class="multiselect service-quantity" data-placeholder="Приобретено на 6 месяц">
+                                <option value="1">На 3 месяца</option>
+                                <option value="2">На на 6 месяцев</option>
+                                <option value="3">На на 12 месяцев</option>
                             </select>
                             <!-- /select -->
 
@@ -380,10 +396,15 @@
                             <!-- /button-open -->
 
                             <!-- button -->
-                            <a href="#" data-popup="#popup" data-target="17" data-budget="5000" data-product="9374"
-                                data-quantity="1" title="Select" class="product-btn btn fz16 fw600 flex aic jcc"
-                                listener="true">
-                                Выбрать </a>
+                            <a href="#" class="product-btn btn fz16 fw600 flex aic jcc" data-product="1">
+                                <span class="flex aic jcc plan-selected">
+                                    <img src="./img/Icon/cart.svg" alt="">
+                                    Приобретен
+                                </span>
+                                <div class="plan">
+                                    Выбрать
+                                </div>
+                            </a>
                             <!-- /button -->
 
                             <!-- button -->
@@ -496,11 +517,11 @@
                                 <!-- price_month_text -->
 
                                 <!-- select -->
-                                <select class="service-quantity">
-                                    <option value="1"> 1 Quarter </option>
-                                    <option value="2"> 2 Quarter </option>
-                                    <option value="3"> 3 Quarter </option>
-                                    <option value="4"> 4 Quarter </option>
+                                <select name="basic[]" multiple="multiple" id="months-amount"
+                                    class="multiselect service-quantity" data-placeholder="Приобретено на 6 месяц">
+                                    <option value="1">На 3 месяца</option>
+                                    <option value="2">На на 6 месяцев</option>
+                                    <option value="3">На на 12 месяцев</option>
                                 </select>
                                 <!-- /select -->
 
@@ -534,11 +555,19 @@
                             <!-- ksoe -->
                             <div class="ksoe">
                                 <!-- button -->
-                                <a href="#" data-popup="#popup" data-target="17" data-budget="5000" data-product="9374"
-                                    data-quantity="1" title="Select"
-                                    class="product-btn btn w-full flex aic jcc fz16m mb-25" listener="true">Select </a>
+                                <a href="#" class="product-btn btn fz16 fw600 flex aic jcc" data-product="1">
+                                    <span class="flex aic jcc plan-selected">
+                                        <img src="./img/Icon/cart.svg" alt="">
+                                        Приобретен
+                                    </span>
+                                    <div class="plan">
+                                        Выбрать
+                                    </div>
+                                </a>
                                 <!-- /button -->
-                                <div class="sevice_table-path-mobile-close flex aic jcc mc">Hide </div>
+                                <a href="#" class="btn flex aic jcc fz16 bold center">
+                                    Опубликовать услугу с пакетом «Люкс» </a>
+                                <div class="sevice_table-path-mobile-close flex aic jcc mc">Свернуть </div>
                             </div>
                             <!-- /ksoe -->
 
@@ -654,10 +683,15 @@
                             <!-- /button-open -->
 
                             <!-- button -->
-                            <a href="#" data-popup="#popup" data-target="14" data-budget="2000" data-product="9375"
-                                data-quantity="1" title="Select" class="product-btn btn fz16 fw600 flex aic jcc"
-                                listener="true">
-                                Выбрать </a>
+                            <a href="#" class="product-btn btn fz16 fw600 flex aic jcc" data-product="2">
+                                <span class="flex aic jcc plan-selected">
+                                    <img src="./img/Icon/cart.svg" alt="">
+                                    Приобретен
+                                </span>
+                                <div class="plan">
+                                    Выбрать
+                                </div>
+                            </a>
                             <!-- /button -->
 
                             <!-- button -->
@@ -834,14 +868,13 @@
                                 <!-- /price_month_text -->
 
                                 <!-- select -->
-                                <select name="" class="service-quantity">
-                                    <option value="3"> 2 Quarter </option>
-                                    <option value="6"> 2 Quarter </option>
-                                    <option value="9"> 2 Quarter </option>
-                                    <option value="12"> 2 Quarter </option>
-                                    <option value="1"> 2 Quarter </option>
+                                <select name="basic[]" multiple="multiple" id="months-amount"
+                                    class="multiselect service-quantity" data-placeholder="Приобретено на 6 месяц">
+                                    <option value="1">На 3 месяца</option>
+                                    <option value="2">На на 6 месяцев</option>
+                                    <option value="3">На на 12 месяцев</option>
                                 </select>
-                                <!-- select -->
+                                <!-- /select -->
 
                             </div>
                             <!-- /box_price_month_2 -->
@@ -875,11 +908,19 @@
                             <!-- ksoe -->
                             <div class="ksoe">
                                 <!-- button -->
-                                <a href="#" data-popup="#popup" data-target="14" data-budget="2000" data-product="9375"
-                                    data-quantity="1" title="Select"
-                                    class="product-btn btn w-full flex aic jcc fz16m mb-25" listener="true">Select </a>
+                                <a href="#" class="product-btn btn fz16 fw600 flex aic jcc" data-product="1">
+                                    <span class="flex aic jcc plan-selected">
+                                        <img src="./img/Icon/cart.svg" alt="">
+                                        Приобретен
+                                    </span>
+                                    <div class="plan">
+                                        Выбрать
+                                    </div>
+                                </a>
                                 <!-- /button -->
-                                <div class="sevice_table-path-mobile-close flex aic jcc mc">Hide </div>
+                                <a href="#" class="btn flex aic jcc fz16 bold center">
+                                    Опубликовать услугу с пакетом «Люкс» </a>
+                                <div class="sevice_table-path-mobile-close flex aic jcc mc">Свернуть </div>
                             </div>
                             <!-- /ksoe -->
 
@@ -1014,10 +1055,15 @@
                             <!-- /button-open -->
 
                             <!-- button -->
-                            <a href="#" data-popup="#popup" data-target="9" data-budget="2000" data-product="9379"
-                                data-quantity="1" title="Select" class="product-btn btn fz16 fw600 flex aic jcc"
-                                listener="true">
-                                Выбрать </a>
+                            <a href="#" class="product-btn btn fz16 fw600 flex aic jcc" data-product="3">
+                                <span class="flex aic jcc plan-selected">
+                                    <img src="./img/Icon/cart.svg" alt="">
+                                    Приобретен
+                                </span>
+                                <div class="plan">
+                                    Выбрать
+                                </div>
+                            </a>
                             <!-- /button -->
 
                             <!-- button -->
@@ -1306,13 +1352,14 @@
                                 </div>
                                 <!-- /price_month_text -->
 
-                                <!-- quantity -->
-                                <select name="" class="service-quantity">
-                                    <option value="1"> 1 Quarter </option>
-                                    <option value="2"> 2 Quarter </option>
-                                    <option value="3"> 3 Quarter </option>
+                                <!-- select -->
+                                <select name="basic[]" multiple="multiple" id="months-amount"
+                                    class="multiselect service-quantity" data-placeholder="Приобретено на 6 месяц">
+                                    <option value="1">На 3 месяца</option>
+                                    <option value="2">На на 6 месяцев</option>
+                                    <option value="3">На на 12 месяцев</option>
                                 </select>
-                                <!-- /quantity -->
+                                <!-- /select -->
                             </div>
                             <!-- /box_price_month_2 -->
 
@@ -1346,11 +1393,19 @@
                             <!-- ksoe -->
                             <div class="ksoe">
                                 <!-- button -->
-                                <a href="#" data-popup="#popup" data-target="9" data-budget="2000" data-product="9379"
-                                    data-quantity="1" title="Select"
-                                    class="product-btn btn w-full flex aic jcc fz16m mb-25" listener="true">Select </a>
+                                <a href="#" class="product-btn btn fz16 fw600 flex aic jcc" data-product="1">
+                                    <span class="flex aic jcc plan-selected">
+                                        <img src="./img/Icon/cart.svg" alt="">
+                                        Приобретен
+                                    </span>
+                                    <div class="plan">
+                                        Выбрать
+                                    </div>
+                                </a>
                                 <!-- /button -->
-                                <div class="sevice_table-path-mobile-close flex aic jcc mc">Hide </div>
+                                <a href="#" class="btn flex aic jcc fz16 bold center">
+                                    Опубликовать услугу с пакетом «Люкс» </a>
+                                <div class="sevice_table-path-mobile-close flex aic jcc mc">Свернуть </div>
                             </div>
                             <!-- /ksoe -->
                         </div>
@@ -1430,7 +1485,7 @@
             <div class="inner round-26 flex jcsb aic pl-75 pr-50 pt-45 pb-45">
                 <div class="ll flex aic">
                     <div class="fz20 fw500 mr-10">
-                        Total:
+                        Итого:
                     </div>
                     <div class="fz24 bold gray-b mr-10">
                         €3500
@@ -1439,11 +1494,11 @@
                         €2900
                     </div>
                     <div class="fz24">
-                        Economy <span class="bold orang">-22%</span>
+                        Экономия <span class="bold orang">-22%</span>
                     </div>
                 </div>
                 <a href="#" class="btn flex aic jcc fz16 bold center">
-                    Publish a service with the “Lux” package </a>
+                    Опубликовать услугу с пакетом «Люкс» </a>
             </div>
         </div>
         <!-- !!!/sevice_table-bottom -->
