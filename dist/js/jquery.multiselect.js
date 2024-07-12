@@ -1015,10 +1015,10 @@
                 }
             }
             // UPDATE PLACEHOLDER TEXT WITH OPTIONS SELECTED
-            placeholderTxt.html(selOpts.join("<span></span>"));
+            placeholderTxt.html(selOpts.join(""));
             if (this.options.categoryInput) {
                 var selectorInput = '#' + this.options.categoryInput;
-                $(selectorInput).html(selOpts.join("<span></span>"));
+                $(selectorInput).html(selOpts.join(""));
             }
 
 

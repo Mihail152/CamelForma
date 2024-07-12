@@ -173,21 +173,22 @@ if ($("#datepicker").length) {
 function init_select() {
   $('.multiselect').each(function (index) {
     const selectElement = $(this);
-    // const onlyvalue = $(this).attr('data-onlyvalue') || false;
+    const selectAll = $(this).attr('data-selectAll') || false;
+    const listType = $(this).attr('data-listType') || "radio";
     selectElement.multiselect({
       columns: 1,
       placeholder: $(this).attr("data-placeholder"),
       icon: "",
       search: false,
       openList: false,
-      listType: "radio",
+      listType: listType,
       minHeight: "150",
       // onlyValue: onlyvalue,
       maxPlaceholderOpts: 2,
       searchOptions: {
         default: "Введите страну для поиска",
       },
-      selectAll: false,
+      selectAll: selectAll,
     });
   });
 }

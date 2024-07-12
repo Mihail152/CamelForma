@@ -3300,7 +3300,9 @@ td .off~* {
   display: none;
 }
 
-
+.block{
+  display: block;
+}
 @media(max-width: 1260px) {
   .header__card {
     padding: 0;
