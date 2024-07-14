@@ -3278,7 +3278,8 @@ html .ui-button.ui-state-disabled:active {
 }
 
 .ms-options-wrap>.ms-options>ul .selected label {
-  font-weight: 500;
+  // font-weight: 500;
+  text-shadow: 0px 1px 0px #0004;
 }
 
 .popup_footer {

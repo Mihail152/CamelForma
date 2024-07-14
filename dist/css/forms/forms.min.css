@@ -54,9 +54,76 @@
   justify-content: end;
 }
 
+.block__checkbox {
+  width: calc(100% + 40px);
+  border-radius: 12px;
+  border: 1px solid #cedcf0;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+.block__checkbox .categoryType .ms-options ul li {
+  padding: 0 10px;
+}
+.block__checkbox .checkbox-def label:before {
+  width: 24px;
+  height: 24px;
+  background-size: 12px;
+}
+
+.combined.fs_input {
+  height: auto;
+  min-height: 50px;
+  flex-wrap: wrap;
+  padding: 8px 15px;
+}
+
+.combined span.item {
+  background: #e6edf7;
+  color: #222754;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  text-align: left;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+.combined span.item::after {
+  content: "";
+  position: absolute;
+  right: 30px;
+  display: block;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: rgba(159, 173, 189, 0.6901960784);
+}
+
 @media (max-width: 480px) {
   .clone_button.right_top {
     right: 15px;
     top: 15px;
   }
+}
+.currency__label .ms-options-wrap button {
+  position: relative;
+  padding-left: 8px;
+}
+.currency__label .ms-options-wrap button::before {
+  content: "";
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  display: block;
+  left: 10px;
+  width: 20px;
+  margin-top: -10px;
+  background-repeat: no-repeat;
+  background-image: url(../img/Icon/user_dollar.svg);
 }

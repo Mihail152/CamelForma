@@ -1,0 +1,178 @@
+<div class="mw-715 mlr-a  pb-40">
+
+    <!-- #1 -->
+    <div class="step__block mt-40 ">
+        <div class="step__title fz18 fw500 ff-roboto">Портфель стартапов и компаний инвестора
+            @@include('../../../blocks/tips.htm')</div>
+        <div class="block__repetitive clone-container mt-20" data-id="1" data-max="5">
+            <div class="step__row step__2_columns mr-60 p-10">
+                <div class="step_col">
+                    <label for="first_xname-4_1" class="fs_label">
+                        Название проекта или компании <sup>*</sup>
+                        @@include('../../../blocks/tips.htm')
+                        <input type="text" id="first_xname-4_1" class="fs_input mt-10"
+                            placeholder="Название проекта или компании">
+                    </label>
+                </div>
+                <div class="step_col">
+                    <form enctype="multipart/form-data" action="" method="post">
+                        <label for="name" class="fs_label">
+                            Логотип <sup>*</sup>
+                            <div id="drop_zone" class="drop-zone mt-10 w-100">
+                                <div class="drop-zone_placeholder flex gap-16">
+                                    <img src="./img/Icon/ic_add_files.svg" alt="">
+                                    <div>
+                                        <p class="drop-zone_title">Загрузите фотографию</p>
+                                        <p class="drop-zone_suptitle">1000x1000 пикселей, до 8 Мб</p>
+                                    </div>
+                                </div>
+                                <div class="preview-container"></div>
+                            </div>
+                            <input id="file_input" accept="image/*" type="file" multiple="" name="file">
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <div class="wrap_clone_buttons flex gap-10 aic absolute right_top">
+                <div class="clone_button" data-remove="0">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
+                            fill="#4272C5"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- #2 -->
+    <div class="step__block">
+        <div class="step__title fz18 fw500 ff-roboto">Команда </div>
+        <div class="block__repetitive clone-container mt-20" data-id="1" data-max="5">
+            <div class="step__row step__2_columns mr-60 p-10">
+                <div class="step_col">
+                    <label for="first_xname-4_1" class="fs_label block mb-20">
+                        Имя <sup>*</sup>
+                        @@include('../../../blocks/tips.htm')
+                        <input type="text" id="first_xname-4_1" class="fs_input mt-10" placeholder="Имя">
+                    </label>
+                    <label for="first_xname-4_1" class="fs_label">
+                        Фамилия <sup>*</sup>
+                        @@include('../../../blocks/tips.htm')
+                        <input type="text" id="first_xname-4_1" class="fs_input mt-10" placeholder="Фамилия">
+                    </label>
+                </div>
+                <div class="step_col">
+                    <form enctype="multipart/form-data" action="" method="post">
+                        <label for="name" class="fs_label">
+                            Фотография профиля <sup>*</sup>
+                            <div id="drop_zone" class="drop-zone mt-10 w-100">
+                                <div class="drop-zone_placeholder flex gap-16">
+                                    <img src="./img/Icon/ic_add_files.svg" alt="">
+                                    <div>
+                                        <p class="drop-zone_title">Загрузите фотографию</p>
+                                        <p class="drop-zone_suptitle">1000x1000 пикселей, до 8 Мб</p>
+                                    </div>
+                                </div>
+                                <div class="preview-container"></div>
+                            </div>
+                            <input id="file_input" accept="image/*" type="file" multiple="" name="file">
+                        </label>
+                    </form>
+                </div>
+            </div>
+
+            <!-- #4 -->
+            <div class="step__row step__2_columns mt-40 mr-60 p-10">
+                <div class="step_col">
+                    <label for="name" class="fs_label mw-full">
+                        <div class="fs_label mb-10">Должность <sup>*</sup></div>
+                        <select name="basic[]" multiple="multiple" class="multiselect"
+                            data-placeholder="Выберите должность">
+                            <option value="var-project-1">должность 1</option>
+                            <option value="var-project-2">должность 2</option>
+                            <option value="var-project-3">должность 3</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="step_col">
+                    <label for="first_xname-4_1" class="fs_label">
+                        Краткая информация о члене команды <sup>*</sup>
+                        <div class="mt-10">
+                            <textarea name="" id="" placeholder="Краткая информация "></textarea>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="wrap_clone_buttons flex gap-10 aic absolute right_top">
+                <div class="clone_button" data-remove="0">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M8.00002 8.00002L8.00006 13C8.00006 13.5523 7.55232 14 7.00007 14C6.72391 14 6.47388 13.8881 6.29291 13.7071C6.11198 13.5262 6.00007 13.2762 6.00007 13L6.00003 8.00002L0.999996 8.00002C0.723892 8.00007 0.473858 7.88816 0.292885 7.70719C0.111912 7.52621 -2.19475e-07 7.27618 0 7.00003C4.3895e-07 6.44773 0.447744 5.99998 0.999997 6.00003L6.00003 6.00003L6.00003 0.999997C6.00003 0.447696 6.44778 -4.67018e-05 7.00003 0C7.55228 4.67018e-05 8.00002 0.447789 8.00002 0.999996L8.00002 6.00003L13 5.99998C13.5523 6.00002 14 6.44776 14 6.99997C14 7.55227 13.5523 8.00002 13 7.99997L8.00002 8.00002Z"
+                            fill="#4272C5"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="user-data-social bg-blue round-16 p-30 ml--30 mr--30 mt-40">
+        <div class="fz16 fw500 black-1c mb-5 ff-roboto">Социальные сети</div>        
+        <div class="user-data-social-row flex fxww">
+            
+            
+            <div class="user-data-social-item flex aic">
+                <div class="lab pr-10 tar fxg flex jcfe"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" class="loaded">
+                        <g id="devicon:linkedin" clip-path="url(#clip0_969_39443)">
+                            <path id="Vector"
+                                d="M21.75 0.562587H2.25C1.80756 0.558084 1.3814 0.729282 1.06504 1.03862C0.74867 1.34795 0.56794 1.77016 0.5625 2.21259V21.7913C0.568923 22.2331 0.750087 22.6544 1.06634 22.9629C1.3826 23.2714 1.8082 23.4421 2.25 23.4376H21.75C22.1925 23.4411 22.6183 23.2693 22.9345 22.9598C23.2507 22.6503 23.4316 22.2282 23.4375 21.7857V2.20696C23.4296 1.76583 23.2479 1.34564 22.9319 1.03772C22.6159 0.729808 22.1912 0.559058 21.75 0.562587Z"
+                                fill="#0076B2"></path>
+                            <path id="Vector_2"
+                                d="M3.94969 9.13672H7.34531V20.0623H3.94969V9.13672ZM5.64844 3.69922C6.0379 3.69922 6.41861 3.81473 6.74241 4.03114C7.06621 4.24756 7.31855 4.55514 7.4675 4.91499C7.61646 5.27485 7.65534 5.67079 7.57922 6.05274C7.5031 6.43469 7.31541 6.78549 7.03989 7.06075C6.76437 7.33601 6.4134 7.52337 6.03137 7.59912C5.64935 7.67487 5.25344 7.63561 4.89373 7.48632C4.53402 7.33702 4.22667 7.08439 4.01057 6.76038C3.79447 6.43638 3.67932 6.05556 3.67969 5.66609C3.68019 5.14427 3.88783 4.644 4.25698 4.27519C4.62614 3.90638 5.12662 3.69922 5.64844 3.69922ZM9.47531 9.13672H12.7303V10.6367H12.7753C13.2291 9.77797 14.3353 8.87234 15.9872 8.87234C19.4259 8.86484 20.0634 11.128 20.0634 14.0623V20.0623H16.6678V14.7467C16.6678 13.4811 16.6453 11.8517 14.9034 11.8517C13.1616 11.8517 12.8653 13.2317 12.8653 14.6642V20.0623H9.47531V9.13672Z"
+                                fill="white"></path>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_969_39443">
+                                <rect width="24" height="24" fill="white"></rect>
+                            </clipPath>
+                        </defs>
+                    </svg></div>
+                <input class="input3" type="text" placeholder="Ссылка">
+            </div>
+            
+            <div class="user-data-social-item flex aic">
+                <div class="lab pr-10 tar fxg flex jcfe"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" class="loaded">
+                        <g id="twitter 1" clip-path="url(#clip0_969_39368)">
+                            <g id="Clip path group">
+                                <mask id="mask0_969_39368" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0"
+                                    y="0" width="24" height="24">
+                                    <g id="clip0_84_15697">
+                                        <path id="Vector" d="M24 0H0V24H24V0Z" fill="white"></path>
+                                    </g>
+                                </mask>
+                                <g mask="url(#mask0_969_39368)">
+                                    <g id="Group">
+                                        <path id="Vector_2"
+                                            d="M21.1875 0H2.8125C1.2592 0 0 1.2592 0 2.8125V21.1875C0 22.7408 1.2592 24 2.8125 24H21.1875C22.7408 24 24 22.7408 24 21.1875V2.8125C24 1.2592 22.7408 0 21.1875 0Z"
+                                            fill="black"></path>
+                                        <path id="Vector_3"
+                                            d="M16.6839 4.6875H19.1649L13.7446 10.8825L20.1211 19.3125H15.1284L11.2179 14.1998L6.74338 19.3125H4.26091L10.0584 12.6863L3.94141 4.6875H9.06088L12.5956 9.36075L16.6839 4.6875ZM15.8131 17.8275H17.1879L8.31388 6.0945H6.83863L15.8131 17.8275Z"
+                                            fill="white"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_969_39368">
+                                <rect width="24" height="24" fill="white"></rect>
+                            </clipPath>
+                        </defs>
+                    </svg></div>
+                <input class="input3" type="text" placeholder="Ссылка">
+            </div>
+            
+        </div>
+    </div>
+</div>

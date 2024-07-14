@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Инвестор"
+})
+
+<body class="body">
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page forms-wrapper">
+			@@include('html/_bread.htm',{
+			"parent_title": "",
+			"parent_link": "",
+			"title": "Разместить предложение"
+			})
+
+			<div class="steps_header__container">
+				@@include('html/startup/_header.htm',{
+					"backlink": '/',
+					"title":"Разместить предложение"
+				})
+			</div>
+			<div class="steps_body__container mt-40">
+
+				<ul class="flex steps__row">
+					<div class="progressbar steps__bg_line" data-progress="33.3"></div>
+					@@loop('html/startup/_steps.htm', [
+					{ "step": 1, "text": "" , "class":"completed"},
+					{ "step": 2, "text": "Основная информация", "class":"current"},
+					{ "step": 3, "text": "" , "class":""},
+					{ "step": 4, "text": "", "class":"" },
+					])
+				</ul>
+
+			</div>
+			@@include('html/invest/content/step_2.htm',{})
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

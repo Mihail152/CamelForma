@@ -24,19 +24,19 @@ $(document).on('click', '.upload-btn', function (e) {
 })
 
 $('.product-btn').on('click', function (e) {
-  e.preventDefault();  
+  e.preventDefault();
   $('.plan_title-selected .logo').hide();
-  if($(this).hasClass('active')){
+  if ($(this).hasClass('active')) {
     $('.product-btn, .td_col').removeClass('active');
-    $('.plan_header').removeClass('active');        
-  }else {
+    $('.plan_header').removeClass('active');
+  } else {
     $('.product-btn, .td_col').removeClass('active');
     $(this).closest('.td_col').addClass('active');
     $(this).toggleClass('active');
-    $('.plan_header').addClass('active');    
-    const data_product = $(this).attr('data-product');    
+    $('.plan_header').addClass('active');
+    const data_product = $(this).attr('data-product');
     $('.plan_title-selected .logo[data-plan="' + data_product + '"]').show();
-  }  
+  }
 })
 
 
@@ -191,7 +191,96 @@ function init_select() {
       selectAll: selectAll,
     });
   });
+  $('.multiselect_opened').each(function (index) {
+    const selectElement = $(this);
+    const searchPlaceholder = $(this).attr('data-placeholder') || false;
+    const placeholderId = $(this).attr('data-placeholderId') || false;
+    const search = $(this).attr('data-search') || false;
+    const columns = $(this).attr('data-columns') || 3;
+    const maxPlaceholder = $(this).attr('data-columns') || 3;
+    selectElement.multiselect({
+      columns: columns,
+      icon: "",
+      search: search,
+      openList: true,
+      listType: "checkbox",
+      minHeight: "150",
+      onlyValue: true,
+      maxPlaceholderOpts: 2,
+      searchOptions: {
+        default: searchPlaceholder,
+      },
+      selectAll: false,
+    });
+  });
+
 }
+
+
+function syncSelectedByText(sourceSelect, targetSelect) {
+  
+  $(sourceSelect).find('option:selected').each(function () {
+    let searchText = $(this).text().trim();
+    $(targetSelect).find('option').each(function () {
+      if ($(this).text().trim() === searchText) {
+        $(this).prop('selected', true);
+      }
+    });
+  });
+}
+
+function updateCombinedValues() {
+  let selectedValues = [];
+
+  $('select.industry__mini option:selected').each(function () {
+    selectedValues.push($(this).text());
+  });
+
+  $('select.industry__popup option:selected').each(function () {
+    selectedValues.push($(this).text());
+  });
+
+
+  // Удаление дубликатов
+  let uniqueValues = [...new Set(selectedValues)];
+  let txt_end = "";
+  if (uniqueValues.length > 3) {
+    txt_end = '+ ' + (uniqueValues.length - 3);
+  }
+
+  let minuniqueValues = uniqueValues;
+  $('#combined_industry-placeholder').html(minuniqueValues.map(text => `<span class="item">${text} <img src="img/Icon/ic_close.svg" class="remove__item"></span>`).join(''));
+}
+
+
+$('select.industry__mini, select.industry__popup').change(updateCombinedValues);
+// Обработка события изменения в select.industry__mini
+$('select.industry__mini').change(function () {
+  syncSelectedByText(this, 'select.industry__popup');
+});
+
+// Обработка события изменения в select.industry__popup
+$('select.industry__popup').change(function () {
+  syncSelectedByText(this, 'select.industry__mini');
+});
+
+syncSelectedByText('select.industry__mini', 'select.industry__popup');
+// Общая функция для снятия выбора с опций по тексту
+function deselectOptionByText(text) {
+  $('.industry__mini option, .industry__popup option').each(function () {
+    if ($(this).text().trim() === text.trim()) {
+      $(this).prop('selected', false).trigger('chosen:updated');
+    }
+  });
+  $('li[data-search-term="' + text.trim().toLowerCase() + '"]').removeClass('selected').find('input[type="checkbox"]').prop('checked', false);
+}
+
+// Делегирование события клика на элементах .combined span.item img
+$(document).on('click', '.combined span.item img', function () {
+  const searchText = $(this).parent().text().trim();
+  deselectOptionByText(searchText);
+  updateCombinedValues();
+});
 
 
 

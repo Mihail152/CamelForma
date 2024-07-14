@@ -1,0 +1,179 @@
+<!-- #1 -->
+<div class="block__checkbox mb-20">
+    <div class="step__row">
+        <div class="step_col">
+            Выберите стадии проекта <sup>*</sup>
+            @@include('../../../blocks/tips.htm')
+
+            <!-- <select name="basic[]" multiple="multiple" class="multiselect_opened active" data-search="false" data-placeholder=""> -->
+            <div class="mt-20">
+                <select name="basic[]" multiple="multiple" class="multiselect_opened active">
+                    <option value="idea">Идея</option>
+                    <option value="crowdfunding">Краудфандинг</option>
+                    <option value="whole-business">Весь бизнес</option>
+                    <option value="seed-stage">Seed stage</option>
+                    <option value="any-type">Любой тип</option>
+                    <option value="business-loan">Кредит под бизнес</option>
+                    <option value="startup-stage">Startup stage</option>
+                    <option value="company-share">Доля компании</option>
+                    <option value="ready-business">Готовый бизнес</option>
+                    <option value="company-stocks">Акции компании</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #2 -->
+<div class="block__checkbox mb-20">
+    <div class="step__row">
+        <div class="step_col">
+            Финансовое состояние проекта <sup>*</sup>
+            @@include('../../../blocks/tips.htm')
+
+            <!-- <select name="basic[]" multiple="multiple" class="multiselect_opened active" data-search="false" data-placeholder=""> -->
+            <div class="mt-20">
+                <select name="basic[]" multiple="multiple" class="multiselect_opened active">
+                    <option value="profit-after-investment">Прибыль после инвестиций</option>
+                    <option value="generates-profit">Приносит прибыль</option>
+                    <option value="foundation-stage">Стадия основания</option>
+                    <option value="growth-stage">Стадия роста</option>
+                    <option value="break-even-stage">Стадия выхода в ноль</option>
+                    <option value="loss-stage">Стадия убытков</option>
+                    <option value="all-stages">Все стадии</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- #3 -->
+<div class="block__checkbox mb-20">
+    <div class="step__row">
+        <div class="step_col">
+            Выберите отрасль инвестирования <sup>*</sup>
+            @@include('../../../blocks/tips.htm')
+
+            <!-- <select name="basic[]" multiple="multiple" class="multiselect_opened active"> -->
+
+            <div class="mt-20">
+                <div id="combined_industry-placeholder" class="combined fs_input flex aic blue-2 fxg gap-8"
+                    data-placeholder="Страна"><span class="flex aic fz14 fw500 ">Выберите отрасль</span></div>
+
+                <div class="mt-20">
+                    <select name="basic[]" multiple="multiple" class="multiselect_opened industry__mini active"
+                        data-columns="2" data-placeholderId="industry__popup-placeholder">
+                        <option value="car-wash-services">3D</option>
+                        <option value="overseas-real-estate">Недвижимость за рубежом</option>
+                        <option value="pharmacy-business">Аптечный бизнес</option>
+                        <option value="printing-media-business">Печатный бизнес, СМИ</option>
+                        <option value="rental-business">Арендный бизнес</option>
+                        <option value="manufacturing-factories">Производство и заводы</option>
+                    </select>
+                </div>
+                <div class="text-center mb-30 mt-30">
+                    <a href="#industry__popup" class="btn btn-border-orang round-6 js_open_popup_startap"
+                        data-columns="3" data-placeholder="Выберите отрасsль" data-icon="choise_cat.webp"
+                        data-search="true" data-openlist="true" data-listtype="checkbox" data-onlyvalue="false"
+                        data-maxplaceholder="1000" data-defaulttext="Введите категорию для поиска">
+                        Показать все отрасли
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- #4 -->
+<div class="block__checkbox mb-20">
+    <div class="step__row">
+        <div class="step_col">
+            Страны инвестирования <sup>*</sup>
+            @@include('../../../blocks/tips.htm')
+
+            <!-- <select name="basic[]" multiple="multiple" class="multiselect_opened active"> -->
+
+            <div class="mt-20">
+                <div id="country__popup-placeholder" class="combined fs_input flex aic blue-2 fxg gap-8"
+                    data-placeholder="Страна"><span class="flex aic fz14 fw500 ">Введите страну для поиска</span></div>
+
+                <div class="mt-20">
+                    <select name="basic[]" multiple="multiple" class="multiselect_opened country__mini active">
+                        <option value="Новая Зеландия" data-img="./img/flag/nz.png"> Новая Зеландия</option>
+                        <option value="ОАЭ" data-img="./img/flag/arab.png"> ОАЭ</option>
+                        <option value="Индонезия" data-img="./img/flag/ind.png"> Индонезия</option>
+                        <option value="Бельгия" data-img="./img/flag/bel.png"> Бельгия</option>
+                        <option value="Австралия" data-img="./img/flag/au.png"> Австралия</option>
+                        <option value="Великобритания" data-img="./img/flag/sing.png"> Великобритания</option>
+                        <option value="Сингапур" data-img="./img/flag/eng.png"> Сингапур</option>
+                        <option value="Финляндия" data-img="./img/flag/fin.png"> Финляндия</option>
+                        <option value="Бахрейн" data-img="./img/flag/bachrein.png"> Бахрейн</option>
+                    </select>
+                </div>
+                <div class="text-center mb-30 mt-30">
+                    <a href="#country__popup" class="btn btn-border-orang round-6 js_open_popup_startap"
+                        data-columns="4" data-placeholder="Выберите страну" data-columns="3" data-icon="choise_cat.webp"
+                        data-search="true" data-openlist="true" data-listtype="checkbox" data-onlyvalue="false"
+                        data-maxplaceholder="1000" data-defaulttext="Введите категорию для поиска">
+                        Показать все отрасли
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- #5 -->
+<div class="step__block">
+    <div class="step__row">
+        <div class="step_1__col">
+            <div class="mt-40">
+                <div class="fs_label">Краткая информация о стартапере <sup>*</sup>
+                    <div class="tooltip posr">
+                        <img src="./img/Icon/ic_object_info_blue.svg" alt="" class="">
+                        <div class="hide absolute fz14 white p-20 round-12 z-3">
+                            The outlines of our work with each project: The outlines of our work
+                            with each project:
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mt-10 gap-40">
+                    <textarea name="" id="" placeholder="Краткая информация о стартапере"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #6 -->
+<div class="step__row step__2_columns mt-40">
+    <div class="step_col">
+        <label for="" class="fs_label nowrap">
+            <div class="fs_label mb-10">Время рассмотрения проекта <sup>*</sup>
+                @@include('../../../blocks/tips.htm')
+            </div>
+            <div class="flex aic gap-20 posr">
+                <div class="flex aic gap-8">
+                    <span class="bef__input">От</span>
+                    <input type="text" id="" class="fs_input minw-no" placeholder="0">
+                </div>
+                <div class="flex aic gap-8">
+                    <span class="bef__input">до</span>
+                    <input type="text" id="" class="fs_input minw-no" placeholder="0">
+                    <span class="after__input">дней</span>
+                </div>
+            </div>
+        </label>
+    </div>
+    <div class="step_col">
+        <label for="" class="fs_label">
+            <div class="fs_label mb-10">Макс. кол-во предложенных проектов <sup>*</sup>
+                @@include('../../../blocks/tips.htm')
+            </div>
+            <div class="flex aic gap-8">
+                <span class="bef__input">До</span>
+                <input type="text" id="" class="fs_input minw-no" placeholder="0">
+            </div>
+        </label>
+    </div>
+
+</div>
