@@ -214,6 +214,38 @@
                             <div class="step_col"></div>
                         </div>
                     </div>
+
+                    <!-- # -->
+                    <div class="block__repetitive mt-40 mb-20">
+                        <div class="block__title mb-15 fz16 fw500 ff-roboto">
+                            Своя годовая метрика
+                        </div>
+                        <div class="clone-container mb-20"  data-id="1" data-max="3">
+                            <div class="step__row step__2_columns ">
+                                <div class="step_col ">
+                                    <label for="name" class="fs_label">
+                                        Название метрики 
+                                        <div class="mt-10 flex aic gap-8 posr">
+                                            <input type="text" id="curr" class="fs_input minw-no"
+                                                placeholder="Название метрики ">
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="step_col">
+                                    <label for="name" class="fs_label">
+                                        Расходы
+                                        <div class="row__input flex aie gap-8 mt-10 mw-full">
+                                            <div class="row__input_items w-full dollar__icon">
+                                                <input type="text" id="ms-benefit-1" data-item="2" data-max="4"
+                                                    class="fs_input minw-no" placeholder="0">
+                                            </div>
+                                            @@include('../../../blocks/forms/_clone_button_row.htm')
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Block 2 -->
                     <div class="step__block">
                         <div class="step__title mb-20 fz18 fw500 ff-roboto">Ежемесячная метрика</div>
@@ -303,14 +335,46 @@
                         </div>
                     </div>
 
+<!-- # -->
+<div class="block__repetitive mt-40 mb-20">
+    <div class="block__title mb-15 fz16 fw500 ff-roboto">
+        Своя ежемесячная метрика @@include('../../../blocks/tips.htm')
+    </div>
+    <div class="clone-container mb-20"  data-id="1" data-max="3">
+        <div class="step__row step__2_columns ">
+            <div class="step_col ">
+                <label for="name" class="fs_label">
+                    Название метрики 
+                    <div class="mt-10 flex aic gap-8 posr">
+                        <input type="text" id="curr" class="fs_input minw-no"
+                            placeholder="Название метрики">
+                    </div>
+                </label>
+            </div>
+            <div class="step_col">
+                <label for="name" class="fs_label">
+                    Расходы
+                    <div class="row__input flex aie gap-8 mt-10 mw-full">
+                        <div class="row__input_items w-full dollar__icon">
+                            <input type="text" id="ms-benefit-1" data-item="2" data-max="4"
+                                class="fs_input minw-no" placeholder="0">
+                        </div>
+                        @@include('../../../blocks/forms/_clone_button_row.htm')
+                    </div>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+
                     <!-- Block 3 -->
                     <div class="step__block">
                         <div class="step__title mb-20 fz18 fw500 ff-roboto">Окупаемость инвестиций</div>
                         <div class="step__row step__2_columns">
                             <div class="step_col">
                                 <label for="name" class="fs_label nowrap">
-                                    Окупаемость инвестиций <sup>*</sup> <img src="./img/Icon/ic_object_info_blue.svg"
-                                        alt="" class="pt-5">
+                                    Окупаемость инвестиций <sup>*</sup> @@include('../../../blocks/tips.htm')
                                     <div class="mt-10 flex aic gap-8 posr">
                                         <span class="bef__input">От</span>
                                         <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
@@ -323,11 +387,11 @@
                             <div class="step_col"></div>
                         </div>
                         <div class="step__row mt-40">
-                            <div class="fs_label">Опишите идею стартапа <sup>*</sup>
+                            <div class="fs_label">Обоснование финансовых показателей <sup>*</sup>
                                 @@include('../../../blocks/tips.htm')
                             </div>
                             <div class="flex mt-10 gap-40">
-                                <textarea name="" id="" placeholder="Идея стартапа"></textarea>
+                                <textarea name="" id="" placeholder="Обоснование финансовых показателей"></textarea>
                             </div>
                         </div>
                     </div>
@@ -1094,7 +1158,8 @@
                                                 Кол-во <sup>*</sup>
                                                 @@include('../../../blocks/tips.htm')
                                                 <div class="mt-10 flex aic gap-8 posr dollar__icon">
-                                                    <input type="text" id="curr" class="fs_input minw-no" placeholder="0">
+                                                    <input type="text" id="curr" class="fs_input minw-no"
+                                                        placeholder="0">
                                                 </div>
                                             </label>
                                         </div>

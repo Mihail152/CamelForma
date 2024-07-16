@@ -1077,7 +1077,19 @@
                 thisCheckbox.prop('checked', true);
             }
             if (option.img_src) {
-                thisOption.prepend('<img src="' + option.img_src + '">');
+                var extension = option.img_src.slice(-3);  // Получаем последние три символа строки
+
+                if (extension === 'svg') {
+                    var svg = '';
+                    $.get(option.img_src, function(data) {
+                        svg = $(data).find('svg');                        
+                        thisOption.prepend(svg);
+                    }, 'xml');
+                    
+                } else {
+                    thisOption.prepend('<img src="' + option.img_src + '">');
+                }
+                
             }
 
             thisOption.prepend(thisCheckbox);

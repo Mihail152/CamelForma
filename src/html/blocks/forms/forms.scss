@@ -89,7 +89,8 @@
     background-size: 12px;
   }
 }
-.combined.fs_input{
+
+.combined.fs_input {
   height: auto;
   min-height: 50px;
   flex-wrap: wrap;
@@ -123,6 +124,7 @@
 }
 
 
+
 @media (max-width: 480px) {
   .clone_button.right_top {
     right: 15px;
@@ -133,7 +135,15 @@
 
 .currency__label .ms-options-wrap button {
   position: relative;
-  padding-left: 8px;
+  padding-left: 28px;
+
+  span span {
+    padding: 5px
+  }
+
+  .item-single {
+    padding: 5px 5px;
+  }
 
   &::before {
     content: "";
@@ -141,10 +151,20 @@
     position: absolute;
     top: 50%;
     display: block;
-    left: 10px;
+    left: 9px;
     width: 20px;
     margin-top: -10px;
     background-repeat: no-repeat;
     background-image: url(../img/Icon/user_dollar.svg);
   }
+}
+
+.btn-border-blue {
+  background-color: #fff;
+  border: 1px solid #4272C5;
+  color: #4272C5;
+  text-align: center;
+  cursor: pointer;
+  max-height: 52px;
+  justify-content: center;
 }

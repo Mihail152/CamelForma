@@ -211,8 +211,10 @@
     width: 800px;
     max-width: 800px;
   }
-  .video-play img{
-    max-height: 200px;;
+
+  .video-play img {
+    max-height: 200px;
+    ;
   }
 
   .history .tab-200-inner,
@@ -795,14 +797,16 @@
 .gap-100 {
   gap: 100px;
 }
-.mb-120{
+
+.mb-120 {
   margin-bottom: 120px;
 }
 
 .style-15-35 {
   padding: 15px 35px;
 }
-.inline-block{
+
+.inline-block {
   display: inline-block;
 }
 
@@ -925,6 +929,7 @@ textarea {
 .tac {
   text-align: center;
 }
+
 .tar {
   text-align: right;
 }
@@ -996,17 +1001,107 @@ a.btn-back-step {
   padding-right: 70px;
 }
 
-.btn.round-12{
+.btn.round-12 {
   border-radius: 12px;
 }
-.btn.fz-14{
+
+.btn.fz-14 {
   font-size: 14px;
+}
+
+
+.forma_page-item.error {
+  .triger {
+    .notice {
+      display: flex;
+      gap: 6px;
+      padding: 8px;
+      font-size: 14px;
+      color: #FF1F00;
+      background-color: #fff;
+      margin-left: 40px;
+      margin-right: 10px;
+      align-items: center;
+      border-radius: 16px;
+
+      .cont-err {
+        display: flex;
+        width: 20px;
+        height: 20px;
+        align-items: center;
+        justify-content: center;
+        background: #ff2617;
+        border-radius: 50px;
+        color: #fff;
+        line-height: 1;
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+      img {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    .name {
+      color: #ff2617;
+    }
+
+    .condition__tab {
+
+      svg circle {
+        fill: #ff2617;
+      }
+    }
+
+  }
+}
+
+.forma_page-item {
+  .triger {
+    .notice {
+      display: none
+    }
+
+  }
+}
+
+@media(max-width: 767px) {
+  .forma_page-item.error {
+    .triger {
+      .notice {
+        min-width: 60px;
+        justify-content: space-around;
+        margin-left: 20px;
+
+        span {
+          display: none
+        }
+      }
+    }
+  }
 }
 
 .forma_page_tab .triger {
   padding: 26px 40px;
   border-radius: 15px 15px 0 0;
 }
+
+.completed {
+  .condition__tab {
+
+    .blank,
+    .current {
+      display: none !important;
+    }
+
+    .completed {
+      display: block
+    }
+  }
+}
+
 
 .forma_page_tab .active .arrow img {
   -webkit-transform: rotate(-180deg);
@@ -1631,6 +1726,7 @@ a.btn-back-step {
   -webkit-filter: drop-shadow(0 15px 22px rgba(0, 0, 0, 0.05));
   filter: drop-shadow(0 15px 22px rgba(0, 0, 0, 0.05));
   line-height: normal;
+  z-index: 200
 }
 
 .forma_slider .pic-3 .hide {
@@ -1654,6 +1750,7 @@ a.btn-back-step {
 
 .forma_slider .tooltip:hover .hide {
   display: block;
+
 }
 
 .text-left {
@@ -1691,8 +1788,28 @@ a.btn-back-step {
 .forma_page-item {
   border: 1px solid #e1e1e1;
   overflow: hidden;
+
+  &.error {
+    border-color: #FF1F00
+  }
 }
-.forma_page-item.active{
+
+.error {
+  >.fs_label {
+    color: #FF1F00;
+    font-weight: 500;
+
+    .fs_input {
+      border: 2px solid #FF1F00;
+    }
+  }
+
+  >.popup_forma__link {
+    border: 2px solid #FF1F00;
+  }
+}
+
+.forma_page-item.active {
   overflow: initial;
 }
 
@@ -2024,6 +2141,17 @@ a.btn-back-step {
 .ms-options ul li {
   padding: 5px 25px;
 }
+
+// .selected.checkbox-def {
+
+//   svg {
+//     [stroke="#ACB9CB"]{
+//       fill: #f65a03;
+//     }
+//     fill: #f65a03;
+
+//   }
+// }
 
 .selected.checkbox-def label:before {
   background-color: #f65a03;
@@ -2954,7 +3082,7 @@ html .ui-button.ui-state-disabled:active {
   span.placeholder {
     display: flex;
     align-items: center;
-    padding-left: 10px;
+    // padding-left: 10px;
   }
 }
 
@@ -3017,6 +3145,11 @@ html .ui-button.ui-state-disabled:active {
   line-height: 14px;
   text-align: left;
   color: #ACB9CB;
+}
+
+a span.placeholder {
+  display: flex;
+  align-items: center
 }
 
 .ms-options-wrap span.placeholder {
@@ -3301,9 +3434,14 @@ td .off~* {
   display: none;
 }
 
-.block{
+.block {
   display: block;
 }
+
+span[id*=-placeholder] img {
+  margin-right: 5px
+}
+
 @media(max-width: 1260px) {
   .header__card {
     padding: 0;
@@ -4026,4 +4164,10 @@ td .off~* {
     gap: 20px;
   }
 
+}
+
+@media (max-width: 61.99875em) {
+  .btn {
+    display: flex;
+  }
 }

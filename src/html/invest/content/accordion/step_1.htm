@@ -42,6 +42,27 @@
         </label>
     </div>
 </div>
+<!-- #5 -->
+<div class="step__row mb-40">
+    <div class="step_col">
+        <div class="fs_label">Отображение имени в профиле <sup>*</sup> @@include('../../../blocks/tips.htm')</div>
+        <div class="flex mt-20 gap-40">
+            <div class="block radio-def">
+                <input type="radio" name="radio-group" id="radio-group-1" checked>
+                <label for="radio-group-1">
+                    Использовать Имя и Фамилию
+                </label>
+            </div>
+            <div class="block radio-def">
+                <input type="radio" name="radio-group" id="radio-group-2">
+                <label for="radio-group-2">
+                    Использовать Название компании
+                </label>
+
+            </div>
+        </div>
+    </div>
+</div>
 <!-- #3 -->
 <div class="step__row step__2_columns mt-40">
     <div class="step_col">
@@ -49,7 +70,8 @@
             Тип инвестора <sup>*</sup>
             @@include('../../../blocks/tips.htm')
             <div class="mt-10 posr">
-                <select name="basic[]" multiple="multiple" class="multiselect active" data-placeholder="Спрос" data-selectAll="true" data-listType="checkbox" >
+                <select name="basic[]" multiple="multiple" class="multiselect active" data-placeholder="Спрос"
+                    data-selectAll="true" data-listType="checkbox">
                     <option value="var-project-1">Ангел</option>
                     <option value="var-project-2">Венчур</option>
                     <option value="var-project-3">Инкубатор</option>
@@ -79,8 +101,8 @@
 
 
 
- <!-- #6 -->
- <div class="step__row step__2_columns mt-40">
+<!-- #6 -->
+<div class="step__row step__2_columns mt-40">
     <div class="step_col">
         <label for="name" class="fs_label currency__label">
             Страна проживания <sup>*</sup>
@@ -89,10 +111,10 @@
                 <div class="popup_forma__link fs_input">
                     <div id="country__popup-placeholder" class="placeholder flex aic fz14 fw500 blue-2 fxg gap-8"
                         data-placeholder="Страна"></div>
-                    <a href="#country__popup" class=" flex aic pointer round-12 js_open_popup_startap"
-                        data-columns="4" data-placeholder="Выберите страну" data-Icon="Icon/choise_country.svg"
-                        data-search="true" data-openlist="true" data-listtype="radio" data-onlyvalue="false"
-                        data-maxPlaceholder="2" data-defaultText="Введите страну для поиска">
+                    <a href="#country__popup" class=" flex aic pointer round-12 js_open_popup_startap" data-columns="4"
+                        data-placeholder="Выберите страну" data-Icon="Icon/choise_country.svg" data-search="true"
+                        data-openlist="true" data-listtype="radio" data-onlyvalue="false" data-maxPlaceholder="2"
+                        data-defaultText="Введите страну для поиска">
                         <span class="arrow block tr">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" class="loaded">
@@ -139,8 +161,8 @@
 <div class="step_1__row">
     <div class="step_1__col">
         <div class="mt-40">
-            <div class="fs_label">Краткая информация о стартапере <sup>*</sup> <img
-                    src="./img/Icon/ic_object_info_blue.svg" alt="" class="pt-5"></div>
+            <div class="fs_label">Краткая информация о стартапере <sup>*</sup> @@include('../../../blocks/tips.htm')
+            </div>
             <div class="flex mt-10 gap-40">
                 <textarea name="" id="" placeholder="Краткая информация о стартапере"></textarea>
             </div>

@@ -174,6 +174,7 @@ function init_select() {
   $('.multiselect').each(function (index) {
     const selectElement = $(this);
     const selectAll = $(this).attr('data-selectAll') || false;
+    const onlyIcon = $(this).attr('data-onlyIcon') || false;
     const listType = $(this).attr('data-listType') || "radio";
     selectElement.multiselect({
       columns: 1,
@@ -185,6 +186,7 @@ function init_select() {
       minHeight: "150",
       // onlyValue: onlyvalue,
       maxPlaceholderOpts: 2,
+      onlyIcon: onlyIcon,
       searchOptions: {
         default: "Введите страну для поиска",
       },
@@ -201,6 +203,7 @@ function init_select() {
     selectElement.multiselect({
       columns: columns,
       icon: "",
+      placeholder: placeholderId,
       search: search,
       openList: true,
       listType: "checkbox",
@@ -217,70 +220,70 @@ function init_select() {
 }
 
 
-function syncSelectedByText(sourceSelect, targetSelect) {
+// function syncSelectedByText(sourceSelect, targetSelect) {
   
-  $(sourceSelect).find('option:selected').each(function () {
-    let searchText = $(this).text().trim();
-    $(targetSelect).find('option').each(function () {
-      if ($(this).text().trim() === searchText) {
-        $(this).prop('selected', true);
-      }
-    });
-  });
-}
+//   $(sourceSelect).find('option:selected').each(function () {
+//     let searchText = $(this).text().trim();
+//     $(targetSelect).find('option').each(function () {
+//       if ($(this).text().trim() === searchText) {
+//         $(this).prop('selected', true);
+//       }
+//     });
+//   });
+// }
 
-function updateCombinedValues() {
-  let selectedValues = [];
+// function updateCombinedValues() {
+//   let selectedValues = [];
 
-  $('select.industry__mini option:selected').each(function () {
-    selectedValues.push($(this).text());
-  });
+//   $('select.industry__mini option:selected').each(function () {
+//     selectedValues.push($(this).text());
+//   });
 
-  $('select.industry__popup option:selected').each(function () {
-    selectedValues.push($(this).text());
-  });
-
-
-  // Удаление дубликатов
-  let uniqueValues = [...new Set(selectedValues)];
-  let txt_end = "";
-  if (uniqueValues.length > 3) {
-    txt_end = '+ ' + (uniqueValues.length - 3);
-  }
-
-  let minuniqueValues = uniqueValues;
-  $('#combined_industry-placeholder').html(minuniqueValues.map(text => `<span class="item">${text} <img src="img/Icon/ic_close.svg" class="remove__item"></span>`).join(''));
-}
+//   $('select.industry__popup option:selected').each(function () {
+//     selectedValues.push($(this).text());
+//   });
 
 
-$('select.industry__mini, select.industry__popup').change(updateCombinedValues);
-// Обработка события изменения в select.industry__mini
-$('select.industry__mini').change(function () {
-  syncSelectedByText(this, 'select.industry__popup');
-});
+//   // Удаление дубликатов
+//   let uniqueValues = [...new Set(selectedValues)];
+//   let txt_end = "";
+//   if (uniqueValues.length > 3) {
+//     txt_end = '+ ' + (uniqueValues.length - 3);
+//   }
 
-// Обработка события изменения в select.industry__popup
-$('select.industry__popup').change(function () {
-  syncSelectedByText(this, 'select.industry__mini');
-});
+//   let minuniqueValues = uniqueValues;
+//   $('#combined_industry-placeholder').html(minuniqueValues.map(text => `<span class="item">${text} <img src="img/Icon/ic_close.svg" class="remove__item"></span>`).join(''));
+// }
 
-syncSelectedByText('select.industry__mini', 'select.industry__popup');
+
+// $('select.industry__mini, select.industry__popup').change(updateCombinedValues);
+// // Обработка события изменения в select.industry__mini
+// $('select.industry__mini').change(function () {
+//   syncSelectedByText(this, 'select.industry__popup');
+// });
+
+// // Обработка события изменения в select.industry__popup
+// $('select.industry__popup').change(function () {
+//   syncSelectedByText(this, 'select.industry__mini');
+// });
+
+// syncSelectedByText('select.industry__mini', 'select.industry__popup');
 // Общая функция для снятия выбора с опций по тексту
-function deselectOptionByText(text) {
-  $('.industry__mini option, .industry__popup option').each(function () {
-    if ($(this).text().trim() === text.trim()) {
-      $(this).prop('selected', false).trigger('chosen:updated');
-    }
-  });
-  $('li[data-search-term="' + text.trim().toLowerCase() + '"]').removeClass('selected').find('input[type="checkbox"]').prop('checked', false);
-}
+// function deselectOptionByText(text) {
+//   $('.industry__mini option, .industry__popup option').each(function () {
+//     if ($(this).text().trim() === text.trim()) {
+//       $(this).prop('selected', false).trigger('chosen:updated');
+//     }
+//   });
+//   $('li[data-search-term="' + text.trim().toLowerCase() + '"]').removeClass('selected').find('input[type="checkbox"]').prop('checked', false);
+// }
 
 // Делегирование события клика на элементах .combined span.item img
-$(document).on('click', '.combined span.item img', function () {
-  const searchText = $(this).parent().text().trim();
-  deselectOptionByText(searchText);
-  updateCombinedValues();
-});
+// $(document).on('click', '.combined span.item img', function () {
+//   const searchText = $(this).parent().text().trim();
+//   // deselectOptionByText(searchText);
+//   // updateCombinedValues();
+// });
 
 
 

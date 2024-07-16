@@ -5757,9 +5757,67 @@ a.btn-back-step:hover::after {
   font-size: 14px;
 }
 
+.forma_page-item.error .triger .notice {
+  display: flex;
+  gap: 6px;
+  padding: 8px;
+  font-size: 14px;
+  color: #FF1F00;
+  background-color: #fff;
+  margin-left: 40px;
+  margin-right: 10px;
+  align-items: center;
+  border-radius: 16px;
+}
+.forma_page-item.error .triger .notice .cont-err {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  background: #ff2617;
+  border-radius: 50px;
+  color: #fff;
+  line-height: 1;
+  font-size: 12px;
+  font-weight: 500;
+}
+.forma_page-item.error .triger .notice img {
+  width: 18px;
+  height: 18px;
+}
+.forma_page-item.error .triger .name {
+  color: #ff2617;
+}
+.forma_page-item.error .triger .condition__tab svg circle {
+  fill: #ff2617;
+}
+
+.forma_page-item .triger .notice {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .forma_page-item.error .triger .notice {
+    min-width: 60px;
+    justify-content: space-around;
+    margin-left: 20px;
+  }
+  .forma_page-item.error .triger .notice span {
+    display: none;
+  }
+}
 .forma_page_tab .triger {
   padding: 26px 40px;
   border-radius: 15px 15px 0 0;
+}
+
+.completed .condition__tab .blank,
+.completed .condition__tab .current {
+  display: none !important;
+}
+.completed .condition__tab .completed {
+  display: block;
 }
 
 .forma_page_tab .active .arrow img {
@@ -6331,6 +6389,7 @@ a.btn-back-step:hover::after {
   -webkit-filter: drop-shadow(0 15px 22px rgba(0, 0, 0, 0.05));
   filter: drop-shadow(0 15px 22px rgba(0, 0, 0, 0.05));
   line-height: normal;
+  z-index: 200;
 }
 
 .forma_slider .pic-3 .hide {
@@ -6388,6 +6447,20 @@ a.btn-back-step:hover::after {
 .forma_page-item {
   border: 1px solid #e1e1e1;
   overflow: hidden;
+}
+.forma_page-item.error {
+  border-color: #FF1F00;
+}
+
+.error > .fs_label {
+  color: #FF1F00;
+  font-weight: 500;
+}
+.error > .fs_label .fs_input {
+  border: 2px solid #FF1F00;
+}
+.error > .popup_forma__link {
+  border: 2px solid #FF1F00;
 }
 
 .forma_page-item.active {
@@ -7595,7 +7668,6 @@ html .ui-button.ui-state-disabled:active {
 .popup_forma__link span.placeholder {
   display: flex;
   align-items: center;
-  padding-left: 10px;
 }
 
 .popup_forma__link [id*=-placeholder] span.item {
@@ -7652,6 +7724,11 @@ html .ui-button.ui-state-disabled:active {
   line-height: 14px;
   text-align: left;
   color: #ACB9CB;
+}
+
+a span.placeholder {
+  display: flex;
+  align-items: center;
 }
 
 .ms-options-wrap span.placeholder {
@@ -7910,6 +7987,10 @@ td .off ~ * {
 
 .block {
   display: block;
+}
+
+span[id*=-placeholder] img {
+  margin-right: 5px;
 }
 
 @media (max-width: 1260px) {
@@ -8492,6 +8573,11 @@ td .off ~ * {
     gap: 20px;
   }
 }
+@media (max-width: 61.99875em) {
+  .btn {
+    display: flex;
+  }
+}
 .clone_button,
 .add_block1,
 .add_row1 {
@@ -8607,7 +8693,13 @@ td .off ~ * {
 }
 .currency__label .ms-options-wrap button {
   position: relative;
-  padding-left: 8px;
+  padding-left: 28px;
+}
+.currency__label .ms-options-wrap button span span {
+  padding: 5px;
+}
+.currency__label .ms-options-wrap button .item-single {
+  padding: 5px 5px;
 }
 .currency__label .ms-options-wrap button::before {
   content: "";
@@ -8615,11 +8707,21 @@ td .off ~ * {
   position: absolute;
   top: 50%;
   display: block;
-  left: 10px;
+  left: 9px;
   width: 20px;
   margin-top: -10px;
   background-repeat: no-repeat;
   background-image: url(../img/Icon/user_dollar.svg);
+}
+
+.btn-border-blue {
+  background-color: #fff;
+  border: 1px solid #4272C5;
+  color: #4272C5;
+  text-align: center;
+  cursor: pointer;
+  max-height: 52px;
+  justify-content: center;
 }
 
 .tooltip {

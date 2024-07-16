@@ -75,5 +75,13 @@
     "gulp-sass": "^5.1.0",
     "simplebar": "latest"
   },
-  "main": "gulpfile.js"
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mihail152/CamelForma.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mihail152/CamelForma/issues"
+  },
+  "homepage": "https://github.com/Mihail152/CamelForma#readme"
 }
